@@ -45,9 +45,9 @@
       <h2 class="homepage-content__heading">В путешествие с крутыми попутчиками!</h2>
       <section class="homepage-content__tools tools">
         <h3 class="visually-hidden">Кнопки быстрого доступа</h3>
-        <ul class="tools__contacts tools-contacts">
-          <li class="tools-contacts__item"><a class="tools-contacts__phone" href="tel:88005558628">Телефон</a></li>
-          <li class="tools-contacts__item"><a class="tools-contacts__email" href="mailto:mail@htmlacademy.ru">Email</a></li>
+        <ul class="tools__contacts tools-list">
+          <li class="tools-list__item"><a class="tools-list__phone" href="tel:88005558628">Телефон</a></li>
+          <li class="tools-list__item"><a class="tools-list__email" href="mailto:mail@htmlacademy.ru">Email</a></li>
         </ul>
         <ul class="tools__user tools-user">
           <li class="tools-user__item">
@@ -86,11 +86,11 @@
         <h3 class="directions__heading">Направления</h3>
         <p class="directions__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
         </p>
-        <ul class="directions__list directions-list">
-          <li class="directions-list__item directions-item">
+        <ul class="directions__list list-directions">
+          <li class="list-directions__item directions-item">
             <img class="directions-item__img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Фото: Таиланд">
             <div class="directions-item__info">
-              <div class="directions-item__flag flag_thailand">Флаг Таиланда</div>
+              <div class="directions-item__flag directions-item__flag--thailand">Флаг Таиланда</div>
               <div class="directions-item__text-wrapper">
                 <h4 class="directions-item__name">Таиланд</h4>
                 <p class="directions-item__slogan">Джунгли зовут!</p>
@@ -98,10 +98,10 @@
               <span class="directions-item__counter">18321</span>
             </div>
           </li>
-          <li class="directions-list__item directions-item">
+          <li class="list-directions__item directions-item">
             <img class="directions-item__img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Фото: Франция">
             <div class="directions-item__info">
-              <div class="directions-item__flag flag_france">Флаг Франции</div>
+              <div class="directions-item__flag directions-item__flag--france">Флаг Франции</div>
               <div class="directions-item__text-wrapper">
                 <h4 class="directions-item__name">Франция</h4>
                 <p class="directions-item__slogan">Трэ бьен, манифик!</p>
@@ -109,10 +109,10 @@
               <span class="directions-item__counter">12518</span>
             </div>
           </li>
-          <li class="directions-list__item directions-item">
+          <li class="list-directions__item directions-item">
             <img class="directions-item__img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Фото: Чехия">
             <div class="directions-item__info">
-              <div class="directions-item__flag flag_czech">Флаг Чехии</div>
+              <div class="directions-item__flag directions-item__flag--czech">Флаг Чехии</div>
               <div class="directions-item__text-wrapper">
                 <h4 class="directions-item__name">Чехия</h4>
                 <p class="directions-item__slogan">Закоулки старой Европы</p>
@@ -130,7 +130,10 @@
         <p class="companions__text companions__text--highlighted">Теперь можно легко найти единомышленников!</p>
         <ul class="companions__list companions-list">
           <li class="companions-list__item companion">
-            <div class="companion__level"></div>
+            <div class="companion__level companion-level">
+              <span class="companion-level__value">99</span>
+              <span class="companion-level__label">level</span>
+            </div>
             <img class="companion__img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото: Таня Фирсова">
             <div class="companion__info companion-info">
               <ul class="companion-info__countries companion-countries">
@@ -156,7 +159,10 @@
             </div>
           </li>
           <li class="companions-list__item companion">
-            <div class="companion__level"></div>
+            <div class="companion__level companion-level">
+              <span class="companion-level__value">80</span>
+              <span class="companion-level__label">level</span>
+            </div>
             <img class="companion__img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото: Петя Демин">
             <div class="companion__info companion-info">
               <ul class="companion-info__countries companion-countries">
