@@ -44,7 +44,7 @@
     <main class="site-main site-main--homepage">
       <h1 class="site-main__heading">В путешествие с крутыми попутчиками!</h1>
       <section class="site-main--homepage__tools tools">
-        <h2 class="visually-hidden">Кнопки быстрого доступа</h2>
+        <h2 class="tools__heading visually-hidden">Кнопки быстрого доступа</h2>
         <ul class="tools__contacts tools-list">
           <li class="tools-list__item"><a class="tools-list__phone" href="tel:88005558628">Телефон</a></li>
           <li class="tools-list__item"><a class="tools-list__email" href="mailto:mail@htmlacademy.ru">Email</a></li>
@@ -57,7 +57,7 @@
       </section>
 
       <section class="site-main--homepage__reviews reviews">
-        <h2 class="visually-hidden">Отзывы</h2>
+        <h2 class="reviews__heading visually-hidden">Отзывы</h2>
         <ul class="reviews__list">
           <li class="reviews__item">
             <q class="reviews__text">«Лучшее приложение, что я видел в жизни!»</q>
@@ -67,7 +67,7 @@
       </section>
 
       <section class="site-main--homepage__steps steps">
-        <h2 class="visually-hidden">Как пользоваться?</h2>
+        <h2 class="steps__heading visually-hidden">Как пользоваться?</h2>
         <ul class="steps__list">
           <li class="steps__item steps__item--step1">Выберите направление</li>
           <li class="steps__item steps__item--step2">Изучите идеи путешественников</li>
@@ -214,9 +214,41 @@
         <a class="add-profile__business-prices" href="#">Показать тарифы для бизнеса</a>
       </section>
 
-      <!-- Секция "Заинтересовались?" -->
-      <!-- Секция адреса -->
-      <!-- Карта -->
+      <section class="site-main--homepage__registration registration">
+        <h2 class="registration__heading">Заинтересовались?</h2>
+        <p class="registration__text">
+          Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="registration__auth-link" href="auth.html">авторизуйтесь</a>.
+        </p>
+        <form class="registration__form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="registration__email-label visually-hidden" for="registration-email">Ваш e-mail</label>
+          <div class="registration__email-wrapper">
+            <input class="registration__email" type="email" name="registration-email" id="registration-email" placeholder="E-mail">
+            <button class="registration__btn btn">Отправить</button>
+          </div>
+        </form>
+        <p class="registration__contacts-heading">
+          Остались вопросы? Мы с радостью на них ответим!
+        </p>
+        <ul class="registration__contacts contacts">
+          <!-- Тут я переиспользую блок contacts из хедера, добавив модификатор --registration для закрашивания текста в желтый цвет (в хедере текст синий) -->
+          <li class="contacts__item"><a class="contacts__phone contacts__phone--registration" href="tel:88005558628">8 800 555-86-28</a></li>
+          <li class="contacts__item"><a class="contacts__email contacts__email--registration" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+        </ul>
+      </section>
+
+      <section class="site-main--homepage__address address">
+        <h2 class="address__heading visually-hidden">Наш адрес</h2>
+        <div class="address__info"> <!-- желтая область -->
+          <div class="address__text-wrapper"> <!-- обертка для картинки и текста -->
+            <div class="address__icon"></div>
+            <p class="address__text">ул. Большая Конюшенная, 19/8</p>
+          </div>
+          <a class="address__btn btn" href="#">Проложить маршрут</a>
+        </div>
+        <div class="address__map">
+          <iframe class="address__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003226!2d30.320858716213408!3d59.938719169053975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sil!4v1585686822018!5m2!1sen!2sil"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -231,5 +263,25 @@
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">Лого HTMLAcademy</a>
       </div>
     </footer>
+
+    <section class="modal business-modal ">
+      <h2 class="business-modal__heading">Бизнес-тарифы</h2>
+      <ul class="business-modal__prices business-prices">
+        <li class="business-prices__item">
+          Реклама у блоггера 300 000 руб./пост
+        </li>
+        <li class="business-prices__item">
+          Накрутка подписчиков от 1 руб./шт.
+        </li>
+        <li class="business-prices__item">
+          Лайки от ботовот 20 коп./лайк
+        </li>
+        <li class="business-prices__item">
+          Ваш продакт-плейсмент Индивидуально
+        </li>
+      </ul>
+      <button class="business-modal__btn btn" type="button">Закрыть окно</button>
+    </section>
+
   </body>
 </html>
