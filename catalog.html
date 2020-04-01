@@ -47,7 +47,145 @@
 
     <main class="site-main site-main--catalog">
       <h1 class="site-main__heading">Попутчики</h1>
-      <!-- Фильтр -->
+
+      <section class="site-main__contries-filter countries-filter">
+        <h2 class="countries-filter__heading">Фильтрация по странам</h2>
+        <div class="countries-filter__wrapper">
+          <ul class="countries-filter__continents continents">
+            <li class="continents__item">Европа</li>
+            <li class="continents__item">Азия</li>
+            <li class="continents__item">Америка</li>
+            <li class="continents__item">Острова</li>
+          </ul>
+          <!-- таблица с буквами -->
+          <ul class="countries-filter__countries countries">
+            <li class="countries__item"><a class="countries__item-link" href="/europe/australia">Австралия</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/austria">Австрия</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/azerbaijan">Азербайджан</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/albania">Албания</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/algeria">Алжир</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/angola">Ангола</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/andorra">Андорра</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/antigua-barbuda">Антигуа и Барбуда</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/argentina">Аргентина</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/armenia">Армения</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/afghanistan">Афганистан</a></li>
+          </ul>
+          <button class="countries-filter__btn btn" type="button">Свернуть</button>
+        </div>
+      </section>
+
+      <section class="site-main__selection selection">
+        <h2 class="selection__heading">Подберите идеального попутчика</h2>
+        <form class="selection__form" action="https://echo.htmlacademy.ru" method="get">
+          <section class="selection__category selection__category--open">
+            <h3 class="selection__category-heading">Хобби</h3>
+            <div class="selection__category-wrapper">
+              <ul class="selection__category-list category-list">
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input check-input--active" type="checkbox" name="hobby-gym" id="hobby-gym">
+                  <label class="item-category__label" for="hobby-gym">Спортзал</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input" type="checkbox" name="hobby-hookah" id="hobby-hookah">
+                  <label class="item-category__label" for="hobby-hookah">Кальян</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input" type="checkbox" name="hobby-sofa" id="hobby-sofa">
+                  <label class="item-category__label" for="hobby-sofa">Диван</label>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="selection__category selection__category--open">
+            <h3 class="selection__category-heading">Музыка</h3>
+            <div class="selection__category-wrapper">
+              <ul class="selection__category-list category-list">
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input check-input--active" type="checkbox" name="music-hard-rock" id="music-hard-rock">
+                  <label class="item-category__label" for="music-hard-rock">Тяжелый рок</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input" type="checkbox" name="music-russian-rap" id="music-russian-rap">
+                  <label class="item-category__label" for="music-russian-rap">Русский рэп</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input" type="checkbox" name="music-euro-dance" id="music-euro-dance">
+                  <label class="item-category__label" for="music-euro-dance">Евроденс</label>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="selection__category selection__category--open">
+            <h3 class="selection__category-heading">Еда</h3>
+            <div class="selection__category-wrapper">
+              <ul class="selection__category-list category-list">
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input check-input--active" type="checkbox" name="food-meat" id="food-meat">
+                  <label class="item-category__label" for="food-meat">Мясоед</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input" type="checkbox" name="food-proper-nutrition" id="food-proper-nutrition">
+                  <label class="item-category__label" for="food-proper-nutrition">Сидит на ПП</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input" type="checkbox" name="food-vegan" id="food-vegan">
+                  <label class="item-category__label" for="food-vegan">Веган-сыроед</label>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="selection__category selection__category--open">
+            <h3 class="selection__category-heading">Транспорт</h3>
+            <div class="selection__category-wrapper">
+              <ul class="selection__category-list category-list">
+                <li class="category-list__item item-category">
+                  <input class="item-category__input transport-input transport-input--active" type="checkbox" name="transport-plane" id="transport-plane">
+                  <label class="item-category__label visually-hidden" for="transport-plane">Самолет</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input transport-input transport-input--active" type="checkbox" name="transport-bus" id="transport-bus">
+                  <label class="item-category__label visually-hidden" for="transport-bus">Автобус</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input transport-input" type="checkbox" name="transport-bicycle" id="transport-bicycle">
+                  <label class="item-category__label visually-hidden" for="transport-bicycle">Велосипед</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input transport-input transport-input--active" type="checkbox" name="transport-legs" id="transport-legs">
+                  <label class="item-category__label visually-hidden" for="transport-legs">Ноги</label>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="selection__category selection__category--open">
+            <h3 class="selection__category-heading">Левел</h3>
+            <div class="selection__category-wrapper">
+              <div class="selection__category-range range">
+                <div class="range__input-wrapper">
+                  <input class="range__from" type="number" id="level-min" name="level-min" value="30">
+                  <label class="range__label visually-hidden" for="level-min">Минимальный левел</label>
+                  <input class="range__to" type="number" id="level-max" name="level-max" value="100">
+                  <label class="range__label visually-hidden" for="level-max">Максимальный левел</label>
+                </div>
+                <div class="range__slider">
+                  <div class="range__selected">
+                    <button class="range__slider-pin range__slider-pin--min " type="button"></button>
+                    <button class="range__slider-pin range__slider-pin--max" type="button"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <button class="selection__btn btn" type="button">Показать</button>
+        </form>
+      </section>
+
       <section class="site-main__travelers catalog">
         <ul class="catalog__list catalog-list">
           <li class="catalog-list__item catalog-item">
@@ -58,7 +196,7 @@
               <div class="catalog-item__name-wrapper">
                 <h2 class="catalog-item__name">Таня Фирсова</h2>
                 <div class="catalog-item__likes-bg">
-                  <button class="catalog-item__likes-heart catalog-item__likes-heart--active" type="button"></button>
+                  <button class="catalog-item__likes-heart catalog-item__likes-heart--active" type="button">Лайк</button>
                   <p class="catalog-item__likes-count">1,5 М</p>
                 </div>
               </div>
@@ -105,7 +243,7 @@
               <div class="catalog-item__name-wrapper">
                 <h2 class="catalog-item__name">Петя Демин</h2>
                 <div class="catalog-item__likes-bg">
-                  <button class="catalog-item__likes-heart" type="button"></button>
+                  <button class="catalog-item__likes-heart" type="button">Лайк</button>
                   <p class="catalog-item__likes-count">1500</p>
                 </div>
               </div>
@@ -150,7 +288,7 @@
               <div class="catalog-item__name-wrapper">
                 <h2 class="catalog-item__name">Марк Смолов</h2>
                 <div class="catalog-item__likes-bg">
-                  <button class="catalog-item__likes-heart" type="button"></button>
+                  <button class="catalog-item__likes-heart" type="button">Лайк</button>
                   <p class="catalog-item__likes-count">170</p>
                 </div>
               </div>
@@ -196,7 +334,7 @@
               <div class="catalog-item__name-wrapper">
                 <h2 class="catalog-item__name">Марк Смолов</h2>
                 <div class="catalog-item__likes-bg">
-                  <button class="catalog-item__likes-heart" type="button"></button>
+                  <button class="catalog-item__likes-heart" type="button">Лайк</button>
                   <p class="catalog-item__likes-count">170</p>
                 </div>
               </div>
@@ -233,10 +371,10 @@
             <a class="catalog-item__btn btn" href="#">Позвать!</a>
           </li>
         </ul>
-        <a class="site-main--catalog__show-more" type="button">Показать еще</a>
-        <div class="site-main--catalog__nav">
-          <a class="site-main--catalog__prev" type="button"></a>
-          <a class="site-main--catalog__next" type="button"></a>
+        <a class="catalog__show-more" href="#">Показать еще</a>
+        <div class="catalog__nav">
+          <a class="catalog__prev" href="#"></a>
+          <a class="catalog__next" href="#"></a>
         </div>
       </section>
     </main>
