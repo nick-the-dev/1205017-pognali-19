@@ -48,7 +48,7 @@
     <main class="site-main site-main--catalog">
       <h1 class="site-main__heading">Попутчики</h1>
 
-      <section class="site-main__contries-filter countries-filter">
+      <section class="site-main__countries-filter countries-filter">
         <h2 class="countries-filter__heading">Фильтрация по странам</h2>
         <div class="countries-filter__wrapper">
           <ul class="countries-filter__continents continents">
@@ -57,7 +57,45 @@
             <li class="continents__item">Америка</li>
             <li class="continents__item">Острова</li>
           </ul>
-          <!-- таблица с буквами -->
+
+          <table class="countries-filter__letters letters">
+              <tr class="letters__row">
+                <td class="letters__cell">а</td>
+                <td class="letters__cell">б</td>
+                <td class="letters__cell">в</td>
+                <td class="letters__cell">г</td>
+                <td class="letters__cell">д</td>
+              </tr>
+              <tr class="letters__row">
+                <td class="letters__cell">е</td>
+                <td class="letters__cell">з</td>
+                <td class="letters__cell">и</td>
+                <td class="letters__cell">к</td>
+                <td class="letters__cell">л</td>
+              </tr>
+              <tr class="letters__row">
+                <td class="letters__cell">м</td>
+                <td class="letters__cell">н</td>
+                <td class="letters__cell">о</td>
+                <td class="letters__cell">п</td>
+                <td class="letters__cell">р</td>
+              </tr>
+              <tr class="letters__row">
+                <td class="letters__cell">с</td>
+                <td class="letters__cell">т</td>
+                <td class="letters__cell">у</td>
+                <td class="letters__cell">ф</td>
+                <td class="letters__cell">х</td>
+              </tr>
+              <tr class="letters__row">
+                <td class="letters__cell">ч</td>
+                <td class="letters__cell">ш</td>
+                <td class="letters__cell">э</td>
+                <td class="letters__cell">ю</td>
+                <td class="letters__cell">я</td>
+              </tr>
+          </table>
+
           <ul class="countries-filter__countries countries">
             <li class="countries__item"><a class="countries__item-link" href="/europe/australia">Австралия</a></li>
             <li class="countries__item"><a class="countries__item-link" href="/europe/austria">Австрия</a></li>
@@ -78,8 +116,8 @@
       <section class="site-main__selection selection">
         <h2 class="selection__heading">Подберите идеального попутчика</h2>
         <form class="selection__form" action="https://echo.htmlacademy.ru" method="get">
-          <section class="selection__category selection__category--open">
-            <h3 class="selection__category-heading">Хобби</h3>
+          <fieldset class="selection__category selection__category--open">
+            <legend class="selection__category-heading">Хобби</legend>
             <div class="selection__category-wrapper">
               <ul class="selection__category-list category-list">
                 <li class="category-list__item item-category">
@@ -96,10 +134,10 @@
                 </li>
               </ul>
             </div>
-          </section>
+          </fieldset>
 
-          <section class="selection__category selection__category--open">
-            <h3 class="selection__category-heading">Музыка</h3>
+          <fieldset class="selection__category selection__category--open">
+            <legend class="selection__category-heading">Музыка</legend>
             <div class="selection__category-wrapper">
               <ul class="selection__category-list category-list">
                 <li class="category-list__item item-category">
@@ -116,10 +154,10 @@
                 </li>
               </ul>
             </div>
-          </section>
+          </fieldset>
 
-          <section class="selection__category selection__category--open">
-            <h3 class="selection__category-heading">Еда</h3>
+          <fieldset class="selection__category selection__category--open">
+            <legend class="selection__category-heading">Еда</legend>
             <div class="selection__category-wrapper">
               <ul class="selection__category-list category-list">
                 <li class="category-list__item item-category">
@@ -136,10 +174,10 @@
                 </li>
               </ul>
             </div>
-          </section>
+          </fieldset>
 
-          <section class="selection__category selection__category--open">
-            <h3 class="selection__category-heading">Транспорт</h3>
+          <fieldset class="selection__category selection__category--open">
+            <legend class="selection__category-heading">Транспорт</legend>
             <div class="selection__category-wrapper">
               <ul class="selection__category-list category-list">
                 <li class="category-list__item item-category">
@@ -160,27 +198,28 @@
                 </li>
               </ul>
             </div>
-          </section>
+          </fieldset>
 
-          <section class="selection__category selection__category--open">
-            <h3 class="selection__category-heading">Левел</h3>
+          <fieldset class="selection__category selection__category--open">
+            <legend class="selection__category-heading">Левел</legend>
             <div class="selection__category-wrapper">
               <div class="selection__category-range range">
                 <div class="range__input-wrapper">
-                  <input class="range__from" type="number" id="level-min" name="level-min" value="30">
-                  <label class="range__label visually-hidden" for="level-min">Минимальный левел</label>
-                  <input class="range__to" type="number" id="level-max" name="level-max" value="100">
-                  <label class="range__label visually-hidden" for="level-max">Максимальный левел</label>
+                  <label class="range__label">
+                    <input class="range__from" type="number" name="level-min" value="30">
+                  </label>
+                  <label class="range__label">
+                    <input class="range__to" type="number" name="level-max" value="100">
+                  </label>
                 </div>
-                <div class="range__slider">
-                  <div class="range__selected">
-                    <button class="range__slider-pin range__slider-pin--min " type="button"></button>
-                    <button class="range__slider-pin range__slider-pin--max" type="button"></button>
-                  </div>
+                <div class="range__scale">
+                  <div class="range__bar"></div>
                 </div>
+                <div class="range__pin range__pin--min"></div>
+                <div class="range__pin range__pin--max"></div>
               </div>
             </div>
-          </section>
+          </fieldset>
 
           <button class="selection__btn btn" type="button">Показать</button>
         </form>
@@ -228,8 +267,13 @@
               </div>
               <div class="catalog-item__level">
                 <span class="catalog-item__level-heading">Левел:</span>
-                <div class="catalog-item__level-circle">
-                  <span class="catalog-item__level-value">99</span>
+                <div class="catalog-item__level-circle level">
+                  <div class="level__text">
+                    <span class="level__value">99</span>
+                  </div>
+                  <svg class="level__visual">
+                    <circle class="level__progress" cx="57" cy="57" r="23"></circle>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -273,8 +317,13 @@
               </div>
               <div class="catalog-item__level">
                 <span class="catalog-item__level-heading">Левел:</span>
-                <div class="catalog-item__level-circle">
-                  <span class="catalog-item__level-value">80</span>
+                <div class="catalog-item__level-circle level">
+                  <div class="level__text">
+                    <span class="level__value">80</span>
+                  </div>
+                  <svg class="level__visual">
+                    <circle class="level__progress" cx="57" cy="57" r="23"></circle>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -319,8 +368,13 @@
               </div>
               <div class="catalog-item__level">
                 <span class="catalog-item__level-heading">Левел:</span>
-                <div class="catalog-item__level-circle">
-                  <span class="catalog-item__level-value">25</span>
+                <div class="catalog-item__level-circle level">
+                  <div class="level__text">
+                    <span class="level__value">99</span>
+                  </div>
+                  <svg class="level__visual">
+                    <circle class="level__progress" cx="57" cy="57" r="23"></circle>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -363,8 +417,13 @@
               </div>
               <div class="catalog-item__level">
                 <span class="catalog-item__level-heading">Левел:</span>
-                <div class="catalog-item__level-circle">
-                  <span class="catalog-item__level-value">50</span>
+                <div class="catalog-item__level-circle level">
+                  <div class="level__text">
+                    <span class="level__value">99</span>
+                  </div>
+                  <svg class="level__visual">
+                    <circle class="level__progress" cx="57" cy="57" r="23"></circle>
+                  </svg>
                 </div>
               </div>
             </div>
