@@ -47,7 +47,184 @@
 
     <main class="site-main site-main--catalog">
       <h1 class="site-main__heading">Попутчики</h1>
-      <!-- Фильтр -->
+
+      <section class="site-main__countries-filter countries-filter">
+        <h2 class="countries-filter__heading">Фильтрация по странам</h2>
+        <div class="countries-filter__wrapper">
+          <ul class="countries-filter__continents continents">
+            <li class="continents__item">Европа</li>
+            <li class="continents__item">Азия</li>
+            <li class="continents__item">Америка</li>
+            <li class="continents__item">Острова</li>
+          </ul>
+
+          <table class="countries-filter__letters letters">
+              <tr class="letters__row">
+                <td class="letters__cell">а</td>
+                <td class="letters__cell">б</td>
+                <td class="letters__cell">в</td>
+                <td class="letters__cell">г</td>
+                <td class="letters__cell">д</td>
+              </tr>
+              <tr class="letters__row">
+                <td class="letters__cell">е</td>
+                <td class="letters__cell">з</td>
+                <td class="letters__cell">и</td>
+                <td class="letters__cell">к</td>
+                <td class="letters__cell">л</td>
+              </tr>
+              <tr class="letters__row">
+                <td class="letters__cell">м</td>
+                <td class="letters__cell">н</td>
+                <td class="letters__cell">о</td>
+                <td class="letters__cell">п</td>
+                <td class="letters__cell">р</td>
+              </tr>
+              <tr class="letters__row">
+                <td class="letters__cell">с</td>
+                <td class="letters__cell">т</td>
+                <td class="letters__cell">у</td>
+                <td class="letters__cell">ф</td>
+                <td class="letters__cell">х</td>
+              </tr>
+              <tr class="letters__row">
+                <td class="letters__cell">ч</td>
+                <td class="letters__cell">ш</td>
+                <td class="letters__cell">э</td>
+                <td class="letters__cell">ю</td>
+                <td class="letters__cell">я</td>
+              </tr>
+          </table>
+
+          <ul class="countries-filter__countries countries">
+            <li class="countries__item"><a class="countries__item-link" href="/europe/australia">Австралия</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/austria">Австрия</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/azerbaijan">Азербайджан</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/albania">Албания</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/algeria">Алжир</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/angola">Ангола</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/andorra">Андорра</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/antigua-barbuda">Антигуа и Барбуда</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/argentina">Аргентина</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/armenia">Армения</a></li>
+            <li class="countries__item"><a class="countries__item-link" href="/europe/afghanistan">Афганистан</a></li>
+          </ul>
+          <button class="countries-filter__btn btn" type="button">Свернуть</button>
+        </div>
+      </section>
+
+      <section class="site-main__selection selection">
+        <h2 class="selection__heading">Подберите идеального попутчика</h2>
+        <form class="selection__form" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="selection__category selection__category--open">
+            <legend class="selection__category-heading">Хобби</legend>
+            <div class="selection__category-wrapper">
+              <ul class="selection__category-list category-list">
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input check-input--active" type="checkbox" name="hobby-gym" id="hobby-gym">
+                  <label class="item-category__label" for="hobby-gym">Спортзал</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input" type="checkbox" name="hobby-hookah" id="hobby-hookah">
+                  <label class="item-category__label" for="hobby-hookah">Кальян</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input" type="checkbox" name="hobby-sofa" id="hobby-sofa">
+                  <label class="item-category__label" for="hobby-sofa">Диван</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+          <fieldset class="selection__category selection__category--open">
+            <legend class="selection__category-heading">Музыка</legend>
+            <div class="selection__category-wrapper">
+              <ul class="selection__category-list category-list">
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input check-input--active" type="checkbox" name="music-hard-rock" id="music-hard-rock">
+                  <label class="item-category__label" for="music-hard-rock">Тяжелый рок</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input" type="checkbox" name="music-russian-rap" id="music-russian-rap">
+                  <label class="item-category__label" for="music-russian-rap">Русский рэп</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input" type="checkbox" name="music-euro-dance" id="music-euro-dance">
+                  <label class="item-category__label" for="music-euro-dance">Евроденс</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+          <fieldset class="selection__category selection__category--open">
+            <legend class="selection__category-heading">Еда</legend>
+            <div class="selection__category-wrapper">
+              <ul class="selection__category-list category-list">
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input check-input--active" type="checkbox" name="food-meat" id="food-meat">
+                  <label class="item-category__label" for="food-meat">Мясоед</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input" type="checkbox" name="food-proper-nutrition" id="food-proper-nutrition">
+                  <label class="item-category__label" for="food-proper-nutrition">Сидит на ПП</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input check-input" type="checkbox" name="food-vegan" id="food-vegan">
+                  <label class="item-category__label" for="food-vegan">Веган-сыроед</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+          <fieldset class="selection__category selection__category--open">
+            <legend class="selection__category-heading">Транспорт</legend>
+            <div class="selection__category-wrapper">
+              <ul class="selection__category-list category-list">
+                <li class="category-list__item item-category">
+                  <input class="item-category__input transport-input transport-input--active" type="checkbox" name="transport-plane" id="transport-plane">
+                  <label class="item-category__label visually-hidden" for="transport-plane">Самолет</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input transport-input transport-input--active" type="checkbox" name="transport-bus" id="transport-bus">
+                  <label class="item-category__label visually-hidden" for="transport-bus">Автобус</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input transport-input" type="checkbox" name="transport-bicycle" id="transport-bicycle">
+                  <label class="item-category__label visually-hidden" for="transport-bicycle">Велосипед</label>
+                </li>
+                <li class="category-list__item item-category">
+                  <input class="item-category__input transport-input transport-input--active" type="checkbox" name="transport-legs" id="transport-legs">
+                  <label class="item-category__label visually-hidden" for="transport-legs">Ноги</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+          <fieldset class="selection__category selection__category--open">
+            <legend class="selection__category-heading">Левел</legend>
+            <div class="selection__category-wrapper">
+              <div class="selection__category-range range">
+                <div class="range__input-wrapper">
+                  <label class="range__label">
+                    <input class="range__from" type="number" name="level-min" value="30">
+                  </label>
+                  <label class="range__label">
+                    <input class="range__to" type="number" name="level-max" value="100">
+                  </label>
+                </div>
+                <div class="range__scale">
+                  <div class="range__bar"></div>
+                </div>
+                <div class="range__pin range__pin--min"></div>
+                <div class="range__pin range__pin--max"></div>
+              </div>
+            </div>
+          </fieldset>
+
+          <button class="selection__btn btn" type="button">Показать</button>
+        </form>
+      </section>
+
       <section class="site-main__travelers catalog">
         <ul class="catalog__list catalog-list">
           <li class="catalog-list__item catalog-item">
@@ -58,7 +235,7 @@
               <div class="catalog-item__name-wrapper">
                 <h2 class="catalog-item__name">Таня Фирсова</h2>
                 <div class="catalog-item__likes-bg">
-                  <div class="catalog-item__likes-heart catalog-item__likes-heart--active"></div>
+                  <button class="catalog-item__likes-heart catalog-item__likes-heart--active" type="button">Лайк</button>
                   <p class="catalog-item__likes-count">1,5 М</p>
                 </div>
               </div>
@@ -90,8 +267,13 @@
               </div>
               <div class="catalog-item__level">
                 <span class="catalog-item__level-heading">Левел:</span>
-                <div class="catalog-item__level-circle">
-                  <span class="catalog-item__level-value">99</span>
+                <div class="catalog-item__level-circle level">
+                  <div class="level__text">
+                    <span class="level__value">99</span>
+                  </div>
+                  <svg class="level__visual">
+                    <circle class="level__progress" cx="57" cy="57" r="23"></circle>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -105,7 +287,7 @@
               <div class="catalog-item__name-wrapper">
                 <h2 class="catalog-item__name">Петя Демин</h2>
                 <div class="catalog-item__likes-bg">
-                  <div class="catalog-item__likes-heart"></div>
+                  <button class="catalog-item__likes-heart" type="button">Лайк</button>
                   <p class="catalog-item__likes-count">1500</p>
                 </div>
               </div>
@@ -135,8 +317,13 @@
               </div>
               <div class="catalog-item__level">
                 <span class="catalog-item__level-heading">Левел:</span>
-                <div class="catalog-item__level-circle">
-                  <span class="catalog-item__level-value">80</span>
+                <div class="catalog-item__level-circle level">
+                  <div class="level__text">
+                    <span class="level__value">80</span>
+                  </div>
+                  <svg class="level__visual">
+                    <circle class="level__progress" cx="57" cy="57" r="23"></circle>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -150,7 +337,7 @@
               <div class="catalog-item__name-wrapper">
                 <h2 class="catalog-item__name">Марк Смолов</h2>
                 <div class="catalog-item__likes-bg">
-                  <div class="catalog-item__likes-heart"></div>
+                  <button class="catalog-item__likes-heart" type="button">Лайк</button>
                   <p class="catalog-item__likes-count">170</p>
                 </div>
               </div>
@@ -181,8 +368,13 @@
               </div>
               <div class="catalog-item__level">
                 <span class="catalog-item__level-heading">Левел:</span>
-                <div class="catalog-item__level-circle">
-                  <span class="catalog-item__level-value">25</span>
+                <div class="catalog-item__level-circle level">
+                  <div class="level__text">
+                    <span class="level__value">99</span>
+                  </div>
+                  <svg class="level__visual">
+                    <circle class="level__progress" cx="57" cy="57" r="23"></circle>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -196,7 +388,7 @@
               <div class="catalog-item__name-wrapper">
                 <h2 class="catalog-item__name">Марк Смолов</h2>
                 <div class="catalog-item__likes-bg">
-                  <div class="catalog-item__likes-heart"></div>
+                  <button class="catalog-item__likes-heart" type="button">Лайк</button>
                   <p class="catalog-item__likes-count">170</p>
                 </div>
               </div>
@@ -225,18 +417,23 @@
               </div>
               <div class="catalog-item__level">
                 <span class="catalog-item__level-heading">Левел:</span>
-                <div class="catalog-item__level-circle">
-                  <span class="catalog-item__level-value">50</span>
+                <div class="catalog-item__level-circle level">
+                  <div class="level__text">
+                    <span class="level__value">99</span>
+                  </div>
+                  <svg class="level__visual">
+                    <circle class="level__progress" cx="57" cy="57" r="23"></circle>
+                  </svg>
                 </div>
               </div>
             </div>
             <a class="catalog-item__btn btn" href="#">Позвать!</a>
           </li>
         </ul>
-        <a class="site-main--catalog__show-more" type="button">Показать еще</a>
-        <div class="site-main--catalog__nav">
-          <a class="site-main--catalog__prev" type="button"></a>
-          <a class="site-main--catalog__next" type="button"></a>
+        <a class="catalog__show-more" href="#">Показать еще</a>
+        <div class="catalog__nav">
+          <a class="catalog__prev" href="#"></a>
+          <a class="catalog__next" href="#"></a>
         </div>
       </section>
     </main>
