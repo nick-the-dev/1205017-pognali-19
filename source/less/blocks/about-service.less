@@ -1,30 +1,26 @@
 .about-service {
-  background-color: #192144;
-  background-image: url("../../img/about-mobile@1x.png");
-  background-repeat: no-repeat;
   padding-top: 33px;
   padding-left: 50px;
   padding-right: 63px;
   padding-bottom: 84px;
+
+  background-color: #192144;
+  background-image: url("../../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+
+  &--highlighted {
+    font-weight: 600;
+  }
 }
 
 .about-service__heading {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 600;
-  color: #ff8d30;
-  margin: 0;
+  .hompage-heading();
 }
 
 .about-service__text {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-size: 16px;
   font-weight: 300;
+  font-size: 16px;
   line-height: 22px;
+  font-family: @site-font-family;
   color: #ffffff;
-}
-
-.about-service__text--highlighted {
-  font-weight: 600;
 }

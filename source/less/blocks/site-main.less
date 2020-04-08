@@ -1,23 +1,30 @@
+.site-main {
+  &--catalog {
+    background-color: #edeff6;
+  }
+}
+
 .site-main__heading-wrapper {
   background-color: #161c36;
-}
 
-.site-main__heading-wrapper--homepage {
-  background-image: url("../../img/globe-back-mobile@1x.jpg");
-  background-size: cover;
-  height: 478px;
-}
+  &--homepage {
+    height: 478px;
 
+    background-image: url("../../img/globe-back-mobile@1x.jpg");
+    background-size: cover;
+  }
+}
 
 .site-main__heading {
-  font-family: "Blogger Sans", "Arial", sans-serif;
+  .remove-indentation();
+  padding-top: 51px;
+
+  font-weight: 600;
   font-size: 36px;
   line-height: 40px;
-  font-weight: 600;
+  font-family: @site-font-family;
   color: #ffffff;
   text-align: center;
-  margin: 0;
-  padding-top: 51px;
 }
 
 .site-main__steps {
@@ -25,9 +32,6 @@
   padding-right: 25px;
 }
 
-.site-main--catalog {
-  background-color: #edeff6;
-}
 
 .site-main__travelers {
   padding-left: 25px;

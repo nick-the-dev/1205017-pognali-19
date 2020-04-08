@@ -2,26 +2,26 @@
   position: absolute;
 }
 
-.level__value--homepage {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
+.level__value {
   font-weight: 600;
-  color: #ffffff;
-}
+  font-size: 24px;
+  font-family: @site-font-family;
 
-.level__value--catalog {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-size: 24px;
-  line-height: 18px;
-  font-weight: 600;
-  color: #1d2e5b;
+  &--homepage {
+    line-height: 24px;
+    color: #ffffff;
+  }
+
+  &--catalog {
+    line-height: 18px;
+    color: #1d2e5b;
+  }
 }
 
 .level__label {
-  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  font-weight: 400;
+  font-family: @site-font-family;
   color: #ffffff;
 }

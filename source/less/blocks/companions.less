@@ -1,30 +1,28 @@
 .companions {
   padding-top: 120px;
   padding-bottom: 30px;
+
   background-color: #192144;
 }
 
 .companions__heading {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 600;
-  color: #ff8d30;
   padding-left: 50px;
-  margin: 0;
+
+  .hompage-heading();
 }
 
 .companions__text {
-  font-family: "Blogger Sans", "Arial", sans-serif;
+  padding-left: 50px;
+
+  font-weight: 300;
   font-size: 16px;
   line-height: 22px;
-  font-weight: 300;
+  font-family: @site-font-family;
   color: #ffffff;
-  padding-left: 50px;
-}
 
-.companions__text--highlighted {
-  font-weight: 600;
+  &--highlighted {
+    font-weight: 600;
+  }
 }
 
 .companions__list {
@@ -34,9 +32,9 @@
 }
 
 .companions__btn {
-  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 600;
   font-size: 18px;
   line-height: 18px;
-  font-weight: 600;
+  font-family: @site-font-family;
   color: #1d2e5b;
 }
