@@ -26,7 +26,7 @@
           </ul>
           <ul class="main-nav__user user-list">
             <li class="user-list__item">
-              <a class="user-list__btn btn" href="auth.html">Авторизация</a>
+              <a class="user-list__btn btn btn--rounded" href="auth.html">Авторизация</a>
             </li>
           </ul>
 
@@ -35,9 +35,9 @@
             <li class="contacts__item"><a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
           </ul>
           <ul class="main-nav__socials socials">
-            <li class="socials__item"><a class="socials__facebook" href="#">Facebook</a></li>
-            <li class="socials__item"><a class="socials__vk" href="#">Vk</a></li>
-            <li class="socials__item"><a class="socials__instagram" href="#">Instagram</a></li>
+            <li class="socials__item"><a class="socials__facebook" href="#"></a></li>
+            <li class="socials__item"><a class="socials__vk" href="#"></a></li>
+            <li class="socials__item"><a class="socials__instagram" href="#"></a></li>
           </ul>
         </div>
       </nav>
@@ -49,12 +49,12 @@
         <section class="site-main__tools tools">
           <h2 class="tools__heading visually-hidden">Кнопки быстрого доступа</h2>
           <ul class="tools__contacts tools-list">
-            <li class="tools-list__item"><a class="tools-list__phone" href="tel:88005558628">Телефон</a></li>
-            <li class="tools-list__item"><a class="tools-list__email" href="mailto:mail@htmlacademy.ru">Email</a></li>
+            <li class="tools-list__item"><a class="tools-list__phone btn btn--circle" href="tel:88005558628"></a></li>
+            <li class="tools-list__item"><a class="tools-list__email btn btn--circle" href="mailto:mail@htmlacademy.ru"></a></li>
           </ul>
           <ul class="tools__user tools-user">
             <li class="tools-user__item">
-              <a class="tools-user__btn btn" href="auth.html">Авторизация</a>
+              <a class="tools-user__btn btn btn--rounded" href="auth.html">Авторизация</a>
             </li>
           </ul>
         </section>
@@ -74,10 +74,10 @@
       <section class="site-main__steps steps">
         <h2 class="steps__heading visually-hidden">Как пользоваться?</h2>
         <ul class="steps__list">
-          <li class="steps__item steps__item--step1">Выберите направление</li>
-          <li class="steps__item steps__item--step2">Изучите идеи путешественников</li>
-          <li class="steps__item steps__item--step3">Находите тех, кто похож на вас</li>
-          <li class="steps__item steps__item--step4">Путешествуйте вместе!</li>
+          <li class="steps__item steps__item--step1"><div class="steps__item-text">Выберите направление</div></li>
+          <li class="steps__item steps__item--step2"><div class="steps__item-text">Изучите идеи путешественников</div></li>
+          <li class="steps__item steps__item--step3"><div class="steps__item-text">Находите тех, кто похож на вас</div></li>
+          <li class="steps__item steps__item--step4"><div class="steps__item-text">Путешествуйте вместе!</div></li>
         </ul>
       </section>
 
@@ -95,34 +95,40 @@
           <li class="list-directions__item directions-item">
             <img class="directions-item__img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Фото: Таиланд">
             <div class="directions-item__info">
-              <div class="directions-item__flag directions-item__flag--thailand">Флаг Таиланда</div>
-              <div class="directions-item__text-wrapper">
+              <div class="directions-item__flag directions-item__flag--thailand"></div>
+              <div class="directions-item__info-wrapper">
+                <div class="directions-item__text-wrapper">
                 <h3 class="directions-item__name">Таиланд</h3>
                 <p class="directions-item__slogan">Джунгли зовут!</p>
               </div>
               <span class="directions-item__counter">18321</span>
+              </div>
             </div>
           </li>
           <li class="list-directions__item directions-item">
             <img class="directions-item__img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Фото: Франция">
             <div class="directions-item__info">
-              <div class="directions-item__flag directions-item__flag--france">Флаг Франции</div>
-              <div class="directions-item__text-wrapper">
-                <h3 class="directions-item__name">Франция</h3>
-                <p class="directions-item__slogan">Трэ бьен, манифик!</p>
+              <div class="directions-item__flag directions-item__flag--france"></div>
+              <div class="directions-item__info-wrapper">
+                <div class="directions-item__text-wrapper">
+                  <h3 class="directions-item__name">Франция</h3>
+                  <p class="directions-item__slogan">Трэ бьен, манифик!</p>
+                </div>
+                <span class="directions-item__counter">12518</span>
               </div>
-              <span class="directions-item__counter">12518</span>
             </div>
           </li>
           <li class="list-directions__item directions-item">
             <img class="directions-item__img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Фото: Чехия">
             <div class="directions-item__info">
-              <div class="directions-item__flag directions-item__flag--czech">Флаг Чехии</div>
-              <div class="directions-item__text-wrapper">
-                <h3 class="directions-item__name">Чехия</h3>
-                <p class="directions-item__slogan">Закоулки старой Европы</p>
+              <div class="directions-item__flag directions-item__flag--czech"></div>
+              <div class="directions-item__info-wrapper">
+                <div class="directions-item__text-wrapper">
+                  <h3 class="directions-item__name">Чехия</h3>
+                  <p class="directions-item__slogan">Закоулки старой Европы</p>
+                </div>
+                <span class="directions-item__counter">5326</span>
               </div>
-              <span class="directions-item__counter">5326</span>
             </div>
           </li>
         </ul>
@@ -147,9 +153,9 @@
             <img class="companion__img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото: Таня Фирсова">
             <div class="companion__info companion-info">
               <ul class="companion-info__countries companion-countries">
-                <li class="companion-countries__item companion-countries__item--sri-lanka">Шри-Ланка</li>
-                <li class="companion-countries__item companion-countries__item--thailand">Таиланд</li>
-                <li class="companion-countries__item companion-countries__item--seychelles">Сейшелы</li>
+                <li class="companion-countries__item companion-countries__item--sri-lanka"></li>
+                <li class="companion-countries__item companion-countries__item--thailand"></li>
+                <li class="companion-countries__item companion-countries__item--seychelles"></li>
               </ul>
               <h3 class="companion__name">Таня Фирсова</h3>
               <ul class="companion__tags companion-tags companion-tags--homepage">
@@ -181,8 +187,8 @@
             <img class="companion__img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото: Петя Демин">
             <div class="companion__info companion-info">
               <ul class="companion-info__countries companion-countries">
-                <li class="companion-countries__item companion-countries__item--belgium">Бельгия</li>
-                <li class="companion-countries__item companion-countries__item--czech">Чехия</li>
+                <li class="companion-countries__item companion-countries__item--belgium"></li>
+                <li class="companion-countries__item companion-countries__item--czech"></li>
               </ul>
               <h3 class="companion__name">Петя Демин</h3>
               <ul class="companion__tags companion-tags companion-tags--homepage">
@@ -207,10 +213,7 @@
       <section class="site-main__add-profile add-profile">
         <div class="add-profile__heading-wrapper">
           <h2 class="add-profile__heading">Добавьте свой профиль</h2>
-          <div class="add-profile__img">
-            Иконка с телефоном и кредиткой
-            <div class="add-profile__ruble-icon">Знак рубля</div>
-          </div>
+          <div class="add-profile__img"></div>
         </div>
         <ul class="add-profile__list profile-prices">
           <li class="profile-prices__item profile-price">
@@ -238,11 +241,11 @@
           <label class="registration__email-label visually-hidden" for="registration-email">Ваш e-mail</label>
           <div class="registration__email-wrapper">
             <input class="registration__email" type="email" name="registration-email" id="registration-email" placeholder="E-mail">
-            <button class="registration__btn btn">Отправить</button>
+            <button class="registration__btn btn"></button>
           </div>
         </form>
         <p class="registration__contacts-heading">
-          Остались вопросы? Мы с радостью на них ответим!
+          Остались вопросы?<br>Мы с радостью на них ответим!
         </p>
         <ul class="registration__contacts contacts">
           <!-- Тут я переиспользую блок contacts из хедера, добавив модификатор --registration для закрашивания текста в желтый цвет (в хедере текст синий) -->
@@ -253,8 +256,8 @@
 
       <section class="site-main__address address">
         <h2 class="address__heading visually-hidden">Наш адрес</h2>
-        <div class="address__info"> <!-- желтая область -->
-          <div class="address__text-wrapper"> <!-- обертка для картинки и текста -->
+        <div class="address__info">
+          <div class="address__text-wrapper">
             <div class="address__icon"></div>
             <p class="address__text">ул. Большая Конюшенная, 19/8</p>
           </div>
@@ -267,15 +270,15 @@
     </main>
 
     <footer class="site-footer">
-      <img class="site-footer__logo" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Погнали?">
+      <img class="site-footer__logo" src="../img/logo-mobile-blue@1x.png" width="96" height="15" alt="Погнали?">
       <ul class="site-footer__socials socials">
-        <li class="socials__item socials__item--circle"><a class="socials__facebook" href="#">Facebook</a></li>
-        <li class="socials__item socials__item--circle"><a class="socials__vk" href="#">Vk</a></li>
-        <li class="socials__item socials__item--circle"><a class="socials__instagram" href="#">Instagram</a></li>
+        <li class="socials__item socials__item--circle"><a class="socials__facebook" href="#"></a></li>
+        <li class="socials__item socials__item--circle"><a class="socials__vk" href="#"></a></li>
+        <li class="socials__item socials__item--circle"><a class="socials__instagram" href="#"></a></li>
       </ul>
       <div class="site-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">Лого HTMLAcademy</a>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
       </div>
     </footer>
 
@@ -295,7 +298,7 @@
           Ваш продакт-плейсмент Индивидуально
         </li>
       </ul>
-      <button class="business-modal__btn btn" type="button">Закрыть окно</button>
+      <button class="business-modal__btn" type="button">Закрыть окно</button>
     </section>
 
   </body>
