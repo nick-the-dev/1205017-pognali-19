@@ -1,8 +1,36 @@
 .catalog__show-more {
+  display: block;
+
   font-weight: 600;
   font-size: 17px;
   line-height: 30px;
   font-family: @site-font-family;
   text-transform: uppercase;
   color: #1d2e5b;
+  text-align: center;
+}
+
+.catalog__nav {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 46px;
+}
+
+.catalog__nav-btn {
+  display: flex;
+  justify-content: center;
+  width: calc(50% - 0.5px);
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  background-color: #ffffff;
+
+  &--prev {
+    border-radius: 20px 0 0 20px;
+  }
+
+  &--next {
+    border-radius: 0 20px 20px 0;
+  }
 }

@@ -1,5 +1,9 @@
 .level {
   position: absolute;
+
+  &--form {
+    position: relative;
+  }
 }
 
 .level__value {
@@ -24,4 +28,18 @@
   line-height: 14px;
   font-family: @site-font-family;
   color: #ffffff;
+}
+
+.level__text {
+  &--form {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.level__visual {
+  &--form {
+    width: 100px;
+    height: 100px;
+  }
 }

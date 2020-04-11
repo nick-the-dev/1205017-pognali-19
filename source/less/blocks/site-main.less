@@ -1,6 +1,11 @@
 .site-main {
   &--catalog {
     background-color: #edeff6;
+    padding-bottom: 35px;
+  }
+
+  &--form {
+    background-color: #edeff6;
   }
 }
 
@@ -12,6 +17,20 @@
 
     background-image: url("../img/globe-back-mobile@1x.jpg");
     background-size: cover;
+  }
+
+  &--catalog {
+    position: relative;
+    z-index: 1;
+
+    border-radius: 0 0 30px 30px;
+  }
+
+  &--form {
+    position: relative;
+    z-index: 1;
+
+    border-radius: 0 0 30px 30px;
   }
 }
 
@@ -25,6 +44,18 @@
   font-family: @site-font-family;
   color: #ffffff;
   text-align: center;
+
+  &--catalog {
+    margin-left: 25px;
+
+    text-align: left;
+  }
+
+  &--form {
+    margin-left: 25px;
+
+    text-align: left;
+  }
 }
 
 .site-main__steps {
@@ -78,4 +109,11 @@
 
 .site-main__address {
   margin-top: -30px;
+}
+
+.site-main__selection {
+  margin-top: 24px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 28px;
 }

@@ -1,0 +1,65 @@
+.range__input-wrapper {
+  display: flex;
+
+  margin-bottom: 24px;
+}
+
+.range__input {
+  width: 100%;
+  padding-top: 9px;
+  padding-bottom: 6px;
+
+  text-align: center;
+
+  border: 1px solid #cbced9;
+
+  &--from {
+    border-radius: 5px 0 0 5px;
+  }
+
+  &--to {
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+.range__scale-wrapper {
+  position: relative;
+}
+
+.range__scale {
+  position: relative;
+  width: 100%;
+  height: 2px;
+
+  background-color: rgba(29, 46, 91, 0.2);
+}
+
+.range__bar {
+  position: relative;
+  right: -66px;
+
+  width: 70%;
+  height: 2px;
+
+  background-color: #1d2e5b;
+}
+
+.range__pin {
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #1d2e5b;
+  border-radius: 50%;
+
+  &--min {
+    top: -4px;
+    left: calc(100% - 70%);
+  }
+
+  &--max {
+    top: -4px;
+    right: 0;
+  }
+}
