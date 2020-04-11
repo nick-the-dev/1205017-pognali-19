@@ -2,14 +2,50 @@
   background-color: #192144;
 }
 
+.steps__list {
+  position: relative;
+  top: -78px;
+}
+
 .steps__item {
   padding-left: 25px;
-  padding-top: 23px;
-  padding-bottom: 23px;
+  padding-top: 22px;
+  padding-bottom: 22px;
 
   font-weight: 600;
   font-size: 18px;
   line-height: 18px;
   font-family: @site-font-family;
   color: #161c35;
+
+  border-radius: 10px;
+
+  &--step1 {
+    height: 160px;
+    margin-bottom: -82px;
+
+    background-color: #ff8d30;
+  }
+
+  &--step2 {
+    height: 160px;
+    margin-bottom: -82px;
+
+    background-color: #ffa530;
+  }
+
+  &--step3 {
+    height: 146px;
+    margin-bottom: -66px;
+
+    background-color: #ffbd30;
+  }
+
+  &--step4 {
+    background-color: #ffd74b;
+  }
+}
+
+.steps__item-text {
+  max-width: 149px;
 }

@@ -1,9 +1,26 @@
 .catalog-item {
+  margin-bottom: 10px;
+  padding-bottom: 22px;
+
   background-color: #ffffff;
+  border-radius: 20px;
 }
 
 .catalog-item__heading-wrapper {
   display: flex;
+}
+
+.catalog-item__img-wrapper {
+  margin-top: 15px;
+  margin-left: 18px;
+}
+
+.catalog-item__img {
+  border-radius: 50%;
+}
+
+.catalog-item__name-wrapper {
+  margin-left: 16px;
 }
 
 .catalog-item__name {
@@ -14,6 +31,31 @@
   color: #1d2e5b;
 }
 
+.catalog-item__likes-wrapper {
+  position: relative;
+}
+
+.catalog-item__likes-heart {
+  position: absolute;
+  left: -40px;
+  top: -7px;
+
+  width: 31px;
+  height: 31px;
+
+  background-color: #f9eaea;
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  background-size: 13px 11px;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+
+  &--active {
+    background-image: url("../img/heart-active.svg");
+  }
+}
+
 .catalog-item__likes-count {
   font-weight: 600;
   font-size: 14px;
@@ -22,17 +64,36 @@
   color: #161c35;
 }
 
+.catalog-item__tags {
+  margin-left: 26px;
+  margin-bottom: 15px;
+}
+
+.catalog-item__countries {
+  margin-left: 66px;
+  margin-top: 23px;
+  margin-bottom: 21px;
+}
+
 .catalog-item__countries-heading {
+  margin-left: 26px;
+
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
   font-family: @site-font-family;
   color: #444444;
+  text-transform: lowercase;
 }
 
 .catalog-item__skills {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.catalog-item__transport {
+  margin-left: 25px;
 }
 
 .catalog-item__transport-heading {
@@ -41,6 +102,7 @@
   line-height: 18px;
   font-family: @site-font-family;
   color: #444444;
+  text-transform: lowercase;
 }
 
 .catalog-item__level-heading {
@@ -49,13 +111,24 @@
   line-height: 18px;
   font-family: @site-font-family;
   color: #444444;
+  text-transform: lowercase;
 }
 
 .catalog-item__btn {
+  display: block;
+  width: calc(100% - 40px);
+  margin: auto;
+  padding-top: 7px;
+  padding-bottom: 3px;
+
   font-weight: 600;
   font-size: 17px;
   line-height: 30px;
   font-family: @site-font-family;
   text-transform: uppercase;
   color: #161c35;
+  text-align: center;
+
+  background-color: #ffd74b;
+  border-radius: 20px;
 }

@@ -1,4 +1,12 @@
+.profile-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .profile-price__text {
+  max-width: 181px;
+
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -7,9 +15,28 @@
 }
 
 .profile-price__num {
+  width: 34px;
+  height: 34px;
+  padding-top: 11px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 14px;
   font-family: @site-font-family;
   color: #ffffff;
+  text-align: center;
+
+  border-radius: 50%;
+
+  &--first {
+    background-color: #ffa530;
+  }
+
+  &--second {
+    background-color: #ffbd30;
+  }
+
+  &--third {
+    background-color: #ffd74b;
+  }
 }

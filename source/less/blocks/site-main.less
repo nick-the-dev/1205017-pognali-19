@@ -1,6 +1,11 @@
 .site-main {
   &--catalog {
     background-color: #edeff6;
+    padding-bottom: 35px;
+  }
+
+  &--form {
+    background-color: #edeff6;
   }
 }
 
@@ -10,8 +15,22 @@
   &--homepage {
     height: 478px;
 
-    background-image: url("../../img/globe-back-mobile@1x.jpg");
+    background-image: url("../img/globe-back-mobile@1x.jpg");
     background-size: cover;
+  }
+
+  &--catalog {
+    position: relative;
+    z-index: 1;
+
+    border-radius: 0 0 30px 30px;
+  }
+
+  &--form {
+    position: relative;
+    z-index: 1;
+
+    border-radius: 0 0 30px 30px;
   }
 }
 
@@ -25,15 +44,76 @@
   font-family: @site-font-family;
   color: #ffffff;
   text-align: center;
+
+  &--catalog {
+    margin-left: 25px;
+
+    text-align: left;
+  }
+
+  &--form {
+    margin-left: 25px;
+
+    text-align: left;
+  }
 }
 
 .site-main__steps {
   padding-left: 25px;
   padding-right: 25px;
+  margin-bottom: -39px;
 }
 
 
 .site-main__travelers {
   padding-left: 25px;
   padding-right: 25px;
+}
+
+.site-main__tools {
+  margin-top: 198px;
+}
+
+.site-main__about {
+  position: relative;
+  z-index: 5;
+}
+
+.site-main__directions {
+  position: relative;
+  z-index: 4;
+
+  margin-top: -30px;
+}
+
+.site-main__companions {
+  position: relative;
+  z-index: 3;
+
+  margin-top: -30px;
+}
+
+.site-main__add-profile {
+  position: relative;
+  z-index: 2;
+
+  margin-top: -30px;
+}
+
+.site-main__registration {
+  position: relative;
+  z-index: 1;
+
+  margin-top: -30px;
+}
+
+.site-main__address {
+  margin-top: -30px;
+}
+
+.site-main__selection {
+  margin-top: 24px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 28px;
 }
