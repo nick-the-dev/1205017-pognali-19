@@ -1,6 +1,6 @@
 .main-nav__toggle {
   position: relative;
-  z-index: 1;
+  z-index: 10;
 
   width: 25px;
   height: 11px;
@@ -16,12 +16,18 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 9;
 
   display: none;
   width: 100%;
   height: 100%;
 
   background-color: #ffffff;
+}
+
+.main-nav__list {
+  margin-top: 121px;
+  margin-bottom: 58px;
 }
 
 .main-nav__contact {
@@ -32,4 +38,56 @@
 
 .main-nav__socials {
   margin-top: 58px;
+}
+
+@media (min-width: @tablet-width) {
+
+  //.main-nav__user {
+    //position: absolute;
+    //top: 40px;
+    //right: 40px;
+
+    //width: 189px;
+  //}
+
+  .main-nav__list {
+    margin-top: 191px;
+    margin-bottom: 173px;
+    margin-left: 99px;
+  }
+
+  .main-nav__contact {
+    margin-left: 190px;
+  }
+
+  .main-nav__socials {
+    margin-top: 154px;
+    margin-left: 123px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    position: static;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
+  }
+
+  .main-nav__contact {
+    margin: 0;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+
+  .main-nav__list {
+    margin: 0;
+  }
 }

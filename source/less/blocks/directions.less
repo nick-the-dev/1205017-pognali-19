@@ -10,7 +10,7 @@
 .directions__heading {
   padding-left: 50px;
 
-  .hompage-heading();
+  .homepage-heading();
 }
 
 .directions__text {
@@ -46,5 +46,23 @@
   color: #1d2e5b;
 
   background-color: #ffd74b;
+}
 
+@media (min-width: @desktop-width) {
+  .directions {
+    display: flex;
+    justify-content: space-between;
+    padding: 130px;
+  }
+
+  .directions__heading-wrapper {
+    width: 30%;
+    order: 2;
+  }
+
+  .directions__btn {
+    position: absolute;
+    bottom: 139px;
+    right: 301px;
+  }
 }

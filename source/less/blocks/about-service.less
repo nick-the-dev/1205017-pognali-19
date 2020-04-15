@@ -9,14 +9,10 @@
   background-repeat: no-repeat;
 
   border-radius: 0 0 30px 30px;
-
-  &--highlighted {
-    font-weight: 600;
-  }
 }
 
 .about-service__heading {
-  .hompage-heading();
+  .homepage-heading();
 }
 
 .about-service__text {
@@ -25,4 +21,58 @@
   line-height: 22px;
   font-family: @site-font-family;
   color: #ffffff;
+
+  &--highlighted {
+    font-weight: 600;
+  }
+}
+
+.about-service__btn {
+  display: none;
+  width: 274px;
+  margin-top: 25px;
+  margin-right: 25px;
+  padding-top: 30px;
+  padding-bottom: 28px;
+  padding-left: 34px;
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: @site-font-family;
+  color: #1d2e5b;
+
+  background-color: #ffd74b;
+  border-radius: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .about-service {
+    padding-left: 76px;
+    padding-bottom: 88px;
+
+    background-image: url("../img/about-tablet@1x.png");
+    background-position: 107% 1%;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .about-service__btn {
+    display: block;
+  }
+
+  .about-service__heading {
+    .homepage-heading--tablet();
+  }
+
+  .about-service__text {
+    width: 300px;
+
+    font-size: 28px;
+    line-height: 33px;
+
+    &--highlighted {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
 }

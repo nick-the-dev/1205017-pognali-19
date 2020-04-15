@@ -13,15 +13,21 @@
   background-color: #161c36;
 
   &--homepage {
-    height: 478px;
+    height: 569px;
+    margin-top: -66px;
 
-    background-image: url("../img/globe-back-mobile@1x.jpg");
-    background-size: cover;
+    background-image: url("../img/traveller-illustration-mobile@1x.png"),
+      url("../img/globe-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 72%, center;
+    background-size: 192px 255px, cover;
   }
 
   &--catalog {
     position: relative;
     z-index: 1;
+
+    padding-top: 97px;
 
     border-radius: 0 0 30px 30px;
   }
@@ -36,7 +42,8 @@
 
 .site-main__heading {
   .remove-indentation();
-  padding-top: 51px;
+  width: 237px;
+  margin: 0 auto;
 
   font-weight: 600;
   font-size: 36px;
@@ -44,6 +51,10 @@
   font-family: @site-font-family;
   color: #ffffff;
   text-align: center;
+
+  &--homepage {
+    padding-top: 97px;
+  }
 
   &--catalog {
     margin-left: 25px;
@@ -71,7 +82,7 @@
 }
 
 .site-main__tools {
-  margin-top: 198px;
+  margin-top: 241px;
 }
 
 .site-main__about {
@@ -116,4 +127,92 @@
   margin-left: 25px;
   margin-right: 25px;
   margin-bottom: 28px;
+}
+
+.site-main__home-link {
+  display: none;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: @site-font-family;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .site-main__heading-wrapper--homepage {
+    height: 994px;
+    margin-top: -105px;
+
+    background-color: #182044;
+    background-image: url("../img/traveller-illustration-mobile@1x.png"),
+      url("../img/globe-back-tablet@1x.jpg");
+    background-position: 73% 75%, 48% 100%;
+    background-size: 372px 451px, 185%;
+  }
+
+  .site-main__heading-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-main__heading-wrapper--catalog {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 170px;
+  }
+
+  .site-main__heading {
+    width: 395px;
+
+    font-size: 60px;
+    line-height: 70px;
+
+    &--homepage {
+      padding-top: 170px;
+    }
+  }
+
+  .site-main__reviews {
+    position: absolute;
+    top: 462px;
+    left: 75px;
+  }
+
+  .site-main__steps {
+    position: relative;
+
+    margin-bottom: -44px;
+  }
+
+  .site-main__home-link {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-main__heading-wrapper--homepage {
+    margin-top: -115px;
+  }
+
+  .site-main__reviews {
+    top: 224px;
+    right: 87px;
+  }
+
+  .site-main__heading {
+    margin-left: 129px;
+
+    text-align: left;
+  }
+
+  .site-main__travelers-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .site-main__selection {
+    order: 2;
+  }
 }

@@ -10,7 +10,7 @@
 .companions__heading {
   padding-left: 50px;
 
-  .hompage-heading();
+  .homepage-heading();
 }
 
 .companions__text {
@@ -28,12 +28,6 @@
   }
 }
 
-.companions__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .companions__btn {
   margin-top: 25px;
   margin-left: 25px;
@@ -49,4 +43,28 @@
   color: #1d2e5b;
 
   background-color: #ffd74b;
+}
+
+@media (min-width: @tablet-width) {
+  .companions__list {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .companions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .companions__text-wrapper {
+    width: 432px;
+  }
+
+  .companions__btn {
+    position: absolute;
+    left: 132px;
+    bottom: 134px;
+  }
 }

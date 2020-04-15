@@ -1,4 +1,6 @@
 .directions-item {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
 
   border-radius: 10px;
@@ -68,4 +70,22 @@
   line-height: 30px;
   font-family: @site-font-family;
   color: rgba(68, 68, 68, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .directions-item {
+    flex-direction: row-reverse;
+  }
+
+  .directions-item__info {
+    width: 432px;
+    height: 140px;
+
+    margin-top: 0;
+  }
+
+  .directions-item__img {
+    width: 186px;
+    height: 140px;
+  }
 }

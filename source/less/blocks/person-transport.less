@@ -1,3 +1,16 @@
 .person-transport {
   display: flex;
 }
+
+@media (min-width: @tablet-width) {
+  .person-transport {
+    flex-direction: column;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .person-transport {
+    flex-direction: row;
+  }
+}

@@ -1,3 +1,8 @@
+.person-countries {
+  display: flex;
+  flex-direction: column;
+}
+
 .person-countries__item {
   font-weight: 500;
   font-size: 15px;
@@ -5,4 +10,20 @@
   font-family: @site-font-family;
   color: #1d2e5b;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .person-countries {
+    flex-direction: row;
+  }
+
+  .person-countries__item {
+    padding-left: 47px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .person-countries {
+    flex-direction: column;
+  }
 }

@@ -1,4 +1,5 @@
 .reviews {
+  display: flex;
   padding-left: 50px;
   padding-top: 50px;
   padding-bottom: 113px;
@@ -31,4 +32,28 @@
   line-height: 22px;
   font-family: @site-font-family;
   color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+
+    background-color: transparent;
+  }
+
+  .reviews__text {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .reviews__author {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  .reviews__list {
+    width: 259px;
+  }
 }

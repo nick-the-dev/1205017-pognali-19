@@ -23,7 +23,7 @@
 }
 
 .add-profile__heading {
-  .hompage-heading();
+  .homepage-heading();
 
   width: 101px;
 }
@@ -34,4 +34,32 @@
   line-height: 16px;
   font-family: @site-font-family;
   color: #192144;
+}
+
+@media (min-width: @tablet-width) {
+  .add-profile__heading-wrapper {
+    justify-content: center;
+  }
+
+  .add-profile__heading {
+    width: auto;
+  }
+
+  .add-profile__img {
+    position: absolute;
+    bottom: 48px;
+    right: 86px;
+  }
+
+  .add-profile__list {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .add-profile {
+    padding-left: 131px;
+    padding-right: 131px;
+  }
 }

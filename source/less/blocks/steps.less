@@ -5,6 +5,11 @@
 .steps__list {
   position: relative;
   top: -78px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .steps__item {
@@ -48,4 +53,64 @@
 
 .steps__item-text {
   max-width: 149px;
+}
+
+@media (min-width: @tablet-width) {
+  .steps__item {
+    margin-bottom: 0;
+    padding-left: 31px;
+    padding-top: 31px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    &--step1 {
+      width: 369px;
+      height: 140px;
+
+      border-radius: 20px 0 0 0;
+    }
+
+    &--step2 {
+      width: 344px;
+      height: 140px;
+      margin-left: -25px;
+
+      border-radius: 20px 20px 0 0;
+    }
+
+    &--step3 {
+      width: 369px;
+      height: 140px;
+
+      border-radius: 0 0 0 20px;
+    }
+
+    &--step4 {
+      width: 344px;
+      height: 140px;
+      margin-left: -25px;
+
+      border-radius: 0 0 20px 20px;
+    }
+  }
+
+  .steps__list {
+    position: relative;
+    top: -140px;
+
+    max-width: 841px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .steps__item-text {
+    max-width: 198px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .steps__list {
+    max-width: none;
+  }
 }
