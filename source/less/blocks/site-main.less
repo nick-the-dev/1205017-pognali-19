@@ -40,6 +40,13 @@
   }
 }
 
+.site-main__heading-container {
+  &--catalog {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
 .site-main__heading {
   .remove-indentation();
   width: 237px;
@@ -70,8 +77,6 @@
 }
 
 .site-main__steps {
-  padding-left: 25px;
-  padding-right: 25px;
   margin-bottom: -39px;
 }
 
@@ -152,15 +157,15 @@
     background-size: 372px 451px, 185%;
   }
 
-  .site-main__heading-wrapper {
-    display: flex;
-    align-items: center;
-  }
-
   .site-main__heading-wrapper--catalog {
     padding-left: 35px;
     padding-right: 35px;
-    padding-top: 170px;
+  }
+
+  .site-main__heading-container {
+    display: flex;
+    align-items: center;
+    max-width: 768px;
   }
 
   .site-main__heading {
@@ -170,7 +175,7 @@
     line-height: 70px;
 
     &--homepage {
-      padding-top: 170px;
+      padding-top: 143px;
     }
   }
 
@@ -196,15 +201,24 @@
     margin-top: -115px;
   }
 
+  .site-main__heading-container {
+    max-width: 1440px;
+  }
+
   .site-main__reviews {
     top: 224px;
     right: 87px;
+    left: auto;
   }
 
   .site-main__heading {
     margin-left: 129px;
 
     text-align: left;
+
+    &--homepage {
+      padding-top: 250px;
+    }
   }
 
   .site-main__travelers-wrapper {
@@ -214,5 +228,9 @@
 
   .site-main__selection {
     order: 2;
+  }
+
+  .site-main__travelers {
+    margin-top: 24px;
   }
 }

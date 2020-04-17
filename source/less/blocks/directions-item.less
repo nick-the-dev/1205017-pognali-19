@@ -15,6 +15,11 @@
   justify-content: space-between;
 }
 
+.directions-item__text-wrapper {
+  max-width: 179px;
+  padding-right: 10px;
+}
+
 .directions-item__info {
   position: relative;
 
@@ -79,13 +84,18 @@
 
   .directions-item__info {
     width: 432px;
-    height: 140px;
+    min-height: 140px;
 
     margin-top: 0;
   }
 
   .directions-item__img {
     width: 186px;
-    height: 140px;
+    min-height: 140px;
+  }
+
+  .directions-item__text-wrapper {
+    max-width: none;
+    padding-right: 10px;
   }
 }

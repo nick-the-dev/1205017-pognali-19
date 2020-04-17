@@ -2,6 +2,13 @@
   background-color: #192144;
 }
 
+.steps__container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 .steps__list {
   position: relative;
   top: -78px;
@@ -26,22 +33,19 @@
   border-radius: 10px;
 
   &--step1 {
-    height: 160px;
-    margin-bottom: -82px;
+    margin-bottom: -17px;
 
     background-color: #ff8d30;
   }
 
   &--step2 {
-    height: 160px;
-    margin-bottom: -82px;
+    margin-bottom: -17px;
 
     background-color: #ffa530;
   }
 
   &--step3 {
-    height: 146px;
-    margin-bottom: -66px;
+    margin-bottom: -17px;
 
     background-color: #ffbd30;
   }
@@ -53,9 +57,19 @@
 
 .steps__item-text {
   max-width: 149px;
+
+  &--step1,
+  &--step2,
+  &--step3 {
+    padding-bottom: 16px;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .steps__container {
+    max-width: 768px;
+  }
+
   .steps__item {
     margin-bottom: 0;
     padding-left: 31px;
@@ -66,14 +80,12 @@
 
     &--step1 {
       width: 369px;
-      height: 140px;
 
       border-radius: 20px 0 0 0;
     }
 
     &--step2 {
       width: 344px;
-      height: 140px;
       margin-left: -25px;
 
       border-radius: 20px 20px 0 0;
@@ -81,14 +93,12 @@
 
     &--step3 {
       width: 369px;
-      height: 140px;
 
       border-radius: 0 0 0 20px;
     }
 
     &--step4 {
       width: 344px;
-      height: 140px;
       margin-left: -25px;
 
       border-radius: 0 0 20px 20px;
@@ -106,10 +116,20 @@
 
   .steps__item-text {
     max-width: 198px;
+
+    &--step1,
+    &--step2,
+    &--step3 {
+      padding-bottom: 39px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .steps__container {
+    max-width: 1440px;
+  }
+
   .steps__list {
     max-width: none;
   }

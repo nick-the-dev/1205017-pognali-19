@@ -1,14 +1,18 @@
 .about-service {
-  padding-top: 33px;
-  padding-left: 50px;
-  padding-right: 63px;
-  padding-bottom: 50px;
-
   background-color: #192144;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
 
   border-radius: 0 0 30px 30px;
+}
+
+.about-service__container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding-top: 33px;
+  padding-left: 50px;
+  padding-right: 63px;
+  padding-bottom: 50px;
 }
 
 .about-service__heading {
@@ -56,6 +60,10 @@
     border-radius: 0 0 60px 60px;
   }
 
+  .about-service__container {
+    max-width: 768px;
+  }
+
   .about-service__btn {
     display: block;
   }
@@ -74,5 +82,15 @@
       font-size: 21px;
       line-height: 25px;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-service__container {
+    max-width: 1440px;
+  }
+
+  .about-service__text {
+    width: 609px;
   }
 }

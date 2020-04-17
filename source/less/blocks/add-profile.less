@@ -1,11 +1,15 @@
 .add-profile {
+  background-color: #edeff6;
+  border-radius: 0 0 30px 30px;
+}
+
+.add-profile__container {
+  max-width: 320px;
+  margin: 0 auto;
   padding-top: 67px;
   padding-bottom: 38px;
   padding-right: 26px;
   padding-left: 50px;
-
-  background-color: #edeff6;
-  border-radius: 0 0 30px 30px;
 }
 
 .add-profile__heading-wrapper {
@@ -37,6 +41,11 @@
 }
 
 @media (min-width: @tablet-width) {
+
+  .add-profile__container {
+    max-width: 768px;
+  }
+
   .add-profile__heading-wrapper {
     justify-content: center;
   }
@@ -58,8 +67,13 @@
 }
 
 @media (min-width: @desktop-width) {
-  .add-profile {
+  .add-profile__container {
+    max-width: 1440px;
     padding-left: 131px;
     padding-right: 131px;
+  }
+
+  .add-profile__img {
+    bottom: 150px;
   }
 }

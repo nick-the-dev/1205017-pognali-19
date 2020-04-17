@@ -46,8 +46,10 @@
 
     <main class="site-main site-main--catalog">
       <div class="site-main__heading-wrapper site-main__heading-wrapper--catalog">
-        <h1 class="site-main__heading site-main__heading--catalog">Попутчики</h1>
-        <span class="site-main__home-link">На главную</span>
+        <div class="site-main__heading-container site-main__heading-container--catalog">
+          <h1 class="site-main__heading site-main__heading--catalog">Попутчики</h1>
+          <span class="site-main__home-link">На главную</span>
+        </div>
       </div>
 
       <section class="site-main__countries-filter countries-filter">
@@ -241,229 +243,231 @@
         </section>
 
         <section class="site-main__travelers catalog">
-          <ul class="catalog__list catalog-list">
-            <li class="catalog-list__item catalog-item">
-              <div class="catalog-item__heading-wrapper">
-                <div class="catalog-item__img-wrapper">
-                  <img class="catalog-item__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото: Таня Фирсова">
-                </div>
-                <div class="catalog-item__name-wrapper">
-                  <h2 class="catalog-item__name">Таня Фирсова</h2>
-                  <div class="catalog-item__likes-wrapper">
-                    <button class="catalog-item__likes-heart catalog-item__likes-heart--active" type="button"></button>
-                    <p class="catalog-item__likes-count">1,5 М</p>
+          <div class="catalog__container">
+            <ul class="catalog__list catalog-list">
+              <li class="catalog-list__item catalog-item">
+                <div class="catalog-item__heading-wrapper">
+                  <div class="catalog-item__img-wrapper">
+                    <img class="catalog-item__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото: Таня Фирсова">
                   </div>
-                </div>
-                <div class="catalog-item__status"></div>
-              </div>
-              <ul class="catalog-item__tags companion-tags companion-tags--catalog">
-                <li class="companion-tags__item companion-tags__item--catalog">ЗОЖ</li>
-                <li class="companion-tags__item companion-tags__item--catalog">ПП</li>
-                <li class="companion-tags__item companion-tags__item--catalog">Фитнес</li>
-                <li class="companion-tags__item companion-tags__item--catalog">пляж</li>
-                <li class="companion-tags__item companion-tags__item--catalog">авокадо</li>
-                <li class="companion-tags__item companion-tags__item--catalog">смузи</li>
-              </ul>
-              <span class="catalog-item__countries-heading">Хочет посетить:</span>
-              <ul class="catalog-item__countries person-countries">
-                <li class="person-countries__item person-countries__item---sri-lanka">Шри-Ланка</li>
-                <li class="person-countries__item person-countries__item---thailand">Таиланд</li>
-                <li class="person-countries__item person-countries__item---seychelles">Сейшелы</li>
-              </ul>
-              <div class="catalog-item__skills">
-                <div class="catalog-item__transport">
-                  <span class="catalog-item__transport-heading">Транспорт:</span>
-                  <ul class="catalog-item__transport-list person-transport">
-                    <li class="person-transport__item person-transport__item--plane person-transport__item--active">Самолет</li>
-                    <li class="person-transport__item person-transport__item--bus">Автобус</li>
-                    <li class="person-transport__item person-transport__item--bicycle">Велосипед</li>
-                    <li class="person-transport__item person-transport__item--legs">Ноги</li>
-                  </ul>
-                </div>
-                <div class="catalog-item__level">
-                  <span class="catalog-item__level-heading">Левел:</span>
-                  <div class="catalog-item__level-circle level">
-                    <div class="level__text">
-                      <span class="level__value level__value--catalog">99</span>
+                  <div class="catalog-item__name-wrapper">
+                    <h2 class="catalog-item__name">Таня Фирсова</h2>
+                    <div class="catalog-item__likes-wrapper">
+                      <button class="catalog-item__likes-heart catalog-item__likes-heart--active" type="button"></button>
+                      <p class="catalog-item__likes-count">1,5 М</p>
                     </div>
-                    <svg class="level__visual">
-                      <circle class="level__progress" cx="57" cy="57" r="23"></circle>
-                    </svg>
                   </div>
+                  <div class="catalog-item__status"></div>
                 </div>
-              </div>
-              <a class="catalog-item__btn" href="#">Позвать!</a>
-            </li>
-            <li class="catalog-list__item catalog-item">
-              <div class="catalog-item__heading-wrapper">
-                <div class="catalog-item__img-wrapper">
-                  <img class="catalog-item__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото: Петя Демин">
-                </div>
-                <div class="catalog-item__name-wrapper">
-                  <h2 class="catalog-item__name">Петя Демин</h2>
-                  <div class="catalog-item__likes-wrapper">
-                    <button class="catalog-item__likes-heart" type="button"></button>
-                    <p class="catalog-item__likes-count">1500</p>
+                <ul class="catalog-item__tags companion-tags companion-tags--catalog">
+                  <li class="companion-tags__item companion-tags__item--catalog">ЗОЖ</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">ПП</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">Фитнес</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">пляж</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">авокадо</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">смузи</li>
+                </ul>
+                <span class="catalog-item__countries-heading">Хочет посетить:</span>
+                <ul class="catalog-item__countries person-countries">
+                  <li class="person-countries__item person-countries__item---sri-lanka">Шри-Ланка</li>
+                  <li class="person-countries__item person-countries__item---thailand">Таиланд</li>
+                  <li class="person-countries__item person-countries__item---seychelles">Сейшелы</li>
+                </ul>
+                <div class="catalog-item__skills">
+                  <div class="catalog-item__transport">
+                    <span class="catalog-item__transport-heading">Транспорт:</span>
+                    <ul class="catalog-item__transport-list person-transport">
+                      <li class="person-transport__item person-transport__item--plane person-transport__item--active">Самолет</li>
+                      <li class="person-transport__item person-transport__item--bus">Автобус</li>
+                      <li class="person-transport__item person-transport__item--bicycle">Велосипед</li>
+                      <li class="person-transport__item person-transport__item--legs">Ноги</li>
+                    </ul>
                   </div>
-                </div>
-                <div class="catalog-item__status"></div>
-              </div>
-              <ul class="catalog-item__tags companion-tags companion-tags--catalog">
-                <li class="companion-tags__item companion-tags__item--catalog">бургер</li>
-                <li class="companion-tags__item companion-tags__item--catalog">бар</li>
-                <li class="companion-tags__item companion-tags__item--catalog">футбол</li>
-                <li class="companion-tags__item companion-tags__item--catalog">концерт</li>
-                <li class="companion-tags__item companion-tags__item--catalog">крафт</li>
-              </ul>
-              <span class="catalog-item__countries-heading">Хочет посетить:</span>
-              <ul class="catalog-item__countries person-countries">
-                <li class="person-countries__item person-countries__item---belgium">Бельгия</li>
-                <li class="person-countries__item person-countries__item---czech">Чехия</li>
-              </ul>
-              <div class="catalog-item__skills">
-                <div class="catalog-item__transport">
-                  <span class="catalog-item__transport-heading">Транспорт:</span>
-                  <ul class="catalog-item__transport-list person-transport">
-                    <li class="person-transport__item person-transport__item--plane person-transport__item--active">Самолет</li>
-                    <li class="person-transport__item person-transport__item--bus person-transport__item--active">Автобус</li>
-                    <li class="person-transport__item person-transport__item--bicycle">Велосипед</li>
-                    <li class="person-transport__item person-transport__item--legs person-transport__item--active">Ноги</li>
-                  </ul>
-                </div>
-                <div class="catalog-item__level">
-                  <span class="catalog-item__level-heading">Левел:</span>
-                  <div class="catalog-item__level-circle level">
-                    <div class="level__text">
-                      <span class="level__value level__value--catalog">80</span>
+                  <div class="catalog-item__level">
+                    <span class="catalog-item__level-heading">Левел:</span>
+                    <div class="catalog-item__level-circle level">
+                      <div class="level__text">
+                        <span class="level__value level__value--catalog">99</span>
+                      </div>
+                      <svg class="level__visual">
+                        <circle class="level__progress" cx="57" cy="57" r="23"></circle>
+                      </svg>
                     </div>
-                    <svg class="level__visual">
-                      <circle class="level__progress" cx="57" cy="57" r="23"></circle>
-                    </svg>
                   </div>
                 </div>
-              </div>
-              <a class="catalog-item__btn" href="#">Позвать!</a>
-            </li>
-            <li class="catalog-list__item catalog-item">
-              <div class="catalog-item__heading-wrapper">
-                <div class="catalog-item__img-wrapper">
-                  <img class="catalog-item__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото: Марк Смолов">
-                </div>
-                <div class="catalog-item__name-wrapper">
-                  <h2 class="catalog-item__name">Марк Смолов</h2>
-                  <div class="catalog-item__likes-wrapper">
-                    <button class="catalog-item__likes-heart" type="button"></button>
-                    <p class="catalog-item__likes-count">170</p>
-                  </div>
-                </div>
-                <div class="catalog-item__status"></div>
-              </div>
-              <ul class="catalog-item__tags companion-tags companion-tags--catalog">
-                <li class="companion-tags__item companion-tags__item--catalog">рэп</li>
-                <li class="companion-tags__item companion-tags__item--catalog">татк</li>
-                <li class="companion-tags__item companion-tags__item--catalog">хайпбист</li>
-                <li class="companion-tags__item companion-tags__item--catalog">кроссовки</li>
-                <li class="companion-tags__item companion-tags__item--catalog">суприм</li>
-              </ul>
-              <span class="catalog-item__countries-heading">Хочет посетить:</span>
-              <ul class="catalog-item__countries person-countries">
-                <li class="person-countries__item person-countries__item---usa">Сша</li>
-                <li class="person-countries__item person-countries__item---australia">Австралия</li>
-                <li class="person-countries__item person-countries__item---dominica">Доминика</li>
-              </ul>
-              <div class="catalog-item__skills">
-                <div class="catalog-item__transport">
-                  <span class="catalog-item__transport-heading">Транспорт:</span>
-                  <ul class="catalog-item__transport-list person-transport">
-                    <li class="person-transport__item person-transport__item--plane person-transport__item--active">Самолет</li>
-                    <li class="person-transport__item person-transport__item--bus">Автобус</li>
-                    <li class="person-transport__item person-transport__item--bicycle person-transport__item--active">Велосипед</li>
-                    <li class="person-transport__item person-transport__item--legs">Ноги</li>
-                  </ul>
-                </div>
-                <div class="catalog-item__level">
-                  <span class="catalog-item__level-heading">Левел:</span>
-                  <div class="catalog-item__level-circle level">
-                    <div class="level__text">
-                      <span class="level__value level__value--catalog">99</span>
-                    </div>
-                    <svg class="level__visual">
-                      <circle class="level__progress" cx="57" cy="57" r="23"></circle>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <a class="catalog-item__btn" href="#">Позвать!</a>
-            </li>
-            <li class="catalog-list__item catalog-item">
-              <div class="catalog-item__heading-wrapper">
-                <div class="catalog-item__img-wrapper">
-                  <img class="catalog-item__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото: Лариса Роговая">
-                </div>
-                <div class="catalog-item__name-wrapper">
-                  <h2 class="catalog-item__name">Лариса Роговая</h2>
-                  <div class="catalog-item__likes-wrapper">
-                    <button class="catalog-item__likes-heart" type="button"></button>
-                    <p class="catalog-item__likes-count">25</p>
-                  </div>
-                </div>
-                <div class="catalog-item__status catalog-item__status--active"></div>
-              </div>
-              <ul class="catalog-item__tags companion-tags companion-tags--catalog">
-                <li class="companion-tags__item companion-tags__item--catalog">образование</li>
-                <li class="companion-tags__item companion-tags__item--catalog">карьера</li>
-                <li class="companion-tags__item companion-tags__item--catalog">учеба</li>
-                <li class="companion-tags__item companion-tags__item--catalog">линкедин</li>
-              </ul>
-              <span class="catalog-item__countries-heading">Хочет посетить:</span>
-              <ul class="catalog-item__countries person-countries">
-                <li class="person-countries__item person-countries__item---uk">Великобритания</li>
-                <li class="person-countries__item person-countries__item---germany">Германия</li>
-              </ul>
-              <div class="catalog-item__skills">
-                <div class="catalog-item__transport">
-                  <span class="catalog-item__transport-heading">Транспорт:</span>
-                  <ul class="catalog-item__transport-list person-transport">
-                    <li class="person-transport__item person-transport__item--plane person-transport__item--active">Самолет</li>
-                    <li class="person-transport__item person-transport__item--bus person-transport__item--active">Автобус</li>
-                    <li class="person-transport__item person-transport__item--bicycle">Велосипед</li>
-                    <li class="person-transport__item person-transport__item--legs">Ноги</li>
-                  </ul>
-                </div>
-                <div class="catalog-item__level">
-                  <span class="catalog-item__level-heading">Левел:</span>
-                  <div class="catalog-item__level-circle level">
-                    <div class="level__text">
-                      <span class="level__value level__value--catalog">99</span>
-                    </div>
-                    <svg class="level__visual">
-                      <circle class="level__progress" cx="57" cy="57" r="23"></circle>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <a class="catalog-item__btn" href="#">Позвать!</a>
-            </li>
-          </ul>
-          <a class="catalog__show-more" href="#">Показать еще</a>
-          <div class="catalog__nav">
-            <ul class="catalog__pagination">
-              <li class="catalog__pagination-item">
-                <a class="catalog__pagination-link" href="#">1</a>
+                <a class="catalog-item__btn" href="#">Позвать!</a>
               </li>
-              <li class="catalog__pagination-item">
-                <a class="catalog__pagination-link" href="#">2</a>
+              <li class="catalog-list__item catalog-item">
+                <div class="catalog-item__heading-wrapper">
+                  <div class="catalog-item__img-wrapper">
+                    <img class="catalog-item__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото: Петя Демин">
+                  </div>
+                  <div class="catalog-item__name-wrapper">
+                    <h2 class="catalog-item__name">Петя Демин</h2>
+                    <div class="catalog-item__likes-wrapper">
+                      <button class="catalog-item__likes-heart" type="button"></button>
+                      <p class="catalog-item__likes-count">1500</p>
+                    </div>
+                  </div>
+                  <div class="catalog-item__status"></div>
+                </div>
+                <ul class="catalog-item__tags companion-tags companion-tags--catalog">
+                  <li class="companion-tags__item companion-tags__item--catalog">бургер</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">бар</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">футбол</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">концерт</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">крафт</li>
+                </ul>
+                <span class="catalog-item__countries-heading">Хочет посетить:</span>
+                <ul class="catalog-item__countries person-countries">
+                  <li class="person-countries__item person-countries__item---belgium">Бельгия</li>
+                  <li class="person-countries__item person-countries__item---czech">Чехия</li>
+                </ul>
+                <div class="catalog-item__skills">
+                  <div class="catalog-item__transport">
+                    <span class="catalog-item__transport-heading">Транспорт:</span>
+                    <ul class="catalog-item__transport-list person-transport">
+                      <li class="person-transport__item person-transport__item--plane person-transport__item--active">Самолет</li>
+                      <li class="person-transport__item person-transport__item--bus person-transport__item--active">Автобус</li>
+                      <li class="person-transport__item person-transport__item--bicycle">Велосипед</li>
+                      <li class="person-transport__item person-transport__item--legs person-transport__item--active">Ноги</li>
+                    </ul>
+                  </div>
+                  <div class="catalog-item__level">
+                    <span class="catalog-item__level-heading">Левел:</span>
+                    <div class="catalog-item__level-circle level">
+                      <div class="level__text">
+                        <span class="level__value level__value--catalog">80</span>
+                      </div>
+                      <svg class="level__visual">
+                        <circle class="level__progress" cx="57" cy="57" r="23"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <a class="catalog-item__btn" href="#">Позвать!</a>
               </li>
-              <li class="catalog__pagination-item">
-                <a class="catalog__pagination-link" href="#">3</a>
+              <li class="catalog-list__item catalog-item">
+                <div class="catalog-item__heading-wrapper">
+                  <div class="catalog-item__img-wrapper">
+                    <img class="catalog-item__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото: Марк Смолов">
+                  </div>
+                  <div class="catalog-item__name-wrapper">
+                    <h2 class="catalog-item__name">Марк Смолов</h2>
+                    <div class="catalog-item__likes-wrapper">
+                      <button class="catalog-item__likes-heart" type="button"></button>
+                      <p class="catalog-item__likes-count">170</p>
+                    </div>
+                  </div>
+                  <div class="catalog-item__status"></div>
+                </div>
+                <ul class="catalog-item__tags companion-tags companion-tags--catalog">
+                  <li class="companion-tags__item companion-tags__item--catalog">рэп</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">татк</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">хайпбист</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">кроссовки</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">суприм</li>
+                </ul>
+                <span class="catalog-item__countries-heading">Хочет посетить:</span>
+                <ul class="catalog-item__countries person-countries">
+                  <li class="person-countries__item person-countries__item---usa">Сша</li>
+                  <li class="person-countries__item person-countries__item---australia">Австралия</li>
+                  <li class="person-countries__item person-countries__item---dominica">Доминика</li>
+                </ul>
+                <div class="catalog-item__skills">
+                  <div class="catalog-item__transport">
+                    <span class="catalog-item__transport-heading">Транспорт:</span>
+                    <ul class="catalog-item__transport-list person-transport">
+                      <li class="person-transport__item person-transport__item--plane person-transport__item--active">Самолет</li>
+                      <li class="person-transport__item person-transport__item--bus">Автобус</li>
+                      <li class="person-transport__item person-transport__item--bicycle person-transport__item--active">Велосипед</li>
+                      <li class="person-transport__item person-transport__item--legs">Ноги</li>
+                    </ul>
+                  </div>
+                  <div class="catalog-item__level">
+                    <span class="catalog-item__level-heading">Левел:</span>
+                    <div class="catalog-item__level-circle level">
+                      <div class="level__text">
+                        <span class="level__value level__value--catalog">99</span>
+                      </div>
+                      <svg class="level__visual">
+                        <circle class="level__progress" cx="57" cy="57" r="23"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <a class="catalog-item__btn" href="#">Позвать!</a>
               </li>
-              <li class="catalog__pagination-item">
-                <a class="catalog__pagination-link" href="#">4</a>
+              <li class="catalog-list__item catalog-item">
+                <div class="catalog-item__heading-wrapper">
+                  <div class="catalog-item__img-wrapper">
+                    <img class="catalog-item__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото: Лариса Роговая">
+                  </div>
+                  <div class="catalog-item__name-wrapper">
+                    <h2 class="catalog-item__name">Лариса Роговая</h2>
+                    <div class="catalog-item__likes-wrapper">
+                      <button class="catalog-item__likes-heart" type="button"></button>
+                      <p class="catalog-item__likes-count">25</p>
+                    </div>
+                  </div>
+                  <div class="catalog-item__status catalog-item__status--active"></div>
+                </div>
+                <ul class="catalog-item__tags companion-tags companion-tags--catalog">
+                  <li class="companion-tags__item companion-tags__item--catalog">образование</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">карьера</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">учеба</li>
+                  <li class="companion-tags__item companion-tags__item--catalog">линкедин</li>
+                </ul>
+                <span class="catalog-item__countries-heading">Хочет посетить:</span>
+                <ul class="catalog-item__countries person-countries">
+                  <li class="person-countries__item person-countries__item---uk">Великобритания</li>
+                  <li class="person-countries__item person-countries__item---germany">Германия</li>
+                </ul>
+                <div class="catalog-item__skills">
+                  <div class="catalog-item__transport">
+                    <span class="catalog-item__transport-heading">Транспорт:</span>
+                    <ul class="catalog-item__transport-list person-transport">
+                      <li class="person-transport__item person-transport__item--plane person-transport__item--active">Самолет</li>
+                      <li class="person-transport__item person-transport__item--bus person-transport__item--active">Автобус</li>
+                      <li class="person-transport__item person-transport__item--bicycle">Велосипед</li>
+                      <li class="person-transport__item person-transport__item--legs">Ноги</li>
+                    </ul>
+                  </div>
+                  <div class="catalog-item__level">
+                    <span class="catalog-item__level-heading">Левел:</span>
+                    <div class="catalog-item__level-circle level">
+                      <div class="level__text">
+                        <span class="level__value level__value--catalog">99</span>
+                      </div>
+                      <svg class="level__visual">
+                        <circle class="level__progress" cx="57" cy="57" r="23"></circle>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <a class="catalog-item__btn" href="#">Позвать!</a>
               </li>
             </ul>
-            <div class="catalog__nav-buttons">
-              <a class="catalog__nav-btn catalog__nav-btn--prev" href="#"><img class="catalog__nav-img" src="../img/triangle-arrow-left.svg" width="10" height="20" alt="Назад"></a>
-              <a class="catalog__nav-btn catalog__nav-btn--next" href="#"><img class="catalog__nav-img" src="../img/triangle-arrow-right.svg" width="10" height="20" alt="Вперед"></a>
+            <a class="catalog__show-more" href="#">Показать еще</a>
+            <div class="catalog__nav">
+              <ul class="catalog__pagination">
+                <li class="catalog__pagination-item">
+                  <a class="catalog__pagination-link" href="#">1</a>
+                </li>
+                <li class="catalog__pagination-item">
+                  <a class="catalog__pagination-link" href="#">2</a>
+                </li>
+                <li class="catalog__pagination-item">
+                  <a class="catalog__pagination-link" href="#">3</a>
+                </li>
+                <li class="catalog__pagination-item">
+                  <a class="catalog__pagination-link" href="#">4</a>
+                </li>
+              </ul>
+              <div class="catalog__nav-buttons">
+                <a class="catalog__nav-btn catalog__nav-btn--prev" href="#"><img class="catalog__nav-img" src="../img/triangle-arrow-left.svg" width="10" height="20" alt="Назад"></a>
+                <a class="catalog__nav-btn catalog__nav-btn--next" href="#"><img class="catalog__nav-img" src="../img/triangle-arrow-right.svg" width="10" height="20" alt="Вперед"></a>
+              </div>
             </div>
           </div>
         </section>

@@ -9,10 +9,12 @@
 .profile-price__wrapper {
   display: flex;
   flex-direction: column;
+  max-width: 210px;
 }
 
 .profile-price__text {
   margin: 0;
+  padding-right: 20px;
 
   font-weight: 300;
   font-size: 16px;
@@ -62,6 +64,7 @@
   .profile-price__wrapper {
     flex-direction: row;
     justify-content: space-between;
+    max-width: none;
     width: 596px;
 
     order: 2;
@@ -75,5 +78,15 @@
     display: flex;
     justify-content: center;
     width: 198px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .profile-price__wrapper {
+    width: 95%;
+  }
+
+  .profile-price__text {
+    width: 500px;
   }
 }
