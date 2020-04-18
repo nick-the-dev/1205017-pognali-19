@@ -47,3 +47,27 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@media (min-width: @tablet-width) {
+  .socials {
+    justify-content: left;
+  }
+
+  .socials__facebook {
+    background-size: 14px 28px;
+  }
+
+  .socials__vk {
+    background-size: 31px 16px;
+  }
+
+  .socials__instagram {
+    background-size: 24px 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .socials--main-nav {
+    display: none;
+  }
+}

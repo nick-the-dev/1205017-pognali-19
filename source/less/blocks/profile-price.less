@@ -2,10 +2,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding-bottom: 20px;
+}
+
+.profile-price__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 210px;
 }
 
 .profile-price__text {
-  max-width: 181px;
+  margin: 0;
+  padding-right: 20px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: @site-font-family;
+  color: #444444;
+}
+
+.profile-price__value {
+  margin: 0;
 
   font-weight: 300;
   font-size: 16px;
@@ -38,5 +57,36 @@
 
   &--third {
     background-color: #ffd74b;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .profile-price__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: none;
+    width: 596px;
+
+    order: 2;
+  }
+
+  .profile-price__text {
+    width: 398px;
+  }
+
+  .profile-price__value {
+    display: flex;
+    justify-content: center;
+    width: 198px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .profile-price__wrapper {
+    width: 95%;
+  }
+
+  .profile-price__text {
+    width: 500px;
   }
 }

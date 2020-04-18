@@ -4,8 +4,44 @@
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 27px;
+  padding-bottom: 20px;
 
-  background-color: #161c36;
-  background-image: url("../img/globe-back-mobile@1x.jpg");
+  &--catalog {
+    background-color: #161c36;
+  }
+
+  &--form {
+    background-color: #161c36;
+  }
 }
 
+.site-header__logo {
+  z-index: 10;
+}
+
+@media (min-width: @tablet-width) {
+  .site-header {
+    align-items: center;
+    padding-right: 48%;
+    padding-left: 40px;
+    padding-top: 43px;
+  }
+
+  .site-header__logo {
+    width: 166px;
+    height: 42px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-header__logo {
+    width: 200px;
+    height: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-header {
+    padding-right: 16%;
+  }
+}

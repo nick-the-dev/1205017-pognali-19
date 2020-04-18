@@ -1,22 +1,23 @@
 .about-service {
+  background-color: #192144;
+  border-radius: 0 0 30px 30px;
+}
+
+.about-service__container {
+  max-width: 320px;
+  margin: 0 auto;
   padding-top: 33px;
   padding-left: 50px;
   padding-right: 63px;
   padding-bottom: 50px;
 
-  background-color: #192144;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
-
-  border-radius: 0 0 30px 30px;
-
-  &--highlighted {
-    font-weight: 600;
-  }
+  background-position: center;
 }
 
 .about-service__heading {
-  .hompage-heading();
+  .homepage-heading();
 }
 
 .about-service__text {
@@ -25,4 +26,82 @@
   line-height: 22px;
   font-family: @site-font-family;
   color: #ffffff;
+
+  &--highlighted {
+    font-weight: 600;
+  }
+}
+
+.about-service__btn {
+  display: none;
+  width: 274px;
+  margin-top: 25px;
+  margin-right: 25px;
+  padding-top: 30px;
+  padding-bottom: 28px;
+  padding-left: 34px;
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: @site-font-family;
+  color: #1d2e5b;
+
+  background-color: #ffd74b;
+  border-radius: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .about-service {
+    padding-bottom: 88px;
+
+    border-radius: 0 0 60px 60px;
+  }
+
+  .about-service__container {
+    max-width: 768px;
+    padding-left: 76px;
+
+    background-image: url("../img/about-tablet@1x.png");
+    background-position: 107% 1%;
+  }
+
+  .about-service__btn {
+    display: block;
+  }
+
+  .about-service__heading {
+    .homepage-heading--tablet();
+  }
+
+  .about-service__text {
+    width: 300px;
+
+    font-size: 28px;
+    line-height: 33px;
+
+    &--highlighted {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-service__container {
+    max-width: 1440px;
+    padding-bottom: 255px;
+
+    background-image: url("../img/about-desktop@1x.png");
+    background-size: 630px 665px;
+    background-position: 92% 100%;
+  }
+
+  .about-service {
+    padding-bottom: 0;
+  }
+
+  .about-service__text {
+    width: 609px;
+  }
 }

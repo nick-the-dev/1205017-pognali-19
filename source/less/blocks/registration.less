@@ -3,8 +3,13 @@
   border-radius: 0 0 30px 30px;
 }
 
+.registration__container {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
 .registration__heading {
-  .hompage-heading();
+  .homepage-heading();
 
   padding-top: 129px;
 
@@ -82,4 +87,10 @@
 .registration__contacts {
   margin-left: 86px;
   padding-bottom: 45px;
+}
+
+@media (min-width: @tablet-width) {
+  .registration__container {
+    max-width: 768px;
+  }
 }
