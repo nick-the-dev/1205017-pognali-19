@@ -1,8 +1,5 @@
 .about-service {
   background-color: #192144;
-  background-image: url("../img/about-mobile@1x.png");
-  background-repeat: no-repeat;
-
   border-radius: 0 0 30px 30px;
 }
 
@@ -13,6 +10,10 @@
   padding-left: 50px;
   padding-right: 63px;
   padding-bottom: 50px;
+
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .about-service__heading {
@@ -52,16 +53,17 @@
 
 @media (min-width: @tablet-width) {
   .about-service {
-    padding-left: 76px;
     padding-bottom: 88px;
 
-    background-image: url("../img/about-tablet@1x.png");
-    background-position: 107% 1%;
     border-radius: 0 0 60px 60px;
   }
 
   .about-service__container {
     max-width: 768px;
+    padding-left: 76px;
+
+    background-image: url("../img/about-tablet@1x.png");
+    background-position: 107% 1%;
   }
 
   .about-service__btn {
@@ -88,6 +90,15 @@
 @media (min-width: @desktop-width) {
   .about-service__container {
     max-width: 1440px;
+    padding-bottom: 255px;
+
+    background-image: url("../img/about-desktop@1x.png");
+    background-size: 630px 665px;
+    background-position: 92% 100%;
+  }
+
+  .about-service {
+    padding-bottom: 0;
   }
 
   .about-service__text {

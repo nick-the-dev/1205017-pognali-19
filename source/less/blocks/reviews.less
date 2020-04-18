@@ -6,9 +6,9 @@
 }
 
 .reviews__container {
-  width: 320px;
+  max-width: 320px;
   margin: 0 auto;
-  padding-left: 50px;
+  padding-right: 68px;
   padding-top: 50px;
   padding-bottom: 113px;
 }
@@ -48,6 +48,14 @@
     background-color: transparent;
   }
 
+  .reviews__container {
+    position: relative;
+    top: -550px;
+    left: -321px;
+
+    max-width: 768px;
+  }
+
   .reviews__text {
     font-size: 28px;
     line-height: 33px;
@@ -60,5 +68,20 @@
 
   .reviews__list {
     width: 259px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    width: 100%;
+  }
+
+  .reviews__container {
+    top: -731px;
+    left: auto;
+    right: -530px;
+
+    max-width: 1440px;
+    padding: 0;
   }
 }
