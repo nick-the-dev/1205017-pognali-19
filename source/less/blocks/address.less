@@ -1,4 +1,6 @@
 .address__container {
+  display: flex;
+  flex-direction: column;
   max-width: 320px;
   margin: 0 auto;
 }
@@ -59,5 +61,25 @@
 @media (min-width: @tablet-width) {
   .address__container {
     max-width: 768px;
+  }
+
+  .address__btn {
+    width: 618px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .address__container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .address__text {
+    margin: 0;
+  }
+
+  .address__btn {
+    width: 324px;
   }
 }

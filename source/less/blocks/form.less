@@ -48,7 +48,42 @@
 
 @media (min-width: @tablet-width) {
   .form__header-container {
+    position: relative;
+
     max-width: 768px;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  .form__img-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .form__img {
+    width: 94px;
+    height: 94px;
+
+    border-radius: 10px;
+  }
+
+  .form__transport {
+    position: absolute;
+    top: 22px;
+    left: 240px;
+  }
+
+  .form__change-img-btn {
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 12px;
+
+    border-radius: 10px;
+  }
+
+  .form__tags {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -60,7 +95,41 @@
   .form__img-wrapper {
     position: absolute;
     z-index: 2;
-    top: 161px;
+    top: -213px;
     right: 155px;
+
+    width: 330px;
+    align-items: center;
+  }
+
+  .form__img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .form__change-img-btn {
+    position: relative;
+    left: 1020px;
+    top: 0;
+
+    width: 190px;
+    margin: 0;
+  }
+
+  .form__transport-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 26px;
+  }
+
+  .form__transport {
+    position: static;
+
+    width: 384px;
+    margin-bottom: 19px;
+  }
+
+  .form__tags {
+    width: 730px;
   }
 }

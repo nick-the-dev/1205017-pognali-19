@@ -1,16 +1,17 @@
 .business-modal {
   position: absolute;
   top: 3690px;
+  left: 50%;
   z-index: 10;
 
   display: none;
-  width: calc(100% - 50px);
+  width: 270px;
   padding-top: 33px;
-  margin-left: 25px;
-  margin-right: 25px;
 
   background-color: #ffffff;
   border-radius: 20px;
+
+  transform: translateX(-50%);
 }
 
 .business-modal__heading {
@@ -19,9 +20,15 @@
   padding-left: 25px;
   padding-right: 25px;
   margin-bottom: 29px;
+
+  text-align: center;
 }
 
 .business-modal__prices {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
   margin-left: 25px;
   margin-right: 25px;
   max-width: 161px;
@@ -31,7 +38,7 @@
   width: 100%;
   padding-top: 19px;
   padding-bottom: 16px;
-  margin-top: 33px;
+  margin-top: 19px;
 
   font-weight: 600;
   font-size: 16px;
@@ -43,4 +50,46 @@
   background-color: #f3f4f8;
   border: 0;
   border-radius: 0 0 20px 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .business-modal {
+    top: 3566px;
+
+    width: 688px;
+    height: 562px;
+  }
+
+  .business-modal__heading {
+    margin-bottom: 45px;
+
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .business-modal__prices {
+    max-width: 505px;
+    margin: 0 auto;
+  }
+
+  .business-modal__btn {
+    position: absolute;
+    bottom: 0;
+
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    font-size: 24px;
+    text-transform: none;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .business-modal {
+    top: 2915px;
+
+    width: 750px;
+    height: 524px;
+  }
 }

@@ -53,193 +53,470 @@
       </div>
 
       <section class="site-main__countries-filter countries-filter">
-        <h2 class="countries-filter__heading">Фильтрация по странам</h2>
-        <div class="countries-filter__wrapper">
-          <ul class="countries-filter__continents continents">
-            <li class="continents__item continents__item--active">Европа</li>
-            <li class="continents__item">Азия</li>
-            <li class="continents__item">Америка</li>
-            <li class="continents__item">Острова</li>
-          </ul>
+        <div class="countries-filter__container">
+          <h2 class="countries-filter__heading">Фильтрация по странам</h2>
+          <div class="countries-filter__wrapper">
+            <div class="continents__wrapper">
+              <ul class="countries-filter__continents continents">
+                <li class="continents__item continents__item--active">Европа</li>
+                <li class="continents__item">Азия</li>
+                <li class="continents__item">Америка</li>
+                <li class="continents__item">Острова</li>
+              </ul>
+              <button class="countries-filter__toggle" type="button">
+                <span class="countries-filter__toggle-text">Свернуть</span>
+              </button>
+            </div>
 
-          <table class="countries-filter__letters letters">
-              <tr class="letters__row">
-                <td class="letters__cell letters__cell--active">а</td>
-                <td class="letters__cell">б</td>
-                <td class="letters__cell">в</td>
-                <td class="letters__cell">г</td>
-                <td class="letters__cell">д</td>
-              </tr>
-              <tr class="letters__row">
-                <td class="letters__cell">е</td>
-                <td class="letters__cell">з</td>
-                <td class="letters__cell">и</td>
-                <td class="letters__cell">к</td>
-                <td class="letters__cell">л</td>
-              </tr>
-              <tr class="letters__row">
-                <td class="letters__cell">м</td>
-                <td class="letters__cell">н</td>
-                <td class="letters__cell">о</td>
-                <td class="letters__cell">п</td>
-                <td class="letters__cell">р</td>
-              </tr>
-              <tr class="letters__row">
-                <td class="letters__cell">с</td>
-                <td class="letters__cell">т</td>
-                <td class="letters__cell">у</td>
-                <td class="letters__cell">ф</td>
-                <td class="letters__cell">х</td>
-              </tr>
-              <tr class="letters__row">
-                <td class="letters__cell">ч</td>
-                <td class="letters__cell">ш</td>
-                <td class="letters__cell">э</td>
-                <td class="letters__cell">ю</td>
-                <td class="letters__cell">я</td>
-              </tr>
-          </table>
+            <div class="countries-filter__countries-wrapper">
+              <table class="countries-filter__letters letters">
+                <tr class="letters__row">
+                  <td class="letters__cell letters__cell--active">
+                    а
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Австралия</li>
+                      <li class="letters__cell-country">Австрия</li>
+                      <li class="letters__cell-country">Азербайджан</li>
+                      <li class="letters__cell-country">Албания</li>
+                      <li class="letters__cell-country">Алжир</li>
+                      <li class="letters__cell-country">Ангола</li>
+                      <li class="letters__cell-country">Андорра</li>
+                      <li class="letters__cell-country">Антигуа и Барбуда</li>
+                      <li class="letters__cell-country">Аргентина</li>
+                      <li class="letters__cell-country">Армения</li>
+                      <li class="letters__cell-country">Афганистан</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    б
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Багамские Острова</li>
+                      <li class="letters__cell-country">Бангладеш</li>
+                      <li class="letters__cell-country">Барбадос</li>
+                      <li class="letters__cell-country">Бахрейн</li>
+                      <li class="letters__cell-country">Белоруссия</li>
+                      <li class="letters__cell-country">Белиз</li>
+                      <li class="letters__cell-country">Бельгия</li>
+                      <li class="letters__cell-country">Бенин</li>
+                      <li class="letters__cell-country">Болгария</li>
+                      <li class="letters__cell-country">Боливия</li>
+                      <li class="letters__cell-country">Босния и Герцеговина</li>
+                      <li class="letters__cell-country">Ботсвана</li>
+                      <li class="letters__cell-country">Бразилия</li>
+                      <li class="letters__cell-country">Бруней</li>
+                      <li class="letters__cell-country">Буркина-Фасо</li>
+                      <li class="letters__cell-country">Бурунди</li>
+                      <li class="letters__cell-country">Бутан</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    в
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Вануату</li>
+                      <li class="letters__cell-country">Великобритания</li>
+                      <li class="letters__cell-country">Венгрия</li>
+                      <li class="letters__cell-country">Венесуэла</li>
+                      <li class="letters__cell-country">Восточный Тимор</li>
+                      <li class="letters__cell-country">Вьетнам</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    г
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Габон</li>
+                      <li class="letters__cell-country">Гаити</li>
+                      <li class="letters__cell-country">Гайана</li>
+                      <li class="letters__cell-country">Гамбия</li>
+                      <li class="letters__cell-country">Гана</li>
+                      <li class="letters__cell-country">Гватемала</li>
+                      <li class="letters__cell-country">Гвинея</li>
+                      <li class="letters__cell-country">Гвинея-Бисау</li>
+                      <li class="letters__cell-country">Германия</li>
+                      <li class="letters__cell-country">Гондурас</li>
+                      <li class="letters__cell-country">Гренада</li>
+                      <li class="letters__cell-country">Греция</li>
+                      <li class="letters__cell-country">Грузия</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    д
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Дания</li>
+                      <li class="letters__cell-country">Джибути</li>
+                      <li class="letters__cell-country">Доминика</li>
+                      <li class="letters__cell-country">Доминикана</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="letters__row">
+                  <td class="letters__cell">
+                    е
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Египет</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    з
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Замбия</li>
+                      <li class="letters__cell-country">Зимбабве</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    и
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Израиль</li>
+                      <li class="letters__cell-country">Индия</li>
+                      <li class="letters__cell-country">Индонезия</li>
+                      <li class="letters__cell-country">Иордания</li>
+                      <li class="letters__cell-country">Ирак</li>
+                      <li class="letters__cell-country">Иран</li>
+                      <li class="letters__cell-country">Ирландия</li>
+                      <li class="letters__cell-country">Исландия</li>
+                      <li class="letters__cell-country">Испания</li>
+                      <li class="letters__cell-country">Италия</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    к
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Кабо-Верде</li>
+                      <li class="letters__cell-country">Казахстан</li>
+                      <li class="letters__cell-country">Камбоджа</li>
+                      <li class="letters__cell-country">Камерун</li>
+                      <li class="letters__cell-country">Канада</li>
+                      <li class="letters__cell-country">Катар</li>
+                      <li class="letters__cell-country">Кения</li>
+                      <li class="letters__cell-country">Кипр</li>
+                      <li class="letters__cell-country">Киргизия</li>
+                      <li class="letters__cell-country">Кирибати</li>
+                      <li class="letters__cell-country">Китай</li>
+                      <li class="letters__cell-country">Колумбия</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    л
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Лаос</li>
+                      <li class="letters__cell-country">Латвия</li>
+                      <li class="letters__cell-country">Лесото</li>
+                      <li class="letters__cell-country">Либерия</li>
+                      <li class="letters__cell-country">Ливан</li>
+                      <li class="letters__cell-country">Ливия</li>
+                      <li class="letters__cell-country">Литва</li>
+                      <li class="letters__cell-country">Лихтенштейн</li>
+                      <li class="letters__cell-country">Люксембург</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="letters__row">
+                  <td class="letters__cell">
+                    м
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Маврикий</li>
+                      <li class="letters__cell-country">Мавритания</li>
+                      <li class="letters__cell-country">Мадагаскар</li>
+                      <li class="letters__cell-country">Малави</li>
+                      <li class="letters__cell-country">Малайзия</li>
+                      <li class="letters__cell-country">Мали</li>
+                      <li class="letters__cell-country">Мальдивы</li>
+                      <li class="letters__cell-country">Мальта</li>
+                      <li class="letters__cell-country">Марокко</li>
+                      <li class="letters__cell-country">Мексика</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    н
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Намибия</li>
+                      <li class="letters__cell-country">Науру</li>
+                      <li class="letters__cell-country">Непал</li>
+                      <li class="letters__cell-country">Нигер</li>
+                      <li class="letters__cell-country">Нигерия</li>
+                      <li class="letters__cell-country">Нидерланды</li>
+                      <li class="letters__cell-country">Никарагуа</li>
+                      <li class="letters__cell-country">Новая Зеландия</li>
+                      <li class="letters__cell-country">Норвегия</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    о
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">ОАЭ</li>
+                      <li class="letters__cell-country">Оман</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    п
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Пакистан</li>
+                      <li class="letters__cell-country">Палау</li>
+                      <li class="letters__cell-country">Панама</li>
+                      <li class="letters__cell-country">Папуа — Новая Гвинея</li>
+                      <li class="letters__cell-country">Парагвай</li>
+                      <li class="letters__cell-country">Перу</li>
+                      <li class="letters__cell-country">Польша</li>
+                      <li class="letters__cell-country">Португалия</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    р
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Руанда</li>
+                      <li class="letters__cell-country">Румыния</li>
+                      <li class="letters__cell-country">Россия</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="letters__row">
+                  <td class="letters__cell">
+                    с
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Сальвадор</li>
+                      <li class="letters__cell-country">Самоа</li>
+                      <li class="letters__cell-country">Сан-Марино</li>
+                      <li class="letters__cell-country">Саудовская Аравия</li>
+                      <li class="letters__cell-country">Сейшелы</li>
+                      <li class="letters__cell-country">Сенегал</li>
+                      <li class="letters__cell-country">Сербия</li>
+                      <li class="letters__cell-country">Сингапур</li>
+                      <li class="letters__cell-country">Сирия</li>
+                      <li class="letters__cell-country">Словакия</li>
+                      <li class="letters__cell-country">Словения</li>
+                      <li class="letters__cell-country">США</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    т
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Таджикистан</li>
+                      <li class="letters__cell-country">Таиланд</li>
+                      <li class="letters__cell-country">Танзания</li>
+                      <li class="letters__cell-country">Того</li>
+                      <li class="letters__cell-country">Тонга</li>
+                      <li class="letters__cell-country">Тринидад и Тобаго</li>
+                      <li class="letters__cell-country">Тувалу</li>
+                      <li class="letters__cell-country">Тунис</li>
+                      <li class="letters__cell-country">Туркмения</li>
+                      <li class="letters__cell-country">Турция</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    у
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Уганда</li>
+                      <li class="letters__cell-country">Узбекистан</li>
+                      <li class="letters__cell-country">Украина</li>
+                      <li class="letters__cell-country">Уругвай</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    ф
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Фиджи</li>
+                      <li class="letters__cell-country">Филиппины</li>
+                      <li class="letters__cell-country">Финляндия</li>
+                      <li class="letters__cell-country">Франция</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    х
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Хорватия</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="letters__row">
+                  <td class="letters__cell">
+                    ч
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Чад</li>
+                      <li class="letters__cell-country">Черногория</li>
+                      <li class="letters__cell-country">Чехия</li>
+                      <li class="letters__cell-country">Чили</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    ш
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Швейцария</li>
+                      <li class="letters__cell-country">Швеция</li>
+                      <li class="letters__cell-country">Шри-Ланка</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    э
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Эквадор</li>
+                      <li class="letters__cell-country">Эритрея</li>
+                      <li class="letters__cell-country">Эсватини</li>
+                      <li class="letters__cell-country">Эстония</li>
+                      <li class="letters__cell-country">Эфиопия</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    ю
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">ЮАР</li>
+                      <li class="letters__cell-country">Южный Судан</li>
+                    </ul>
+                  </td>
+                  <td class="letters__cell">
+                    я
+                    <ul class="letters__cell-list">
+                      <li class="letters__cell-country">Ямайка</li>
+                      <li class="letters__cell-country">Япония</li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>
 
-          <ul class="countries-filter__countries countries">
-            <li class="countries__item"><a class="countries__item-link" href="/europe/australia">Австралия</a></li>
-            <li class="countries__item"><a class="countries__item-link" href="/europe/austria">Австрия</a></li>
-            <li class="countries__item"><a class="countries__item-link" href="/europe/azerbaijan">Азербайджан</a></li>
-            <li class="countries__item"><a class="countries__item-link" href="/europe/albania">Албания</a></li>
-            <li class="countries__item"><a class="countries__item-link" href="/europe/algeria">Алжир</a></li>
-            <li class="countries__item"><a class="countries__item-link" href="/europe/angola">Ангола</a></li>
-            <li class="countries__item"><a class="countries__item-link" href="/europe/andorra">Андорра</a></li>
-            <li class="countries__item"><a class="countries__item-link" href="/europe/antigua-barbuda">Антигуа и Барбуда</a></li>
-            <li class="countries__item"><a class="countries__item-link" href="/europe/argentina">Аргентина</a></li>
-            <li class="countries__item"><a class="countries__item-link" href="/europe/armenia">Армения</a></li>
-            <li class="countries__item"><a class="countries__item-link" href="/europe/afghanistan">Афганистан</a></li>
-          </ul>
-          <button class="countries-filter__btn" type="button">Свернуть</button>
+              <ul class="countries-filter__countries countries">
+                <li class="countries__item"><a class="countries__item-link" href="/europe/australia">Австралия</a></li>
+                <li class="countries__item"><a class="countries__item-link" href="/europe/austria">Австрия</a></li>
+                <li class="countries__item"><a class="countries__item-link" href="/europe/azerbaijan">Азербайджан</a></li>
+                <li class="countries__item"><a class="countries__item-link" href="/europe/albania">Албания</a></li>
+                <li class="countries__item"><a class="countries__item-link" href="/europe/algeria">Алжир</a></li>
+                <li class="countries__item"><a class="countries__item-link" href="/europe/angola">Ангола</a></li>
+                <li class="countries__item"><a class="countries__item-link" href="/europe/andorra">Андорра</a></li>
+                <li class="countries__item"><a class="countries__item-link" href="/europe/antigua-barbuda">Антигуа и Барбуда</a></li>
+                <li class="countries__item"><a class="countries__item-link" href="/europe/argentina">Аргентина</a></li>
+                <li class="countries__item"><a class="countries__item-link" href="/europe/armenia">Армения</a></li>
+                <li class="countries__item"><a class="countries__item-link" href="/europe/afghanistan">Афганистан</a></li>
+              </ul>
+            </div>
+
+            <button class="countries-filter__btn" type="button">Свернуть</button>
+          </div>
         </div>
+
       </section>
 
       <div class="site-main__travelers-wrapper">
         <section class="site-main__selection selection">
-          <h2 class="selection__heading">Подберите идеального попутчика</h2>
-          <form class="selection__form" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="selection__category selection__category--open">
-              <div class="selection__category-heading-wrapper">
-                <legend class="selection__category-heading">Хобби</legend>
-              </div>
-              <div class="selection__category-wrapper">
-                <ul class="selection__category-list category-list">
-                  <li class="category-list__item item-category">
-                    <input class="item-category__input check-input check-input--active" type="checkbox" name="hobby-gym" id="hobby-gym">
-                    <label class="item-category__label" for="hobby-gym">Спортзал</label>
-                  </li>
-                  <li class="category-list__item item-category">
-                    <input class="item-category__input check-input" type="checkbox" name="hobby-hookah" id="hobby-hookah">
-                    <label class="item-category__label" for="hobby-hookah">Кальян</label>
-                  </li>
-                  <li class="category-list__item item-category">
-                    <input class="item-category__input check-input" type="checkbox" name="hobby-sofa" id="hobby-sofa">
-                    <label class="item-category__label" for="hobby-sofa">Диван</label>
-                  </li>
-                </ul>
-              </div>
-            </fieldset>
+          <div class="selection__container">
+            <h2 class="selection__heading">Подберите идеального попутчика</h2>
+            <form class="selection__form" action="https://echo.htmlacademy.ru" method="get">
+              <fieldset class="selection__category selection__category--open">
+                <div class="selection__category-heading-wrapper">
+                  <legend class="selection__category-heading">Хобби</legend>
+                </div>
+                <div class="selection__category-wrapper">
+                  <ul class="selection__category-list category-list">
+                    <li class="category-list__item item-category">
+                      <input class="item-category__input check-input check-input--active" type="checkbox" name="hobby-gym" id="hobby-gym">
+                      <label class="item-category__label" for="hobby-gym">Спортзал</label>
+                    </li>
+                    <li class="category-list__item item-category">
+                      <input class="item-category__input check-input" type="checkbox" name="hobby-hookah" id="hobby-hookah">
+                      <label class="item-category__label" for="hobby-hookah">Кальян</label>
+                    </li>
+                    <li class="category-list__item item-category">
+                      <input class="item-category__input check-input" type="checkbox" name="hobby-sofa" id="hobby-sofa">
+                      <label class="item-category__label" for="hobby-sofa">Диван</label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
 
-            <fieldset class="selection__category selection__category--open">
-              <div class="selection__category-heading-wrapper">
-                <legend class="selection__category-heading">Музыка</legend>
-              </div>
-              <div class="selection__category-wrapper">
-                <ul class="selection__category-list category-list">
-                  <li class="category-list__item item-category">
-                    <input class="item-category__input check-input check-input--active" type="checkbox" name="music-hard-rock" id="music-hard-rock">
-                    <label class="item-category__label" for="music-hard-rock">Тяжелый рок</label>
-                  </li>
-                  <li class="category-list__item item-category">
-                    <input class="item-category__input check-input" type="checkbox" name="music-russian-rap" id="music-russian-rap">
-                    <label class="item-category__label" for="music-russian-rap">Русский рэп</label>
-                  </li>
-                  <li class="category-list__item item-category">
-                    <input class="item-category__input check-input" type="checkbox" name="music-euro-dance" id="music-euro-dance">
-                    <label class="item-category__label" for="music-euro-dance">Евроденс</label>
-                  </li>
-                </ul>
-              </div>
-            </fieldset>
+              <fieldset class="selection__category selection__category--open">
+                <div class="selection__category-heading-wrapper">
+                  <legend class="selection__category-heading">Музыка</legend>
+                </div>
+                <div class="selection__category-wrapper">
+                  <ul class="selection__category-list category-list">
+                    <li class="category-list__item item-category">
+                      <input class="item-category__input check-input check-input--active" type="checkbox" name="music-hard-rock" id="music-hard-rock">
+                      <label class="item-category__label" for="music-hard-rock">Тяжелый рок</label>
+                    </li>
+                    <li class="category-list__item item-category">
+                      <input class="item-category__input check-input" type="checkbox" name="music-russian-rap" id="music-russian-rap">
+                      <label class="item-category__label" for="music-russian-rap">Русский рэп</label>
+                    </li>
+                    <li class="category-list__item item-category">
+                      <input class="item-category__input check-input" type="checkbox" name="music-euro-dance" id="music-euro-dance">
+                      <label class="item-category__label" for="music-euro-dance">Евроденс</label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
 
-            <fieldset class="selection__category selection__category--open">
-              <div class="selection__category-heading-wrapper">
-                <legend class="selection__category-heading">Еда</legend>
-              </div>
-              <div class="selection__category-wrapper">
-                <ul class="selection__category-list category-list">
-                  <li class="category-list__item item-category">
-                    <input class="item-category__input check-input check-input--active" type="checkbox" name="food-meat" id="food-meat">
-                    <label class="item-category__label" for="food-meat">Мясоед</label>
-                  </li>
-                  <li class="category-list__item item-category">
-                    <input class="item-category__input check-input" type="checkbox" name="food-proper-nutrition" id="food-proper-nutrition">
-                    <label class="item-category__label" for="food-proper-nutrition">Сидит на ПП</label>
-                  </li>
-                  <li class="category-list__item item-category">
-                    <input class="item-category__input check-input" type="checkbox" name="food-vegan" id="food-vegan">
-                    <label class="item-category__label" for="food-vegan">Веган-сыроед</label>
-                  </li>
-                </ul>
-              </div>
-            </fieldset>
+              <fieldset class="selection__category selection__category--open">
+                <div class="selection__category-heading-wrapper">
+                  <legend class="selection__category-heading">Еда</legend>
+                </div>
+                <div class="selection__category-wrapper">
+                  <ul class="selection__category-list category-list">
+                    <li class="category-list__item item-category">
+                      <input class="item-category__input check-input check-input--active" type="checkbox" name="food-meat" id="food-meat">
+                      <label class="item-category__label" for="food-meat">Мясоед</label>
+                    </li>
+                    <li class="category-list__item item-category">
+                      <input class="item-category__input check-input" type="checkbox" name="food-proper-nutrition" id="food-proper-nutrition">
+                      <label class="item-category__label" for="food-proper-nutrition">Сидит на ПП</label>
+                    </li>
+                    <li class="category-list__item item-category">
+                      <input class="item-category__input check-input" type="checkbox" name="food-vegan" id="food-vegan">
+                      <label class="item-category__label" for="food-vegan">Веган-сыроед</label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
 
-            <fieldset class="selection__category selection__category--open">
-              <div class="selection__category-heading-wrapper">
-                <legend class="selection__category-heading">Транспорт</legend>
-              </div>
-              <div class="selection__category-wrapper">
-                <ul class="selection__category-list category-list category-list--transport">
-                  <li class="category-list__item item-category">
-                    <input class="item-category__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-plane" id="transport-plane">
-                    <label class="item-category__label" for="transport-plane">Самолет</label>
-                  </li>
-                  <li class="category-list__item item-category">
-                    <input class="item-category__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-bus" id="transport-bus">
-                    <label class="item-category__label" for="transport-bus">Автобус</label>
-                  </li>
-                  <li class="category-list__item item-category">
-                    <input class="item-category__input transport-input visually-hidden" type="checkbox" name="transport-bicycle" id="transport-bicycle">
-                    <label class="item-category__label" for="transport-bicycle">Велосипед</label>
-                  </li>
-                  <li class="category-list__item item-category">
-                    <input class="item-category__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-legs" id="transport-legs">
-                    <label class="item-category__label" for="transport-legs">Ноги</label>
-                  </li>
-                </ul>
-              </div>
-            </fieldset>
+              <fieldset class="selection__category selection__category--open">
+                <div class="selection__category-heading-wrapper">
+                  <legend class="selection__category-heading">Транспорт</legend>
+                </div>
+                <div class="selection__category-wrapper">
+                  <ul class="selection__category-list category-list category-list--transport">
+                    <li class="category-list__item item-category">
+                      <input class="item-category__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-plane" id="transport-plane">
+                      <label class="item-category__label" for="transport-plane">Самолет</label>
+                    </li>
+                    <li class="category-list__item item-category">
+                      <input class="item-category__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-bus" id="transport-bus">
+                      <label class="item-category__label" for="transport-bus">Автобус</label>
+                    </li>
+                    <li class="category-list__item item-category">
+                      <input class="item-category__input transport-input visually-hidden" type="checkbox" name="transport-bicycle" id="transport-bicycle">
+                      <label class="item-category__label" for="transport-bicycle">Велосипед</label>
+                    </li>
+                    <li class="category-list__item item-category">
+                      <input class="item-category__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-legs" id="transport-legs">
+                      <label class="item-category__label" for="transport-legs">Ноги</label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
 
-            <fieldset class="selection__category selection__category--open">
-              <div class="selection__category-heading-wrapper">
-                <legend class="selection__category-heading">Левел</legend>
-              </div>
-              <div class="selection__category-wrapper">
-                <div class="selection__category-range range">
-                  <div class="range__input-wrapper">
-                    <label class="range__label">
-                      <input class="range__input range__input--from" type="number" name="level-min" value="30">
-                    </label>
-                    <label class="range__label">
-                      <input class="range__input range__input--to" type="number" name="level-max" value="100">
-                    </label>
-                  </div>
-                  <div class="range__scale-wrapper">
-                    <div class="range__scale">
-                      <div class="range__bar"></div>
+              <fieldset class="selection__category selection__category--open">
+                <div class="selection__category-heading-wrapper">
+                  <legend class="selection__category-heading">Левел</legend>
+                </div>
+                <div class="selection__category-wrapper">
+                  <div class="selection__category-range range">
+                    <div class="range__input-wrapper">
+                      <label class="range__label">
+                        <input class="range__input range__input--from" type="number" name="level-min" value="30">
+                      </label>
+                      <label class="range__label">
+                        <input class="range__input range__input--to" type="number" name="level-max" value="100">
+                      </label>
                     </div>
-                    <div class="range__pin range__pin--min"></div>
-                    <div class="range__pin range__pin--max"></div>
+                    <div class="range__scale-wrapper">
+                      <div class="range__scale">
+                        <div class="range__bar"></div>
+                      </div>
+                      <div class="range__pin range__pin--min"></div>
+                      <div class="range__pin range__pin--max"></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </fieldset>
+              </fieldset>
 
-            <button class="selection__btn btn" type="button">Показать</button>
-          </form>
+              <button class="selection__btn btn" type="button">Показать</button>
+            </form>
+          </div>
         </section>
 
         <section class="site-main__travelers catalog">

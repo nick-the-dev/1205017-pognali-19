@@ -1,3 +1,8 @@
+.continents {
+  display: flex;
+  flex-direction: column;
+}
+
 .continents__item {
   font-weight: 600;
   font-size: 16px;
@@ -8,5 +13,35 @@
 
   &--active {
     color: #192144;
+  }
+}
+
+.continents__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .continents {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 366px;
+  }
+
+  .continents__item {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .continents__wrapper {
+    position: absolute;
+    top: 107px;
+    left: 405px;
+
+    width: 909px;
   }
 }

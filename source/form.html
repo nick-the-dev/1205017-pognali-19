@@ -64,37 +64,39 @@
             </div>
             <img class="form__img" src="https://via.placeholder.com/270x270" width="100" height="100" alt="Фото: Петя Демин">
           </div>
-          <button class="form__change-img-btn btn">Сменить фото</button>
+          <button class="form__change-img-btn btn" type="button">Сменить фото</button>
 
-          <fieldset class="form__tags tags">
-            <legend class="tags__heading">Тэги</legend>
-            <textarea class="tags__list" name="tags-list" rows="2" cols="30">#бургер #бар #футбол #концерт #крафт
-            </textarea>
-          </fieldset>
+          <div class="form__transport-wrapper">
+            <fieldset class="form__tags tags">
+              <legend class="tags__heading">Тэги</legend>
+              <textarea class="tags__list" name="tags-list" rows="2" cols="30">#бургер #бар #футбол #концерт #крафт
+              </textarea>
+            </fieldset>
 
-          <fieldset class="form__transport transport">
-            <legend class="transport__heading">Транспорт</legend>
-            <ul class="transport__list">
-              <li class="transport__item item-transport">
-                <input class="item-transport__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-plane" id="transport-plane">
-                <label class="item-transport__label" for="transport-plane">Самолет</label>
-              </li>
-              <li class="transport__item item-transport">
-                <input class="item-transport__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-bus" id="transport-bus">
-                <label class="item-transport__label" for="transport-bus">Автобус</label>
-              </li>
-              <li class="transport__item item-transport">
-                <input class="item-transport__input transport-input visually-hidden" type="checkbox" name="transport-bicycle" id="transport-bicycle">
-                <label class="item-transport__label" for="transport-bicycle">Велосипед</label>
-              </li>
-              <li class="transport__item item-transport">
-                <input class="item-transport__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-legs" id="transport-legs">
-                <label class="item-transport__label" for="transport-legs">Ноги</label>
-              </li>
-            </ul>
-          </fieldset>
+            <fieldset class="form__transport transport">
+              <legend class="transport__heading">Транспорт</legend>
+              <ul class="transport__list">
+                <li class="transport__item item-transport">
+                  <input class="item-transport__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-plane" id="transport-plane">
+                  <label class="item-transport__label" for="transport-plane">Самолет</label>
+                </li>
+                <li class="transport__item item-transport">
+                  <input class="item-transport__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-bus" id="transport-bus">
+                  <label class="item-transport__label" for="transport-bus">Автобус</label>
+                </li>
+                <li class="transport__item item-transport">
+                  <input class="item-transport__input transport-input visually-hidden" type="checkbox" name="transport-bicycle" id="transport-bicycle">
+                  <label class="item-transport__label" for="transport-bicycle">Велосипед</label>
+                </li>
+                <li class="transport__item item-transport">
+                  <input class="item-transport__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-legs" id="transport-legs">
+                  <label class="item-transport__label" for="transport-legs">Ноги</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
         </div>
-
 
         <section class="form__plans plans">
           <div class="plans__container">
@@ -105,18 +107,22 @@
                   <span class="item-plans__heading-num">1. </span>
                   Франция, Италия
                 </h3>
-                <p class="item-plans__companions">3 Попутчика</p>
-                <p class="item-plans__date">26 Апр - 29 Мар</p>
-                <a class="item-plans__change" href="#">Изменить</a>
+                <div class="item-plans__wrapper">
+                  <p class="item-plans__companions">3 Попутчика</p>
+                  <p class="item-plans__date">26 Апр - 29 Мар</p>
+                  <a class="item-plans__change" href="#">Изменить</a>
+                </div>
               </li>
               <li class="plans__item item-plans">
                 <h3 class="item-plans__heading">
                   <span class="item-plans__heading-num">2. </span>
                   Таиланд, Индонезия
                 </h3>
-                <p class="item-plans__companions">1 Попутчик</p>
-                <p class="item-plans__date">1 Июл - 15 Июл</p>
-                <a class="item-plans__change" href="#">Изменить</a>
+                <div class="item-plans__wrapper">
+                  <p class="item-plans__companions">1 Попутчик</p>
+                  <p class="item-plans__date">1 Июл - 15 Июл</p>
+                  <a class="item-plans__change" href="#">Изменить</a>
+                </div>
               </li>
             </ul>
           </div>
@@ -127,9 +133,9 @@
             <div class="add-plan__heading-wrapper">
               <h2 class="add-plan__heading">Добавить план:</h2>
               <ul class="add-plan__steps-markers steps-marker">
-                <li class="steps-marker__item steps-marker__item--active"></li>
-                <li class="steps-marker__item"></li>
-                <li class="steps-marker__item"></li>
+                <li class="steps-marker__item steps-marker__item--active"><span class="steps-marker__item-text steps-marker__item-text--current">Даты</span></li>
+                <li class="steps-marker__item"><span class="steps-marker__item-text">Маршрут</span></li>
+                <li class="steps-marker__item"><span class="steps-marker__item-text">Развлечения</span></li>
               </ul>
             </div>
             <ul class="add-plan__steps plan-steps">
@@ -139,20 +145,34 @@
                   <p class="step__desc">
                     Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.
                   </p>
-                  <label class="step__companions-heading" for="companions-number">Ищу попутчиков:</label>
-                  <div class="step__input-wrapper">
-                    <input class="step__companions-input" type="number" name="companions-number" id="companions-number" value="2">
-                    <button class="step__companions-dec" type="button"></button>
-                    <button class="step__companions-inc" type="button"></button>
+                  <div class="step__fields-wrapper">
+                    <div class="step__inputs-wrapper">
+                      <div class="step__companions-wrapper">
+                        <label class="step__companions-heading" for="companions-number">Ищу попутчиков:</label>
+                        <div class="step__input-wrapper">
+                          <input class="step__companions-input" type="number" name="companions-number" id="companions-number" value="2">
+                          <button class="step__companions-dec" type="button"></button>
+                          <button class="step__companions-inc" type="button"></button>
+                        </div>
+                      </div>
+
+                      <div class="step__duration-wrapper">
+                        <label class="step__duration-heading" for="trip-duration">Длительность:</label>
+                        <div class="step__input-wrapper">
+                          <input class="step__duration-input" type="number" name="trip-duration" id="trip-duration" value="2">
+                          <button class="step__duration-dec" type="button"></button>
+                          <button class="step__duration-inc" type="button"></button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="step__children-wrapper">
+                      <input class="step__children-input check-input check-input--active" type="checkbox" name="children-allowed" id="children-allowed">
+                      <label class="step__children-label" for="children-allowed">Можно с детьми</label>
+                    </div>
                   </div>
-                  <label class="step__duration-heading" for="trip-duration">Длительность:</label>
-                  <div class="step__input-wrapper">
-                    <input class="step__duration-input" type="number" name="trip-duration" id="trip-duration" value="2">
-                    <button class="step__duration-dec" type="button"></button>
-                    <button class="step__duration-inc" type="button"></button>
-                  </div>
-                  <input class="step__children-input check-input check-input--active" type="checkbox" name="children-allowed" id="children-allowed">
-                  <label class="step__children-label" for="children-allowed">Можно с детьми</label>
+
+
                   <div class="step__calendar calendar">
                     <div class="calendar__month--wrapper">
                       <a class="calendar__month-nav calendar__month-nav--prev" href="#"><img class="calendar__month-nav-btn" src="../img/month-arrow-left.svg" width="9" height="17" alt="Месяц назад"></a>
@@ -236,6 +256,11 @@
                 <a class="step__next" href="#step-2">Следующий шаг</a>
               </li>
               <li class="plan-steps__item step" id="step-2">
+                <ul class="step__steps-markers step__steps-markers--step2 steps-marker">
+                  <li class="steps-marker__item"><span class="steps-marker__item-text">Даты</span></li>
+                  <li class="steps-marker__item steps-marker__item--active"><span class="steps-marker__item-text steps-marker__item-text--current">Маршрут</span></li>
+                  <li class="steps-marker__item"><span class="steps-marker__item-text">Развлечения</span></li>
+                </ul>
                 <div class="step__wrapper">
                   <h3 class="step__heading">Шаг 2.<br>Маршрут</h3>
                   <p class="step__desc">
@@ -271,45 +296,45 @@
                         <div class="country__flag">
                           <img class="country__flag-img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг:">
                         </div>
-                        <button class="country__remove"type="button">Удалить</button>
+                        <button class="country__remove" type="button">Удалить</button>
                         <div class="country__filter countries-filter countries-filter--active-form"> <!-- переиспользую бэм блок countries-filter из страницы каталога с небольшими изменениями-->
                           <h4 class="countries-filter__heading countries-filter__heading--form">Выберите страну</h4>
-                          <div class="countries-filter__wrapper">
-                            <table class="countries-filter__letters countries-filter__letters--form letters">
+                          <div class="countries-filter__wrapper countries-filter__wrapper--form">
+                            <table class="countries-filter__letters countries-filter__letters--form letters--form">
                                 <tr class="letters__row">
-                                  <td class="letters__cell">а</td>
-                                  <td class="letters__cell">б</td>
-                                  <td class="letters__cell">в</td>
-                                  <td class="letters__cell">г</td>
-                                  <td class="letters__cell">д</td>
+                                  <td class="letters__cell  letters__cell--form letters__cell--active-tablet">а</td>
+                                  <td class="letters__cell letters__cell--form">б</td>
+                                  <td class="letters__cell letters__cell--form">в</td>
+                                  <td class="letters__cell letters__cell--form">г</td>
+                                  <td class="letters__cell letters__cell--form">д</td>
                                 </tr>
                                 <tr class="letters__row">
-                                  <td class="letters__cell">е</td>
-                                  <td class="letters__cell">з</td>
-                                  <td class="letters__cell">и</td>
-                                  <td class="letters__cell">к</td>
-                                  <td class="letters__cell">л</td>
+                                  <td class="letters__cell letters__cell--form">е</td>
+                                  <td class="letters__cell letters__cell--form">з</td>
+                                  <td class="letters__cell letters__cell--form">и</td>
+                                  <td class="letters__cell letters__cell--form">к</td>
+                                  <td class="letters__cell letters__cell--form">л</td>
                                 </tr>
                                 <tr class="letters__row">
-                                  <td class="letters__cell">м</td>
-                                  <td class="letters__cell">н</td>
-                                  <td class="letters__cell">о</td>
-                                  <td class="letters__cell">п</td>
-                                  <td class="letters__cell">р</td>
+                                  <td class="letters__cell letters__cell--form">м</td>
+                                  <td class="letters__cell letters__cell--form">н</td>
+                                  <td class="letters__cell letters__cell--form">о</td>
+                                  <td class="letters__cell letters__cell--form">п</td>
+                                  <td class="letters__cell letters__cell--form">р</td>
                                 </tr>
                                 <tr class="letters__row">
-                                  <td class="letters__cell">с</td>
-                                  <td class="letters__cell">т</td>
-                                  <td class="letters__cell">у</td>
-                                  <td class="letters__cell">ф</td>
-                                  <td class="letters__cell">х</td>
+                                  <td class="letters__cell letters__cell--form">с</td>
+                                  <td class="letters__cell letters__cell--form">т</td>
+                                  <td class="letters__cell letters__cell--form">у</td>
+                                  <td class="letters__cell letters__cell--form">ф</td>
+                                  <td class="letters__cell letters__cell--form">х</td>
                                 </tr>
                                 <tr class="letters__row">
-                                  <td class="letters__cell">ч</td>
-                                  <td class="letters__cell">ш</td>
-                                  <td class="letters__cell">э</td>
-                                  <td class="letters__cell">ю</td>
-                                  <td class="letters__cell">я</td>
+                                  <td class="letters__cell letters__cell--form">ч</td>
+                                  <td class="letters__cell letters__cell--form">ш</td>
+                                  <td class="letters__cell letters__cell--form">э</td>
+                                  <td class="letters__cell letters__cell--form">ю</td>
+                                  <td class="letters__cell letters__cell--form">я</td>
                                 </tr>
                             </table>
 
@@ -333,10 +358,17 @@
                   </ul>
                   <button class="step__add-country">Добавить страну</button>
                 </div>
-                <a class="step__next btn" href="#step-3">Следующий шаг</a>
-                <a class="step__prev" href="#step-1">На шаг назад</a>
+                <div class="step__btn-wrapper">
+                  <a class="step__next btn" href="#step-3">Следующий шаг</a>
+                  <a class="step__prev" href="#step-1">На шаг назад</a>
+                </div>
               </li>
               <li class="plan-steps__item step" id="step-3">
+                <ul class="step__steps-markers step__steps-markers--step3 steps-marker">
+                  <li class="steps-marker__item"><span class="steps-marker__item-text">Даты</span></li>
+                  <li class="steps-marker__item"><span class="steps-marker__item-text">Маршрут</span></li>
+                  <li class="steps-marker__item steps-marker__item--active"><span class="steps-marker__item-text steps-marker__item-text--current">Развлечения</span></li>
+                </ul>
                 <div class="step__wrapper">
                   <h3 class="step__heading">Шаг 3. Развлечения</h3>
                   <p class="step__desc">
@@ -362,8 +394,10 @@
                     </li>
                   </ul>
                 </div>
-                <button class="step__submit-btn btn">Отправить</button>
-                <a class="step__prev" href="#step-2">На шаг назад</a>
+                <div class="step__btn-wrapper">
+                  <button class="step__submit-btn btn">Отправить</button>
+                  <a class="step__prev" href="#step-2">На шаг назад</a>
+                </div>
               </li>
             </ul>
           </div>

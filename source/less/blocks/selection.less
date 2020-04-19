@@ -1,6 +1,10 @@
-.selection {
+.selection__container {
+  max-width: 270px;
+  margin: 0 auto;
   padding-top: 26px;
   padding-bottom: 22px;
+  padding-right: 25px;
+  padding-left: 25px;
 
   background-color: #ffd74b;
   border-radius: 20px;
@@ -59,4 +63,25 @@
 
   background-color: #ffffff;
   border-radius: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .selection__container {
+    max-width: 688px;
+  }
+
+  .selection__heading {
+    width: auto;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .selection {
+    max-width: 285px;
+    max-height: 815px;
+  }
 }
