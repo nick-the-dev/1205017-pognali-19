@@ -56,7 +56,7 @@
         <div class="countries-filter__container">
           <h2 class="countries-filter__heading">Фильтрация по странам</h2>
           <div class="countries-filter__wrapper">
-            <div class="continents__wrapper">
+            <div class="countries-filter__continents-wrapper">
               <ul class="countries-filter__continents continents">
                 <li class="continents__item continents__item--active">Европа</li>
                 <li class="continents__item">Азия</li>
@@ -397,10 +397,8 @@
           <div class="selection__container">
             <h2 class="selection__heading">Подберите идеального попутчика</h2>
             <form class="selection__form" action="https://echo.htmlacademy.ru" method="get">
-              <fieldset class="selection__category selection__category--open">
-                <div class="selection__category-heading-wrapper">
-                  <legend class="selection__category-heading">Хобби</legend>
-                </div>
+              <div class="selection__category selection__category--open">
+                <legend class="selection__category-heading">Хобби</legend>
                 <div class="selection__category-wrapper">
                   <ul class="selection__category-list category-list">
                     <li class="category-list__item item-category">
@@ -417,12 +415,10 @@
                     </li>
                   </ul>
                 </div>
-              </fieldset>
+              </div>
 
-              <fieldset class="selection__category selection__category--open">
-                <div class="selection__category-heading-wrapper">
-                  <legend class="selection__category-heading">Музыка</legend>
-                </div>
+              <div class="selection__category selection__category--open">
+                <legend class="selection__category-heading">Музыка</legend>
                 <div class="selection__category-wrapper">
                   <ul class="selection__category-list category-list">
                     <li class="category-list__item item-category">
@@ -439,12 +435,10 @@
                     </li>
                   </ul>
                 </div>
-              </fieldset>
+              </div>
 
-              <fieldset class="selection__category selection__category--open">
-                <div class="selection__category-heading-wrapper">
-                  <legend class="selection__category-heading">Еда</legend>
-                </div>
+              <div class="selection__category selection__category--open">
+                <legend class="selection__category-heading">Еда</legend>
                 <div class="selection__category-wrapper">
                   <ul class="selection__category-list category-list">
                     <li class="category-list__item item-category">
@@ -461,38 +455,34 @@
                     </li>
                   </ul>
                 </div>
-              </fieldset>
+              </div>
 
-              <fieldset class="selection__category selection__category--open">
-                <div class="selection__category-heading-wrapper">
-                  <legend class="selection__category-heading">Транспорт</legend>
-                </div>
+              <div class="selection__category selection__category--open">
+                <legend class="selection__category-heading">Транспорт</legend>
                 <div class="selection__category-wrapper">
                   <ul class="selection__category-list category-list category-list--transport">
-                    <li class="category-list__item item-category">
+                    <li class="category-list__item item-category item-category--transport">
                       <input class="item-category__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-plane" id="transport-plane">
                       <label class="item-category__label" for="transport-plane">Самолет</label>
                     </li>
-                    <li class="category-list__item item-category">
+                    <li class="category-list__item item-category item-category--transport">
                       <input class="item-category__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-bus" id="transport-bus">
                       <label class="item-category__label" for="transport-bus">Автобус</label>
                     </li>
-                    <li class="category-list__item item-category">
+                    <li class="category-list__item item-category item-category--transport">
                       <input class="item-category__input transport-input visually-hidden" type="checkbox" name="transport-bicycle" id="transport-bicycle">
                       <label class="item-category__label" for="transport-bicycle">Велосипед</label>
                     </li>
-                    <li class="category-list__item item-category">
+                    <li class="category-list__item item-category item-category--transport">
                       <input class="item-category__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-legs" id="transport-legs">
                       <label class="item-category__label" for="transport-legs">Ноги</label>
                     </li>
                   </ul>
                 </div>
-              </fieldset>
+              </div>
 
-              <fieldset class="selection__category selection__category--open">
-                <div class="selection__category-heading-wrapper">
-                  <legend class="selection__category-heading">Левел</legend>
-                </div>
+              <div class="selection__category selection__category--open">
+                <legend class="selection__category-heading">Левел</legend>
                 <div class="selection__category-wrapper">
                   <div class="selection__category-range range">
                     <div class="range__input-wrapper">
@@ -512,7 +502,7 @@
                     </div>
                   </div>
                 </div>
-              </fieldset>
+              </div>
 
               <button class="selection__btn btn" type="button">Показать</button>
             </form>

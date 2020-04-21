@@ -101,6 +101,13 @@
   flex-direction: column;
 }
 
+.countries-filter__continents-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
 @media (min-width: @tablet-width) {
   .countries-filter__heading {
     display: none;
@@ -214,5 +221,13 @@
     &--form {
       display: block;
     }
+  }
+
+  .countries-filter__continents-wrapper {
+    position: absolute;
+    top: 107px;
+    left: 405px;
+
+    width: 909px;
   }
 }

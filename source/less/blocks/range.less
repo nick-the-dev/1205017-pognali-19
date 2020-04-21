@@ -63,3 +63,39 @@
     right: 0;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .range {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .range__input-wrapper {
+    order: 2;
+
+    width: 150px;
+    margin-bottom: 0;
+  }
+
+  .range__scale-wrapper {
+    width: 277px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .range {
+    flex-direction: column;
+  }
+
+  .range__input-wrapper {
+    order: 0;
+
+    width: 100%;
+  }
+
+  .range__scale-wrapper {
+    width: 191px;
+    margin-top: 36px;
+  }
+}
