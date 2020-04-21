@@ -1,3 +1,8 @@
+.continents {
+  display: flex;
+  flex-direction: column;
+}
+
 .continents__item {
   font-weight: 600;
   font-size: 16px;
@@ -8,5 +13,18 @@
 
   &--active {
     color: #192144;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .continents {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 366px;
+  }
+
+  .continents__item {
+    font-size: 20px;
+    line-height: 24px;
   }
 }

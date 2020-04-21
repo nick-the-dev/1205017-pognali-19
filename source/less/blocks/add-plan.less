@@ -16,6 +16,10 @@
   padding-bottom: 60px;
 }
 
+.add-plan__heading-wrapper {
+  position: relative;
+}
+
 .add-plan__heading {
   margin-top: 0;
 
@@ -26,14 +30,28 @@
   color: #1d2e5b;
 }
 
+.add-plan__steps-markers {
+  top: 9px;
+  right: 3px;
+}
+
 @media (min-width: @tablet-width) {
   .add-plan__container {
     max-width: 768px;
+    padding-left: 75px;
+    padding-right: 75px;
   }
+
+
 }
 
 @media (min-width: @desktop-width) {
   .add-plan__container {
     max-width: 1440px;
+  }
+
+  .add-plan__steps-markers {
+    top: 185px;
+    right: 296px;
   }
 }

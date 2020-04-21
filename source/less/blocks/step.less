@@ -2,7 +2,7 @@
   margin-bottom: 10px;
   padding-bottom: 22px;
 
-  background-color: #ffffff;
+  background-color: #fcfdfd;
   border-radius: 10px;
 }
 
@@ -175,4 +175,128 @@
 
   background-color: #ffd74b;
   border-radius: 20px;
+}
+
+.step__steps-markers {
+  &--step2 {
+    display: none;
+  }
+
+  &--step3 {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .step__wrapper {
+    padding: 44px;
+  }
+
+  .step__next {
+    width: 285px;
+    margin-left: 44px;
+    margin-right: 107px;
+    padding-top: 27px;
+    padding-bottom: 23px;
+  }
+
+  .step__prev {
+    margin-top: 0;
+  }
+
+  .step__add-country {
+    width: 369px;
+  }
+
+  .step__btn-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .step__submit-btn {
+    width: 285px;
+    margin-left: 44px;
+    margin-right: 107px;
+    padding-top: 27px;
+    padding-bottom: 23px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .step {
+    position: relative;
+
+    margin-bottom: 44px;
+    padding-bottom: 105px;
+  }
+
+  .step__add-country {
+    width: 730px;
+  }
+
+  .step__wrapper {
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .step__desc {
+    width: 576px;
+  }
+
+  .step__fields-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+
+  .step__companions-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    padding-bottom: 14px;
+  }
+
+  .step__input-wrapper {
+    margin-bottom: 0;
+  }
+
+  .step__duration-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+  }
+
+  .step__next {
+    margin-left: 160px;
+  }
+
+  .step__steps-markers {
+    top: 105px;
+    right: 301px;
+
+    &--step2 {
+      display: flex;
+    }
+
+    &--step3 {
+      display: flex;
+    }
+  }
+
+  .step__countries-to-do {
+    margin-top: 82px;
+  }
+
+  .step__btn-wrapper {
+    justify-content: space-between;
+    margin-right: 160px;
+  }
+
+  .step__submit-btn {
+    margin-left: 160px;
+  }
 }

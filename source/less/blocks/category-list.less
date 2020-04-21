@@ -3,3 +3,24 @@
     display: flex;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .category-list {
+    display: flex;
+    justify-content: space-between;
+
+    &--transport {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .category-list {
+    flex-direction: column;
+
+    &--transport {
+      flex-direction: row;
+    }
+  }
+}

@@ -1,14 +1,12 @@
-.calendar__month--wrapper {
+.calendar__month-wrapper {
+  position: relative;
+
   margin-bottom: 25px;
   padding-top: 12px;
   padding-bottom: 12px;
 
   border-top: 1px solid #cbced9;
   border-bottom: 1px solid #cbced9;
-}
-
-.calendar__month--wrapper {
-  position: relative;
 }
 
 .calendar__month {
@@ -65,5 +63,23 @@
 
   &--weekend {
     color: #ff5c23;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .calendar__day {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .calendar__day {
+    padding-top: 15px;
+    padding-right: 108px;
+    padding-bottom: 43px;
+    padding-left: 16px;
   }
 }
