@@ -1,3 +1,17 @@
+.main-nav {
+  /* Я ж могу так делать в нашем курсе? Смысл в том, чтобы
+     показывать список с кнопкой только когда у .main-nav
+     есть модификатор --open */
+  &--open .user-list {
+    display: flex;
+  }
+
+  &--open .main-nav__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .main-nav__toggle {
   position: relative;
   z-index: 10;
@@ -26,47 +40,55 @@
 }
 
 .main-nav__list {
-  margin-top: 121px;
+  margin-top: 117px;
   margin-bottom: 58px;
 }
 
 .main-nav__contact {
-  margin-top: 67px;
-  margin-left: 87px;
+  position: absolute;
+  top: 388px;
+  left: 50%;
+
+  //margin-top: 101px;
+  margin-left: -73px;
 }
 
 
 .main-nav__socials {
-  margin-top: 58px;
+  margin-top: 212px;
 }
 
 @media (min-width: @tablet-width) {
-
-  //.main-nav__user {
-    //position: absolute;
-    //top: 40px;
-    //right: 40px;
-
-    //width: 189px;
-  //}
-
   .main-nav__list {
-    margin-top: 191px;
+    position: absolute;
+    left: 50%;
+    margin-left: -287px;
+    margin-top: 184px;
     margin-bottom: 173px;
-    margin-left: 99px;
   }
 
   .main-nav__contact {
-    margin-left: 190px;
+    top: 550px;
+
+    margin-left: -196px;
   }
 
   .main-nav__socials {
-    margin-top: 154px;
-    margin-left: 123px;
+    position: absolute;
+    left: 50%;
+
+    margin-top: 783px;
+    margin-left: -277px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .main-nav {
+    &--open .main-nav__wrapper {
+      margin-top: -20px;
+    }
+  }
+
   .main-nav__wrapper {
     position: static;
 
