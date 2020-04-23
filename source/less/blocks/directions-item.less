@@ -17,13 +17,14 @@
 
 .directions-item__text-wrapper {
   max-width: 179px;
+  padding-top: 3px;
   padding-right: 10px;
 }
 
 .directions-item__info {
   position: relative;
 
-  margin-top: -10px;
+  margin-top: -11px;
   padding-left: 25px;
   padding-right: 25px;
 
@@ -31,6 +32,7 @@
 
   border-radius: 10px;
 }
+
 .directions-item__flag {
   position: relative;
   top: -12px;
@@ -54,6 +56,8 @@
 .directions-item__name {
   .remove-indentation();
 
+  margin-left: -1px;
+
   font-weight: 600;
   font-size: 21px;
   line-height: 21px;
@@ -62,6 +66,9 @@
 }
 
 .directions-item__slogan {
+  margin-top: 2px;
+  margin-bottom: 22px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -70,11 +77,27 @@
 }
 
 .directions-item__counter {
+  display: flex;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 30px;
   font-family: @site-font-family;
   color: rgba(68, 68, 68, 0.3);
+}
+
+.directions-item__counter::before {
+  content: "";
+
+  display: block;
+  width: 11px;
+  height: 11px;
+  margin-right: 6px;
+  margin-top: 8px;
+
+  background-image: url("../img/user.svg");
+
+  opacity: 0.1;
 }
 
 @media (min-width: @tablet-width) {

@@ -11,7 +11,7 @@
 
 .steps__list {
   position: relative;
-  top: -83px;
+  top: -80px;
 
   display: flex;
   flex-direction: column;
@@ -20,6 +20,8 @@
 }
 
 .steps__item {
+  position: relative;
+
   padding-left: 24px;
   padding-top: 22px;
   padding-bottom: 22px;
@@ -53,6 +55,29 @@
   &--step4 {
     background-color: #ffd74b;
   }
+}
+
+.steps__item-text::after {
+  position: absolute;
+  top: 22px;
+  right: 21px;
+  color: #ffffff;
+}
+
+.steps__item-text--step1::after {
+  content: "1";
+}
+
+.steps__item-text--step2::after {
+  content: "2";
+}
+
+.steps__item-text--step3::after {
+  content: "3";
+}
+
+.steps__item-text--step4::after {
+  content: "4";
 }
 
 .steps__item-text {
