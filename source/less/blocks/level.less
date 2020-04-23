@@ -1,3 +1,5 @@
+/* OLD CODE
+
 .level {
   position: absolute;
 
@@ -44,4 +46,79 @@
     width: 100px;
     height: 100px;
   }
+}
+
+*/
+
+.level {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  margin: 30px auto;
+}
+
+.level__visual {
+  width: 114px;
+  height: 114px;
+  margin-top: -41px;
+  margin-left: -10px;
+}
+
+.level__progress {
+  fill: rgba(0, 0, 0, 0.6);
+  stroke-width: 3px;
+  stroke: #ff8d30;
+  stroke-linecap: square;
+  stroke-dasharray: 220.56;
+  stroke-dashoffset: 40;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.level__text {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 16px;
+  text-align: center;
+}
+
+.level__value {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: @site-font-family;
+
+  &--homepage {
+    line-height: 24px;
+    color: #ffffff;
+  }
+
+  &--catalog {
+    line-height: 18px;
+    color: #1d2e5b;
+  }
+}
+
+.level__label {
+  margin-top: 1px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: @site-font-family;
+  color: #ffffff;
+}
+
+.level__label::before {
+  content: "";
+
+  position: absolute;
+  top: 22px;
+  left: 15px;
+
+  display: block;
+  width: 31px;
+  height: 1px;
+
+  background-color: rgba(255, 255, 255, 0.3);
 }
