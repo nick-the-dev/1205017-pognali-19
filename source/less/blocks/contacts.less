@@ -29,9 +29,24 @@
 }
 
 .contacts__item {
-  &--main-nav {
-    margin-bottom: 23px;
-  }
+  display: flex;
+  align-items: center;
+}
+
+.contacts__item-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin-right: 16px;
+
+  background-color: #121936;
+  border-radius: 50%;
+}
+
+.contacts__item-img svg {
+  fill: #ffd74b;
 }
 
 @media (min-width: @tablet-width) {

@@ -1,19 +1,26 @@
 .business-prices__item {
   display: flex;
   flex-direction: column;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  margin-bottom: 3px;
+  padding-top: 7px;
+  padding-bottom: 9px;
 
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   font-family: @site-font-family;
   color: #444444;
+
+  border-bottom: 1px solid #e1e3e9;
 }
 
 .business-prices__item-name,
 .business-prices__item-price {
   margin: 0;
+}
+
+.business-prices__item-name {
+  margin-bottom: -2px;
 }
 
 @media (min-width: @tablet-width) {

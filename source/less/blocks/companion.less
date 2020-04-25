@@ -10,6 +10,12 @@
 .companion__name {
   .remove-indentation();
 
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  margin-top: -1px;
+  margin-left: -16px;
   padding-bottom: 15px;
 
   font-weight: 600;
@@ -20,11 +26,32 @@
   color: #1d2e5b;
 }
 
-.companion__tags {
-  padding-bottom: 15px;
+.companion--online .companion__name::before {
+  content: "";
+
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin-top: 7px;
+  margin-right: 11px;
+
+  background-color: #81e31e;
+  border-radius: 50%;
 }
 
-.companion__transport {
-  padding-left: 20px;
-  padding-right: 20px;
+.companion--offline .companion__name::before {
+  content: "";
+
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin-top: 7px;
+  margin-right: 11px;
+
+  background-color: #f97676;
+  border-radius: 50%;
+}
+
+.companion__tags {
+  padding-bottom: 15px;
 }
