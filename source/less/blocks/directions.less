@@ -71,27 +71,92 @@
 }
 
 @media (min-width: @tablet-width) {
+  .directions {
+    padding-top: 103px;
+    padding-bottom: 80px;
+
+    border-radius: 0 0 60px 60px;
+  }
+
   .directions__container {
     max-width: 768px;
     padding-left: 75px;
     padding-right: 75px;
+
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: 92% 2.5%;
+  }
+
+  .directions__container::before {
+    content: "";
+
+    position: absolute;
+    top: 332px;
+    left: 40px;
+    z-index: -1;
+
+    display: block;
+    width: 141px;
+    height: 141px;
+
+    background-color: #e2e5f2;
+    border-radius: 20px;
   }
 
   .directions__heading {
+    margin-left: -2px;
     padding: 0;
+
+    font-size: 45px;
+    line-height: 45px;
   }
 
   .directions__text {
+    margin-top: 58px;
+    margin-bottom: 104px;
     padding: 0;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .directions__list {
+    margin-bottom: 39px;
+  }
+
+  .directions__list::after {
+    content: "";
+
+    position: absolute;
+
+    display: block;
+    width: 618px;
+    height: 450px;
+
+    background-image: linear-gradient(0deg, rgba(237, 239, 246, 1) 0%, rgba(242, 243, 248, 1) 3%, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0.23) 100%);
   }
 
   .directions__btn {
     margin-left: 0;
     margin-right: 0;
+    padding-top: 30px;
+    padding-bottom: 27px;
+    padding-left: 32px;
+    padding-right: 36px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 20px;
+  }
+
+  .directions__btn-arrow {
+    margin-top: 4px;
   }
 
   .directions__heading-wrapper {
-    max-width: 337px;
+    max-width: 342px;
   }
 }
 

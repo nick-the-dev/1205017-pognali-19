@@ -97,7 +97,7 @@
 
   .steps__item {
     margin-bottom: 0;
-    padding-left: 31px;
+    padding-left: 33px;
     padding-top: 31px;
 
     font-size: 24px;
@@ -132,7 +132,7 @@
 
   .steps__list {
     position: relative;
-    top: -140px;
+    top: -139px;
 
     max-width: 841px;
     flex-direction: row;
@@ -148,6 +148,15 @@
       padding-bottom: 39px;
     }
   }
+
+  .steps__item-text::after {
+    top: 44px;
+    right: auto;
+    left: 34px;
+
+    font-size: 30px;
+    line-height: 120px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -156,6 +165,25 @@
   }
 
   .steps__list {
+    top: -229px;
+
     max-width: none;
+  }
+
+  .steps__item--step1 {
+    width: 340px;
+  }
+
+  .steps__item--step2 {
+    width: 370px;
+  }
+
+  .steps__item--step3 {
+    width: 370px;
+    margin-left: -25px;
+  }
+
+  .steps__item--step4 {
+    width: 315px;
   }
 }
