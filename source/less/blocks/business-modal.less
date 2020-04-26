@@ -4,7 +4,7 @@
   left: 50%;
   z-index: 10;
 
-  display: none;
+  //display: none;
   width: 270px;
   padding-top: 33px;
 
@@ -96,9 +96,25 @@
 
 @media (min-width: @desktop-width) {
   .business-modal {
-    top: 2915px;
+    top: 3109px;
 
     width: 750px;
-    height: 524px;
+    height: 526px;
+  }
+
+  .business-modal__prices {
+    max-width: 632px;
+  }
+
+  .business-modal__heading {
+    padding-left: 3px;
+    padding-right: 0;
+  }
+
+  .business-modal__btn {
+    padding-top: 41px;
+    padding-bottom: 43px;
+
+    border-radius: 0 0 30px 30px;
   }
 }

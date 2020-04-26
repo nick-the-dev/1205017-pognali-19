@@ -166,24 +166,63 @@
 
   .steps__list {
     top: -229px;
+    z-index: 2;
 
     max-width: none;
   }
 
-  .steps__item--step1 {
-    width: 340px;
+  .steps__item {
+    padding-left: 30px;
+    padding-top: 29px;
+
+    &--step1 {
+      width: 340px;
+
+      border-radius: 20px 0 0 20px;
+    }
+
+    &--step2 {
+      width: 370px;
+
+      border-radius: 20px 0 0 20px;
+    }
+
+    &--step3 {
+      width: 370px;
+      margin-left: -25px;
+
+      border-radius: 20px 0 0 20px;
+    }
+
+    &--step4 {
+      width: 315px;
+
+      border-radius: 20px;
+    }
   }
 
-  .steps__item--step2 {
-    width: 370px;
+  .steps__item-text {
+    padding-bottom: 8px;
   }
 
-  .steps__item--step3 {
-    width: 370px;
-    margin-left: -25px;
+  .steps__item-text::after {
+    font-size: 24px;
+    top: -19px;
   }
 
-  .steps__item--step4 {
-    width: 315px;
+  .steps__item-text--step1::after {
+    left: 268px;
+  }
+
+  .steps__item-text--step2::after {
+    left: 299px;
+  }
+
+  .steps__item-text--step3::after {
+    left: 300px;
+  }
+
+  .steps__item-text--step4::after {
+    left: 269px;
   }
 }

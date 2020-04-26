@@ -51,7 +51,8 @@
   }
 }
 
-.about-service__text-br2 {
+.about-service__text-br2,
+.about-service__text-br3 {
   display: none;
 }
 
@@ -135,17 +136,29 @@
 
   .about-service__btn-arrow {
     margin-top: 4px;
+
+    fill: #1d2e5b;
   }
 }
 
 @media (min-width: @desktop-width) {
   .about-service__container {
     max-width: 1440px;
-    padding-bottom: 255px;
+    padding-bottom: 163px;
+    padding-left: 130px;
+    padding-top: 70px;
+
 
     background-image: url("../img/about-desktop@1x.png");
     background-size: 630px 665px;
-    background-position: 92% 100%;
+    background-position: 92.6% 100%;
+  }
+
+  .about-service__container::before {
+    top: 9px;
+    margin-left: -660px;
+    width: 213px;
+    height: 213px;
   }
 
   .about-service {
@@ -153,6 +166,21 @@
   }
 
   .about-service__text {
-    width: 609px;
+    width: 612px;
+    margin-top: 58px;
+    margin-bottom: -20px;
+  }
+
+  .about-service__text-br2 {
+    display: none;
+  }
+
+  .about-service__text-br3 {
+    display: block;
+  }
+
+  .about-service__btn {
+    margin-top: 104px;
+    padding-bottom: 27px;
   }
 }

@@ -195,6 +195,9 @@
 
 @media (min-width: @desktop-width) {
   .site-main__heading-wrapper--homepage {
+    position: relative;
+    z-index: 1;
+
     height: 750px;
     margin-top: -115px;
 
@@ -202,6 +205,7 @@
     background-position: 60% 101.1%, 50% 0%;
     background-size: 431px 640px, 1800px 750px;
     background-color: #161c34;
+    border-radius: 0 0 60px 60px;
   }
 
   .site-main__heading-container {
@@ -241,5 +245,10 @@
 
   .site-main__reviews {
     left: auto;
+  }
+
+  .site-main__steps {
+    margin-top: -60px;
+    padding-top: 60px;
   }
 }
