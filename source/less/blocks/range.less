@@ -4,20 +4,33 @@
   margin-bottom: 24px;
 }
 
+.range__label--from {
+  margin-right: -1px;
+}
+
 .range__input {
   width: 100%;
-  padding-top: 9px;
+  padding-top: 11px;
   padding-bottom: 6px;
 
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 1.5px;
+  font-family: @site-font-family;
+  color: #1d2e5b;
   text-align: center;
 
   border: 1px solid #cbced9;
 
   &--from {
+    padding-left: 17px;
     border-radius: 5px 0 0 5px;
   }
 
   &--to {
+    padding-left: 15px;
+
     border-radius: 0 5px 5px 0;
   }
 }

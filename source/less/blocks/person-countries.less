@@ -4,12 +4,76 @@
 }
 
 .person-countries__item {
+  display: flex;
+
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
   font-family: @site-font-family;
   color: #1d2e5b;
   text-transform: uppercase;
+
+  &--sri-lanka::before {
+    background-image: url("../img/sri-lanka-icon.png");
+    background-size: 26px 18px;
+  }
+
+  &--thailand::before {
+    background-image: url("../img/thailand-icon.png");
+    background-size: 26px 18px;
+  }
+
+  &--seychelles::before {
+    background-image: url("../img/seychelles-icon.png");
+    background-size: 26px 18px;
+  }
+
+  &--belgium::before {
+    background-image: url("../img/belgium-icon.png");
+    background-size: 26px 18px;
+  }
+
+  &--czech::before {
+    background-image: url("../img/czech-icon.png");
+    background-size: 26px 18px;
+  }
+
+  &--usa::before {
+    background-image: url("../img/usa-icon.png");
+    background-size: 26px 18px;
+  }
+
+  &--australia::before {
+    background-image: url("../img/australia-icon.png");
+    background-size: 26px 18px;
+  }
+
+  &--dominica::before {
+    background-image: url("../img/dominica-icon.png");
+    background-size: 26px 18px;
+  }
+
+  &--uk::before {
+    background-image: url("../img/uk-icon.png");
+    background-size: 26px 18px;
+  }
+
+  &--germany::before {
+    background-image: url("../img/germany-icon.png");
+    background-size: 26px 18px;
+  }
+}
+
+.person-countries__item::before {
+  content: "";
+
+  display: block;
+  width: 26px;
+  height: 18px;
+  margin-right: 14px;
+  margin-top: -3px;
 }
 
 @media (min-width: @tablet-width) {

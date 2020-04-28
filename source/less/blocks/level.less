@@ -62,6 +62,11 @@
   height: 114px;
   margin-top: -41px;
   margin-left: -10px;
+
+  &--catalog {
+    margin-top: -57px;
+    margin-left: -37px;
+  }
 }
 
 .level__progress {
@@ -79,7 +84,33 @@
 
   &--80 {
     stroke-dasharray: 193.56;
+
   }
+}
+
+.level__progress--catalog {
+  fill: transparent;
+
+  &-99 {
+    stroke-dasharray: 173.56;
+  }
+
+  &-80 {
+    stroke-dasharray: 158.56;
+  }
+
+  &-25 {
+    stroke-dasharray: 144.56;
+    stroke-dashoffset: 114;
+  }
+
+  &-50 {
+    stroke-dasharray: 107.56;
+  }
+
+
+
+
 }
 
 .level__text {
@@ -88,6 +119,11 @@
   top: 0;
   left: 16px;
   text-align: center;
+
+  &--catalog {
+    top: -7px;
+    left: -10px;
+  }
 }
 
 .level__value {

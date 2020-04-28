@@ -2,6 +2,30 @@
   display: flex;
 }
 
+.person-transport__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 32px;
+
+  background-color: #edeff6;
+  border-radius: 50%;
+}
+
+.person-transport__item svg {
+  margin-left: -2px;
+
+  fill: #1d2e5b;
+  opacity: 0.15;
+}
+
+.person-transport__item--active svg {
+  fill: #1d2e5b;
+  opacity: 1;
+}
+
 @media (min-width: @tablet-width) {
   .person-transport {
     flex-direction: column;

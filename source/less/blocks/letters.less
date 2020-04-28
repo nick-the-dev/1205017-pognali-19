@@ -1,19 +1,26 @@
 .letters {
+  max-width: 222px;
+
   border: 1px solid #cbced9;
-  border-spacing: 0;
+  border-collapse: collapse;
 
   &--form {
     border-spacing: 0;
   }
 }
 
+.letters__row {
+  display: flex;
+  justify-content: space-between;
+}
+
 .letters__cell {
-  min-width: 45px;
-  max-width: 45px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 12px;
-  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 41px;
 
   font-weight: 500;
   font-size: 14px;

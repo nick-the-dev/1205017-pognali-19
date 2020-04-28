@@ -1,0 +1,22 @@
+.check-input + label::before {
+  content: "";
+
+  position: absolute;
+  top: -4px;
+  left: -9px;
+
+  display: inline-block;
+  vertical-align: baseline;
+  width: 18px;
+  height: 18px;
+
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.check-input:checked + label::before {
+  background-image: url("../img/tick.svg");
+  background-size: 9px 9px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
