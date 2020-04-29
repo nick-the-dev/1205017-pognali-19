@@ -83,6 +83,8 @@
 
   &--active .catalog-item__heart--active {
     display: block;
+
+    opacity: 1;
   }
 }
 
@@ -267,6 +269,23 @@
     width: 688px;
   }
 
+  .catalog-item__name {
+    width: fit-content;
+    max-width: 218px;
+    margin-top: 33px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .catalog-item__name::after {
+    top: 11px;
+    right: -30px;
+
+    width: 7px;
+    height: 7px;
+  }
+
   .catalog-item__img {
     width: 190px;
     height: 190px;
@@ -278,23 +297,27 @@
     margin-left: 33px;
   }
 
+  .catalog-item__heading-wrapper {
+    margin-bottom: 10px;
+  }
+
   .catalog-item__likes-wrapper {
-    margin-top: 149px;
-    margin-left: 196px;
+    margin-top: 134px;
+    margin-left: 202px;
   }
 
   .catalog-item__tags {
     position: absolute;
-    top: 83px;
-    left: 259px;
+    top: 81px;
+    left: 262px;
 
     margin: 0;
   }
 
   .catalog-item__skills {
     position: absolute;
-    top: 37px;
-    right: 25px;
+    top: 32px;
+    right: 18px;
 
     flex-direction: column;
     margin: 0;
@@ -302,6 +325,11 @@
 
   .catalog-item__transport {
     margin: 0;
+  }
+
+  .catalog-item__transport-list {
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .catalog-item__transport-heading {
@@ -313,8 +341,15 @@
   }
 
   .catalog-item__countries {
-    margin-left: 36px;
-    margin-bottom: 26px;
+    min-height: 50px;
+
+    margin-top: 17px;
+    margin-bottom: 0;
+    margin-left: -11px;
+  }
+
+  .catalog-item:nth-child(3) .catalog-item__countries {
+    min-height: 50px;
   }
 
   .catalog-item__btn {
@@ -323,6 +358,33 @@
     left: 255px;
 
     width: 148px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    border-radius: 25px;
+  }
+
+  .catalog-item__heart {
+    width: 20px;
+    height: 17px;
+  }
+
+  .catalog-item__likes {
+    left: -57px;
+    top: -12px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: #edeff6;
+  }
+
+  .catalog-item__likes-count {
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .catalog-item__img-wrapper {
@@ -332,6 +394,39 @@
 
   .catalog-item__countries-heading {
     margin-left: 83px;
+  }
+
+  .catalog-item__countries-heading::before {
+    left: -83px;
+
+    width: 71px;
+  }
+
+  .catalog-item__countries-heading::after {
+    width: 500px;
+  }
+
+  .catalog__show-more {
+    position: relative;
+    margin-left: -19px;
+    padding-left: 61px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .catalog__show-more-icon {
+    position: absolute;
+    left: 50%;
+
+    width: 27px;
+    height: 27px;
+    margin-top: -1px;
+    margin-left: -97px;
+  }
+
+  .catalog__show-more-wrapper {
+    margin-top: 46px;
   }
 }
 

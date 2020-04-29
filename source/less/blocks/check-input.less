@@ -20,3 +20,14 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@media (min-width: @tablet-width) {
+  .check-input + label::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .check-input:checked + label::before {
+    background-size: 12px 12px;
+  }
+}

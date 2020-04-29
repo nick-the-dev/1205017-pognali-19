@@ -78,6 +78,10 @@
   }
 }
 
+.site-main__home-link-icon {
+  display: none;
+}
+
 .site-main__heading--catalog::after {
   content: "";
 
@@ -90,7 +94,6 @@
 
   border-radius: 2.4px;
   background-color: #ff8d30;
-
 }
 
 .site-main__steps {
@@ -167,8 +170,20 @@
   }
 
   .site-main__heading-wrapper--catalog {
+    padding-top: 114px;
+    padding-bottom: 54px;
     padding-left: 35px;
-    padding-right: 35px;
+    padding-right: 75px;
+
+    border-radius: 0 0 60px 60px;
+  }
+
+  .site-main__heading--catalog::after {
+    bottom: -58px;
+
+    height: 8px;
+
+    border-radius: 4px;
   }
 
   .site-main__heading-container {
@@ -186,6 +201,30 @@
     &--homepage {
       padding-top: 163px;
     }
+
+    &--catalog {
+      width: 289px;
+      margin-left: 39px;
+    }
+  }
+
+  .site-main__home-link-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 177px;
+  }
+
+  .site-main__home-link {
+    display: flex;
+
+    margin-top: -3px;
+  }
+
+  .site-main__home-link-icon {
+    display: block;
+    margin-top: -2px;
+
+    fill: #ffffff;
   }
 
   .site-main__reviews {
@@ -199,16 +238,16 @@
     margin-bottom: -44px;
   }
 
-  .site-main__home-link {
-    display: flex;
-  }
-
   .site-main__registration {
     margin-top: -60px;
   }
 
   .site-main__address {
     margin-top: -60px;
+  }
+
+  .site-main__selection {
+    margin-bottom: 40px;
   }
 }
 
