@@ -1,6 +1,10 @@
 .tools {
   display: flex;
   justify-content: center;
+
+  &--catalog {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -17,5 +21,12 @@
 
     display: flex;
     margin-top: 0;
+
+    &--catalog {
+      top: -65px;
+      right: 59px;
+
+      display: flex;
+    }
   }
 }

@@ -73,9 +73,13 @@
   width: 31px;
   height: 31px;
 
-  background-color: #f9eaea;
+  background-color: #edeff6;
   border: none;
   border-radius: 50%;
+
+  &--active {
+    background-color: #f9eaea;
+  }
 
   &--active .catalog-item__heart {
     display: none;
@@ -378,8 +382,6 @@
 
     width: 50px;
     height: 50px;
-
-    background-color: #edeff6;
   }
 
   .catalog-item__likes-count {
@@ -405,29 +407,6 @@
   .catalog-item__countries-heading::after {
     width: 500px;
   }
-
-  .catalog__show-more {
-    position: relative;
-    margin-left: -19px;
-    padding-left: 61px;
-
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .catalog__show-more-icon {
-    position: absolute;
-    left: 50%;
-
-    width: 27px;
-    height: 27px;
-    margin-top: -1px;
-    margin-left: -97px;
-  }
-
-  .catalog__show-more-wrapper {
-    margin-top: 46px;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -439,24 +418,47 @@
   .catalog-item__img {
     width: 285px;
     height: 285px;
+
+    border-radius: 20px 0 0 20px;
+  }
+
+  .catalog-item__name {
+    margin-top: 48px;
+  }
+
+  .catalog-item__name::after {
+    top: 10px;
+    right: auto;
+    left: -25px;
+  }
+
+  .catalog-item__name-wrapper {
+    margin-left: 59px;
   }
 
   .catalog-item__tags {
-    left: 314px;
+    left: 347px;
+    top: 96px;
   }
 
   .catalog-item__img-wrapper {
+    height: 285px;
     margin: 0;
   }
 
   .catalog-item__btn {
-    left: 310px;
+    left: 340px;
+    top: 188px;
+  }
+
+  .catalog-item__likes-wrapper {
+    margin-top: 133px;
   }
 
   .catalog-item__skills {
     top: auto;
-    right: 44px;
-    bottom: 61px;
+    right: 131px;
+    bottom: 56px;
 
     flex-direction: row;
   }
@@ -467,9 +469,27 @@
 
   .catalog-item__countries {
     position: absolute;
-    top: 54px;
-    left: 657px;
+    top: 49px;
+    left: 654px;
 
     margin: 0;
+  }
+
+  .catalog-item__level::after {
+    display: none;
+  }
+
+  .catalog-item__transport::after {
+    display: none;
+  }
+
+  .catalog-item__transport::before {
+    top: -147px;
+    left: -38px;
+
+    width: 1px;
+    height: 187px;
+
+    background: linear-gradient(0deg, rgba(237, 239, 246, 0) 0%, rgba(237, 239, 246, 1) 30%, rgba(237, 239, 246, 1) 70%, rgba(237, 239, 246, 0) 100%);
   }
 }

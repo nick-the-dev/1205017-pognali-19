@@ -57,7 +57,6 @@
 @media (min-width: @tablet-width) {
   .letters {
     border: none;
-    margin-left: -22px;
 
     &--form {
       margin-left: 27px;
@@ -112,15 +111,20 @@
 @media (min-width: @desktop-width) {
   .letters__row {
     display: flex;
+    align-items: flex-start;
   }
 
   .letters__cell {
-    width: 180px;
-    margin-right: 68px;
-    padding-left: 52px;
-    padding-bottom: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 251px;
+    height: auto;
+    padding-left: 57px;
+    padding-right: 0;
+    padding-bottom: 28px;
 
     text-align: left;
+    color: #192144;
 
     &--form {
       width: 60px;
@@ -137,5 +141,6 @@
   .letters__cell-list {
     display: flex;
     flex-direction: column;
+    margin-top: 48px;
   }
 }
