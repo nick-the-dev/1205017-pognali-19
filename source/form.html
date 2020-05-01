@@ -5,17 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Направления - Погнали!</title>
     <link href="css/style.css" rel="stylesheet">
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию показывается мобильный макет */
+        background-image: url( "img/temp/pognali-form-mobile.png" );
+      }
+      /* Планшет */
+      @media ( min-width: 768px ) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url( "img/temp/pognali-form-tablet-filter.png" );
+        }
+      }
+      /* Десктоп */
+      @media ( min-width: 1440px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url( "img/temp/pognali-form-desktop-filter.png" );
+        }
+      }
+    </style>
+    <link href="pixel-glass/styles.css" rel="stylesheet">
+    <script src="pixel-glass/script.js"></script>
   </head>
   <body>
 
     <header class="site-header site-header--form">
-      <img class="site-header__logo" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Погнали?">
+      <img class="site-header__logo" src="../img/logo-mobile-white@1x.png" width="100" height="19" alt="Погнали?">
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"></button>
+        <button class="main-nav__toggle" type="button">
+          <svg class="main-nav__toggle-burger" width="25" height="11" viewbox="0 0 25 11"><path d="M1.5 3h22c.8 0 1.5-.7 1.5-1.5S24.3 0 23.5 0h-22C.7 0 0 .7 0 1.5S.7 3 1.5 3zM23.5 8h-22C.7 8 0 8.7 0 9.5S.7 11 1.5 11h22c.8 0 1.5-.7 1.5-1.5S24.3 8 23.5 8z"/></svg>
+          <svg class="main-nav__toggle-close" width="19" height="19" viewbox="0 0 18 18"><path d="M10.3 9l7.4-7.4c.4-.4.4-.9 0-1.3s-.9-.4-1.3 0L9 7.7 1.6.3C1.2-.1.7-.1.3.3s-.4.9 0 1.3L7.7 9 .3 16.4c-.4.4-.4.9 0 1.3s.9.4 1.3 0L9 10.3l7.4 7.4c.4.4.9.4 1.3 0s.4-.9 0-1.3L10.3 9z"/></svg>
+        </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a class="site-list__link" href="#">О серивисе</a>
+              <a class="site-list__link" href="#">О сервисе</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="form.html">Направления</a>
@@ -26,14 +53,36 @@
           </ul>
 
           <ul class="main-nav__contact contacts contacts--main-nav">
-            <li class="contacts__item contacts__item--main-nav"><a class="contacts__phone contacts__phone--main-nav" href="tel:88005558628">8 800 555-86-28</a></li>
-            <li class="contacts__item contacts__item--main-nav"><a class="contacts__email contacts__email--main-nav" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+            <li class="contacts__item contacts__item--main-nav">
+              <div class="contacts__item-img contacts__item-img--phone">
+                <svg width="18" height="18" viewbox="0 0 36 36"><path d="M18 0C11.6 0 5.2 1.1 2.8 3.4.9 5.3.2 8.7 0 10.8v.3c0 .8.7 1.5 1.5 1.5.1 0 3.7-.3 5.9-.5h.2c.8 0 1.5-.7 1.5-1.5v-3C9 6.7 9.7 6 10.7 6h14.7c.8 0 1.6.7 1.6 1.7v3c0 .8.7 1.5 1.5 1.5h.2c2.2.2 5.8.5 5.9.5.8 0 1.5-.7 1.5-1.5v-.3c-.2-2.1-.9-5.5-2.8-7.4C30.8 1.1 24.4 0 18 0zm0 19.5c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-2.3-6.8v-1.9c0-1-.8-1.9-1.9-1.9s-1.8.9-1.8 2v1.9L1.9 23.6c-.7.7-1.1 1.6-1.1 2.7v3c0 1.7 1.3 3 3 3h.8v1.9c0 1 .8 1.9 1.9 1.9s1.9-.8 1.9-1.9v-1.9h19.5v1.9c0 1 .8 1.9 1.9 1.9 1 0 1.9-.8 1.9-1.9v-1.9h.8c1.7 0 3-1.3 3-3v-3c0-1.1-.4-2-1.1-2.7L24 12.7v-1.9c0-1-.8-1.9-1.9-1.9s-1.9.8-1.9 1.9v1.9h-4.5zm2.3 3.8c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z"/></svg>
+              </div>
+              <a class="contacts__phone contacts__phone--main-nav" href="tel:88005558628">8 800 555-86-28</a>
+            </li>
+            <li class="contacts__item contacts__item--main-nav">
+              <div class="contacts__item-img contacts__item-img--email">
+                <svg width="18" height="13" viewbox="0 0 36 26"><path d="M0 23c0 1.6 1.3 3 3 3h30c1.7 0 3-1.3 3-3V3c0-1.6-1.3-3-3-3H3C1.3 0 0 1.3 0 3v20zm11-10L4.2 6.2c-.6-.6-.6-1.5 0-2 .6-.6 1.5-.6 2.1 0l11 10.9c.4.4 1.2.4 1.6 0l11-10.9c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2L25 13l6.9 6.8c.6.6.6 1.5 0 2-.6.6-1.5.6-2.1 0L22.9 15s-2.1 2.2-2.5 2.5c-.6.6-1.4 1-2.4 1-.9 0-1.8-.4-2.4-1L13.1 15l-6.9 6.8c-.6.6-1.5.6-2.1 0-.6-.6-.6-1.5 0-2L11 13z"/></svg>
+              </div>
+              <a class="contacts__email contacts__email--main-nav" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
           </ul>
 
           <ul class="main-nav__socials socials socials--main-nav">
-            <li class="socials__item"><a class="socials__facebook" href="#"></a></li>
-            <li class="socials__item"><a class="socials__vk" href="#"></a></li>
-            <li class="socials__item"><a class="socials__instagram" href="#"></a></li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--facebook" href="#">
+                <svg width="11" height="21" viewbox="0 0 11 21"><path d="M7.8 21H2.2v-9.8H0V6.4h2.1c-.1-2.2.3-3.8 1.3-4.9C4.2.6 5.5.1 7.1 0H11v4.7H7.9c-.1.2-.2.8-.2 1.7H11v4.8H7.8V21zm-4.4-1.1h3.1v-9.8h3.2V7.5H6.5v-.6c0-1.5 0-2.9.8-3.4l.2-.1h2.3V1.1H7.1c-1.2.1-2.2.5-2.8 1.2-.8.9-1.1 2.5-.9 4.6l.1.6H1.2v2.6h2.2v9.8z"/></svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--vk" href="#">
+                <svg width="23" height="12" viewbox="0 0 30 15.8"><path d="M23.9 15.8c-.4 0-1.2-.1-2.1-.6-.6-.4-1.2-1-1.8-1.5-.4-.4-1.2-1.2-1.4-1.2-.3.1-.5.9-.5 1.6 0 .1 0 .8-.5 1.2-.4.4-1.1.5-1.2.5h-1.9c-1 0-4.4-.2-7.4-3C3.4 9.4.3 3 .1 2.7 0 2.2-.1 1.5.3 1.1.7.7 1.4.6 1.7.6H5.9c.1 0 .6.1 1 .3.4.2.6.7.6.7S8.1 3 9 4.3c1.3 2 1.9 2.5 2.1 2.6.2-.4.3-1.7.2-2.9 0-.5-.1-1.1-.3-1.3-.1-.1-.4-.3-.8-.3l-.7-.6c-.1-.7.6-1.2 1.1-1.4.7-.3 1.8-.4 3.1-.4h.7c1.2 0 1.6.1 2.1.2 1.7.4 1.6 1.7 1.6 3.3v2.1c0 .4 0 1 .1 1.3.2-.1.9-.7 2.1-2.5.8-1.2 1.4-2.5 1.5-2.8.2-.4.6-.9 1.6-.9h4.7c1 0 1.6.3 1.8.9.3.6.2 1.7-2.4 4.6-.4.4-.7.8-1 1.1-.6.7-1.2 1.4-1.2 1.6.1.1.7.6 1.3 1.1 1.5 1.2 2.5 2.3 3 3.1.5.8.4 1.3.3 1.7-.4.9-1.6 1-1.9 1h-4.1zm-5.3-4.9c.9 0 1.7.8 2.5 1.6.5.5 1 1 1.5 1.3.7.4 1.3.4 1.4.4h3.9c.2 0 .4-.1.5-.1 0 0 0-.1-.1-.2-.4-.7-1.4-1.7-2.7-2.7-1.2-1-1.8-1.5-1.9-2.2-.1-.8.5-1.4 1.6-2.7.3-.3.6-.7 1-1.1 1.6-1.8 2-2.6 2.1-3H23.1c-.2.4-.8 1.8-1.6 3-1.9 2.8-2.8 3.2-3.4 3.2-.2 0-.4 0-.6-.1-1-.6-1-1.8-.9-2.8v-.4-1.7c.1-1.7 0-1.7-.4-1.8-.4-.1-.7-.1-1.9-.2h-.7c-.6 0-1.3 0-1.9.1l.3.3c.6.7.6 2 .6 2.2.1 1.6.1 3.8-1 4.3-.2.1-.4.1-.6.1-.9 0-1.9-.9-3.4-3.3-.8-1.2-1.5-2.7-1.5-2.8L6 2.2c-.1 0-.2-.1-.3-.1h-4-.1c.6 1.2 3.4 6.6 6.5 9.5 2.7 2.5 5.8 2.6 6.4 2.6h1.9s.2-.1.3-.1V14c0-.3 0-2.6 1.6-3 .1-.1.2-.1.3-.1z"/></svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--instagram" href="#">
+                <svg width="18" height="18" version="1.1" x="0" y="0" viewbox="0 0 23 23" xml:space="preserve"><path class="st0" d="M17 1.5c2.5 0 4.5 2 4.5 4.5v11c0 2.5-2 4.5-4.5 4.5H6c-2.5 0-4.5-2-4.5-4.5V6c0-2.5 2-4.5 4.5-4.5h11M17 0H6C2.7 0 0 2.7 0 6v11c0 3.3 2.7 6 6 6h11c3.3 0 6-2.7 6-6V6c0-3.3-2.7-6-6-6z"/><path class="st0" d="M11.5 7.1c2.4 0 4.4 2 4.4 4.4 0 2.4-2 4.4-4.4 4.4-2.4 0-4.4-2-4.4-4.4 0-2.4 2-4.4 4.4-4.4m0-1.5c-3.3 0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9-2.6-5.9-5.9-5.9z"/><circle class="st0" cx="17.6" cy="5.4" r="1.3"/></svg>
+              </a>
+            </li>
           </ul>
         </div>
         <ul class="site-header__user user-list">
@@ -55,11 +104,11 @@
           <div class="form__img-wrapper">
             <div class="form__level level level--form">
               <div class="level__text level__text--form">
-                <span class="level__value">80</span>
-                <span class="level__label">level</span>
+                <span class="level__value level__value--form">80</span>
+                <span class="level__label level__label--form">level</span>
               </div>
               <svg class="level__visual level__visual--form">
-                <circle class="level__progress" cx="57" cy="57" r="50"></circle>
+                <circle class="level__progress level__progress--form" cx="57" cy="57" r="50"></circle>
               </svg>
             </div>
             <img class="form__img" src="https://via.placeholder.com/270x270" width="100" height="100" alt="Фото: Петя Демин">
@@ -69,28 +118,31 @@
           <div class="form__transport-wrapper">
             <fieldset class="form__tags tags">
               <legend class="tags__heading">Тэги</legend>
-              <textarea class="tags__list" name="tags-list" rows="2" cols="30">#бургер #бар #футбол #концерт #крафт
-              </textarea>
+              <textarea class="tags__list" name="tags-list" rows="2" cols="30">#бургер #бар #футбол #концерт #крафт</textarea>
             </fieldset>
 
             <fieldset class="form__transport transport">
               <legend class="transport__heading">Транспорт</legend>
               <ul class="transport__list">
-                <li class="transport__item item-transport">
+                <li class="transport__item item-transport item-transport--plane item-transport--active">
                   <input class="item-transport__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-plane" id="transport-plane">
-                  <label class="item-transport__label" for="transport-plane">Самолет</label>
+                  <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 19 21"><path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg>
+                  <label class="item-transport__label visually-hidden" for="transport-plane">Самолет</label>
                 </li>
-                <li class="transport__item item-transport">
+                <li class="transport__item item-transport item-transport--bus item-transport--active">
                   <input class="item-transport__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-bus" id="transport-bus">
-                  <label class="item-transport__label" for="transport-bus">Автобус</label>
+                  <svg width="13" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg>
+                  <label class="item-transport__label visually-hidden" for="transport-bus">Автобус</label>
                 </li>
-                <li class="transport__item item-transport">
+                <li class="transport__item item-transport item-transport--bicycle item-transport">
                   <input class="item-transport__input transport-input visually-hidden" type="checkbox" name="transport-bicycle" id="transport-bicycle">
-                  <label class="item-transport__label" for="transport-bicycle">Велосипед</label>
+                  <svg width="19" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
+                  <label class="item-transport__label visually-hidden" for="transport-bicycle">Велосипед</label>
                 </li>
-                <li class="transport__item item-transport">
+                <li class="transport__item item-transport item-transport--legs item-transport--active">
                   <input class="item-transport__input transport-input transport-input--active visually-hidden" type="checkbox" name="transport-legs" id="transport-legs">
-                  <label class="item-transport__label" for="transport-legs">Ноги</label>
+                  <svg width="15" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 21"><ellipse cx="14.3" cy="2" rx="2.1" ry="2"/><path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/></svg>
+                  <label class="item-transport__label visually-hidden" for="transport-legs">Ноги</label>
                 </li>
               </ul>
             </fieldset>
@@ -109,7 +161,7 @@
                 </h3>
                 <div class="item-plans__wrapper">
                   <p class="item-plans__companions">3 Попутчика</p>
-                  <p class="item-plans__date">26 Апр - 29 Мар</p>
+                  <p class="item-plans__date">26 Мар — 29 Мар</p>
                   <a class="item-plans__change" href="#">Изменить</a>
                 </div>
               </li>
@@ -120,7 +172,7 @@
                 </h3>
                 <div class="item-plans__wrapper">
                   <p class="item-plans__companions">1 Попутчик</p>
-                  <p class="item-plans__date">1 Июл - 15 Июл</p>
+                  <p class="item-plans__date">1 Июл — 15 Июл</p>
                   <a class="item-plans__change" href="#">Изменить</a>
                 </div>
               </li>
@@ -167,7 +219,7 @@
                     </div>
 
                     <div class="step__children-wrapper">
-                      <input class="step__children-input check-input check-input--active" type="checkbox" name="children-allowed" id="children-allowed">
+                      <input class="step__children-input check-input--active visually-hidden" type="checkbox" name="children-allowed" id="children-allowed" checked>
                       <label class="step__children-label" for="children-allowed">Можно с детьми</label>
                     </div>
                   </div>
@@ -238,16 +290,16 @@
                           <td class="calendar__day calendar__day--current calendar__day--active">26</td>
                           <td class="calendar__day calendar__day--active">27</td>
                           <td class="calendar__day calendar__day--active">28</td>
-                          <td class="calendar__day">29</td>
+                          <td class="calendar__day calendar__day--inactive">29</td>
                         </tr>
                         <tr class="calendar__row">
-                          <td class="calendar__day">30</td>
-                          <td class="calendar__day">31</td>
-                          <td class="calendar__day">1</td>
-                          <td class="calendar__day">2</td>
-                          <td class="calendar__day">3</td>
-                          <td class="calendar__day">4</td>
-                          <td class="calendar__day">5</td>
+                          <td class="calendar__day calendar__day--inactive">30</td>
+                          <td class="calendar__day calendar__day--inactive">31</td>
+                          <td class="calendar__day calendar__day--inactive">1</td>
+                          <td class="calendar__day calendar__day--inactive">2</td>
+                          <td class="calendar__day calendar__day--inactive">3</td>
+                          <td class="calendar__day calendar__day--inactive">4</td>
+                          <td class="calendar__day calendar__day--inactive">5</td>
                         </tr>
                       </tbody>
                     </table>
@@ -255,15 +307,15 @@
                 </div>
                 <a class="step__next" href="#step-2">Следующий шаг</a>
               </li>
-              <li class="plan-steps__item step" id="step-2">
+              <li class="plan-steps__item step step--step2" id="step-2">
                 <ul class="step__steps-markers step__steps-markers--step2 steps-marker">
                   <li class="steps-marker__item"><span class="steps-marker__item-text">Даты</span></li>
                   <li class="steps-marker__item steps-marker__item--active"><span class="steps-marker__item-text steps-marker__item-text--current">Маршрут</span></li>
                   <li class="steps-marker__item"><span class="steps-marker__item-text">Развлечения</span></li>
                 </ul>
-                <div class="step__wrapper">
+                <div class="step__wrapper step__wrapper--step2">
                   <h3 class="step__heading">Шаг 2.<br>Маршрут</h3>
-                  <p class="step__desc">
+                  <p class="step__desc step__desc--step2">
                     Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
                   </p>
                   <ul class="step__countries countries-list">
@@ -272,9 +324,12 @@
                         <label class="country__label visually-hidden" for="country-1">Босния и герцеговина</label>
                         <input class="country__input country__input--selected" type="text" id="country-1" value="Босния и герцеговина">
                         <div class="country__flag country__flag--active">
-                          <img class="country__flag-img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг: Босния и герцеговина">
+                          <div class="country__flag-img country__flag-img--bosnia"></div>
                         </div>
-                        <button class="country__remove" type="button">Удалить</button>
+                        <svg class="country__dropdown-icon" width="12" height="7" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 9"><path d="M8.5 7.2L1.3.2C1-.1.5-.1.2.2c-.3.3-.3.8 0 1L8 8.8c.3.3.8.3 1.1 0l7.7-7.5c.1-.2.2-.4.2-.6s-.1-.4-.2-.5c-.3-.3-.8-.3-1.1 0l-7.2 7z"/></svg>
+                        <button class="country__remove" type="button">
+                          <svg width="9" height="9" xmlns="http://www.w3.org/2000/svg" viewox="0 0 9 9"><path d="M5.2 4.5L8.9.8c.1-.2.1-.5 0-.7s-.5-.1-.7 0L4.5 3.8.8.1C.6 0 .3 0 .1.1S0 .6.1.8l3.7 3.7L.1 8.2c-.1.2-.1.5 0 .7.1.1.3.1.4.1s.2 0 .3-.1l3.7-3.7 3.7 3.7c.1.1.2.1.3.1s.2 0 .3-.1c.2-.2.2-.5.1-.7L5.2 4.5z"/></svg>
+                        </button>
                         <div class="country__filter countries-filter"></div>
                       </div>
                     </li>
@@ -283,9 +338,12 @@
                         <label class="country__label visually-hidden" for="country-2">Чехия</label>
                         <input class="country__input country__input--selected" type="text" id="country-2" value="Чехия">
                         <div class="country__flag country__flag--active">
-                          <img class="country__flag-img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг: Чехия">
+                          <div class="country__flag-img country__flag-img--czech"></div>
                         </div>
-                        <button class="country__remove" type="button">Удалить</button>
+                        <svg class="country__dropdown-icon" width="12" height="7" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 9"><path d="M8.5 7.2L1.3.2C1-.1.5-.1.2.2c-.3.3-.3.8 0 1L8 8.8c.3.3.8.3 1.1 0l7.7-7.5c.1-.2.2-.4.2-.6s-.1-.4-.2-.5c-.3-.3-.8-.3-1.1 0l-7.2 7z"/></svg>
+                        <button class="country__remove" type="button">
+                          <svg width="9" height="9" xmlns="http://www.w3.org/2000/svg" viewox="0 0 9 9"><path d="M5.2 4.5L8.9.8c.1-.2.1-.5 0-.7s-.5-.1-.7 0L4.5 3.8.8.1C.6 0 .3 0 .1.1S0 .6.1.8l3.7 3.7L.1 8.2c-.1.2-.1.5 0 .7.1.1.3.1.4.1s.2 0 .3-.1l3.7-3.7 3.7 3.7c.1.1.2.1.3.1s.2 0 .3-.1c.2-.2.2-.5.1-.7L5.2 4.5z"/></svg>
+                        </button>
                         <div class="country__filter countries-filter"></div>
                       </div>
                     </li>
@@ -294,9 +352,12 @@
                         <label class="country__label visually-hidden" for="country-3">Выберите страну</label>
                         <input class="country__input country__input--selected " type="text" id="country-3" value="Выберите страну">
                         <div class="country__flag">
-                          <img class="country__flag-img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг:">
+                          <div class="country__flag-img"></div>
                         </div>
-                        <button class="country__remove" type="button">Удалить</button>
+                        <svg class="country__dropdown-icon" width="12" height="7" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 9"><path d="M8.5 7.2L1.3.2C1-.1.5-.1.2.2c-.3.3-.3.8 0 1L8 8.8c.3.3.8.3 1.1 0l7.7-7.5c.1-.2.2-.4.2-.6s-.1-.4-.2-.5c-.3-.3-.8-.3-1.1 0l-7.2 7z"/></svg>
+                        <button class="country__remove" type="button">
+                          <svg width="9" height="9" xmlns="http://www.w3.org/2000/svg" viewox="0 0 9 9"><path d="M5.2 4.5L8.9.8c.1-.2.1-.5 0-.7s-.5-.1-.7 0L4.5 3.8.8.1C.6 0 .3 0 .1.1S0 .6.1.8l3.7 3.7L.1 8.2c-.1.2-.1.5 0 .7.1.1.3.1.4.1s.2 0 .3-.1l3.7-3.7 3.7 3.7c.1.1.2.1.3.1s.2 0 .3-.1c.2-.2.2-.5.1-.7L5.2 4.5z"/></svg>
+                        </button>
                         <div class="country__filter countries-filter countries-filter--active-form"> <!-- переиспользую бэм блок countries-filter из страницы каталога с небольшими изменениями-->
                           <h4 class="countries-filter__heading countries-filter__heading--form">Выберите страну</h4>
                           <div class="countries-filter__wrapper countries-filter__wrapper--form">
@@ -356,7 +417,10 @@
                       </div>
                     </li>
                   </ul>
-                  <button class="step__add-country">Добавить страну</button>
+                  <button class="step__add-country" type="button">
+                    Добавить страну
+                    <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 14 14"><path d="M8 6V0H6v6H0v2h6v6h2V8h6V6z"/></svg>
+                  </button>
                 </div>
                 <div class="step__btn-wrapper">
                   <a class="step__next btn" href="#step-3">Следующий шаг</a>
@@ -370,7 +434,7 @@
                   <li class="steps-marker__item steps-marker__item--active"><span class="steps-marker__item-text steps-marker__item-text--current">Развлечения</span></li>
                 </ul>
                 <div class="step__wrapper">
-                  <h3 class="step__heading">Шаг 3. Развлечения</h3>
+                  <h3 class="step__heading">Шаг 3.<br>Развлечения</h3>
                   <p class="step__desc">
                     Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
                   </p>
@@ -378,7 +442,7 @@
                     <li class="to-do__item plan">
                       <div class="plan__header">
                         <h4 class="plan__country-name">Босния и Герцеговина</h4>
-                        <img class="plan__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг: Босния и герцеговина">
+                        <div class="plan__country-flag plan__country-flag--bosnia"></div>
                       </div>
                       <label class="plan__label visually-hidden">План действий</label>
                       <textarea class="plan__text" placeholder="План действий"></textarea>
@@ -386,15 +450,15 @@
                     <li class="to-do__item plan">
                       <div class="plan__header">
                         <h4 class="plan__country-name">Чехия</h4>
-                        <img class="plan__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг: Чехия">
+                        <div class="plan__country-flag plan__country-flag--czech"></div>
                       </div>
                       <label class="plan__label visually-hidden">План действий</label>
-                      <textarea class="plan__text" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                      <textarea class="plan__text" placeholder="План действий">Пить пиво и лазить          по старым замкам, наслаждаться архитектурой и вот это все.
                       </textarea>
                     </li>
                   </ul>
                 </div>
-                <div class="step__btn-wrapper">
+                <div class="step__btn-wrapper step__btn-wrapper--last">
                   <button class="step__submit-btn btn">Отправить</button>
                   <a class="step__prev" href="#step-2">На шаг назад</a>
                 </div>
@@ -408,11 +472,23 @@
 
     <footer class="site-footer">
       <div class="site-footer__container">
-        <img class="site-footer__logo" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Погнали?">
+        <img class="site-footer__logo" src="../img/logo-mobile-blue@1x.png" width="100" height="19" alt="Погнали?">
         <ul class="site-footer__socials socials">
-          <li class="socials__item socials__item--circle"><a class="socials__facebook" href="#"></a></li>
-          <li class="socials__item socials__item--circle"><a class="socials__vk" href="#"></a></li>
-          <li class="socials__item socials__item--circle"><a class="socials__instagram" href="#"></a></li>
+          <li class="socials__item socials__item--circle">
+            <a class="socials__link socials__link--footer socials__link--facebook" href="#">
+              <svg width="11" height="21" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 11 21"><path d="M7.8 21H2.2v-9.8H0V6.4h2.1c-.1-2.2.3-3.8 1.3-4.9C4.2.6 5.5.1 7.1 0H11v4.7H7.9c-.1.2-.2.8-.2 1.7H11v4.8H7.8V21zm-4.4-1.1h3.1v-9.8h3.2V7.5H6.5v-.6c0-1.5 0-2.9.8-3.4l.2-.1h2.3V1.1H7.1c-1.2.1-2.2.5-2.8 1.2-.8.9-1.1 2.5-.9 4.6l.1.6H1.2v2.6h2.2v9.8z"/></svg>
+            </a>
+          </li>
+          <li class="socials__item socials__item--circle">
+            <a class="socials__link socials__link--footer socials__link--vk" href="#">
+              <svg width="23" height="12" viewbox="0 0 30 15.8"><path d="M23.9 15.8c-.4 0-1.2-.1-2.1-.6-.6-.4-1.2-1-1.8-1.5-.4-.4-1.2-1.2-1.4-1.2-.3.1-.5.9-.5 1.6 0 .1 0 .8-.5 1.2-.4.4-1.1.5-1.2.5h-1.9c-1 0-4.4-.2-7.4-3C3.4 9.4.3 3 .1 2.7 0 2.2-.1 1.5.3 1.1.7.7 1.4.6 1.7.6H5.9c.1 0 .6.1 1 .3.4.2.6.7.6.7S8.1 3 9 4.3c1.3 2 1.9 2.5 2.1 2.6.2-.4.3-1.7.2-2.9 0-.5-.1-1.1-.3-1.3-.1-.1-.4-.3-.8-.3l-.7-.6c-.1-.7.6-1.2 1.1-1.4.7-.3 1.8-.4 3.1-.4h.7c1.2 0 1.6.1 2.1.2 1.7.4 1.6 1.7 1.6 3.3v2.1c0 .4 0 1 .1 1.3.2-.1.9-.7 2.1-2.5.8-1.2 1.4-2.5 1.5-2.8.2-.4.6-.9 1.6-.9h4.7c1 0 1.6.3 1.8.9.3.6.2 1.7-2.4 4.6-.4.4-.7.8-1 1.1-.6.7-1.2 1.4-1.2 1.6.1.1.7.6 1.3 1.1 1.5 1.2 2.5 2.3 3 3.1.5.8.4 1.3.3 1.7-.4.9-1.6 1-1.9 1h-4.1zm-5.3-4.9c.9 0 1.7.8 2.5 1.6.5.5 1 1 1.5 1.3.7.4 1.3.4 1.4.4h3.9c.2 0 .4-.1.5-.1 0 0 0-.1-.1-.2-.4-.7-1.4-1.7-2.7-2.7-1.2-1-1.8-1.5-1.9-2.2-.1-.8.5-1.4 1.6-2.7.3-.3.6-.7 1-1.1 1.6-1.8 2-2.6 2.1-3H23.1c-.2.4-.8 1.8-1.6 3-1.9 2.8-2.8 3.2-3.4 3.2-.2 0-.4 0-.6-.1-1-.6-1-1.8-.9-2.8v-.4-1.7c.1-1.7 0-1.7-.4-1.8-.4-.1-.7-.1-1.9-.2h-.7c-.6 0-1.3 0-1.9.1l.3.3c.6.7.6 2 .6 2.2.1 1.6.1 3.8-1 4.3-.2.1-.4.1-.6.1-.9 0-1.9-.9-3.4-3.3-.8-1.2-1.5-2.7-1.5-2.8L6 2.2c-.1 0-.2-.1-.3-.1h-4-.1c.6 1.2 3.4 6.6 6.5 9.5 2.7 2.5 5.8 2.6 6.4 2.6h1.9s.2-.1.3-.1V14c0-.3 0-2.6 1.6-3 .1-.1.2-.1.3-.1z"/></svg>
+            </a>
+          </li>
+          <li class="socials__item socials__item--circle">
+            <a class="socials__link socials__link--footer socials__link--instagram" href="#">
+              <svg width="18" height="18" version="1.1" x="0" y="0" viewbox="0 0 23 23" xml:space="preserve"><path class="st0" d="M17 1.5c2.5 0 4.5 2 4.5 4.5v11c0 2.5-2 4.5-4.5 4.5H6c-2.5 0-4.5-2-4.5-4.5V6c0-2.5 2-4.5 4.5-4.5h11M17 0H6C2.7 0 0 2.7 0 6v11c0 3.3 2.7 6 6 6h11c3.3 0 6-2.7 6-6V6c0-3.3-2.7-6-6-6z"/><path class="st0" d="M11.5 7.1c2.4 0 4.4 2 4.4 4.4 0 2.4-2 4.4-4.4 4.4-2.4 0-4.4-2-4.4-4.4 0-2.4 2-4.4 4.4-4.4m0-1.5c-3.3 0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9-2.6-5.9-5.9-5.9z"/><circle class="st0" cx="17.6" cy="5.4" r="1.3"/></svg>
+            </a>
+          </li>
         </ul>
         <div class="site-footer__copyright copyright">
           <p class="copyright__text">Разработано</p>

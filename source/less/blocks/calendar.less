@@ -1,9 +1,9 @@
 .calendar__month-wrapper {
   position: relative;
 
-  margin-bottom: 25px;
+  margin-bottom: 17px;
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
 
   border-top: 1px solid #cbced9;
   border-bottom: 1px solid #cbced9;
@@ -35,15 +35,14 @@
 }
 
 .calendar__table {
+  width: 221px;
   margin: auto;
-  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 .calendar__day {
-  padding-top: 5px;
+  padding-top: 7px;
   padding-bottom: 5px;
-  padding-left: 7px;
-  padding-right: 7px;
 
   font-weight: 400;
   font-size: 14px;
@@ -56,6 +55,10 @@
   border: 1px solid #cbced9;
 
   &--header {
+    padding-top: 5px;
+    padding-bottom: 7px;
+    padding-left: 4px;
+
     color: #444444;
 
     border: none;
@@ -63,6 +66,22 @@
 
   &--weekend {
     color: #ff5c23;
+  }
+
+  &--current {
+    outline: 2px solid #ff5c23;
+  }
+
+  &--active {
+    color: #ffffff;
+
+    background-color: #1d2e5b;
+  }
+
+  &--inactive {
+    color: #444444;
+
+    background-color: #edeff6;
   }
 }
 

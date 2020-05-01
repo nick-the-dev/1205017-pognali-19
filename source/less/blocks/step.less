@@ -4,14 +4,28 @@
 
   background-color: #fcfdfd;
   border-radius: 10px;
+
+  &--step2 {
+    padding-bottom: 9px;
+  }
+}
+
+.step:last-child {
+  margin-bottom: 27px;
+  padding-bottom: 9px;
 }
 
 .step__wrapper {
-  padding: 25px;
+  padding: 24px;
+
+  &--step2 {
+    padding-bottom: 25px;
+  }
 }
 
 .step__heading {
   margin-top: 0;
+  margin-bottom: 15px;
 
   font-weight: 600;
   font-size: 20px;
@@ -21,15 +35,25 @@
 }
 
 .step__desc {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 1px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   font-family: @site-font-family;
   color: #444444;
+
+  &--step2 {
+    margin-bottom: 21px;
+  }
 }
 
 .step__companions-heading,
 .step__duration-heading {
+  position: relative;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
@@ -39,19 +63,45 @@
   text-transform: uppercase;
 }
 
+.step__companions-heading::after {
+  content: "Чел.";
+  position: absolute;
+  right: -68px;
+  top: 0;
+  color: rgba(29, 46, 91, 0.3);
+}
+
+.step__duration-heading::after {
+  content: "Дн.";
+  position: absolute;
+  right: -88px;
+  top: 0;
+  color: rgba(29, 46, 91, 0.3);
+}
+
 .step__input-wrapper {
   position: relative;
 
-  margin-bottom: 21px;
+  margin-bottom: 20px;
+  margin-top: 7px;
+  padding-left: 1px;
+  padding-right: 1px;
 }
 
 .step__companions-input,
 .step__duration-input {
   width: 100%;
-  padding-top: 13px;
+  padding-top: 15px;
+  padding-left: 15px;
   padding-bottom: 10px;
 
   text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 13.5px;
+  letter-spacing: 1.5px;
+  font-family: @site-font-family;
+  color: #1d2e5b;
 
   border: 1px solid #cbced9;
   border-radius: 4px;
@@ -70,7 +120,7 @@
   background-image: url("../img/qty-minus-mobile.svg");
   background-repeat: no-repeat;
   background-size: 14px 2px;
-  background-position: center;
+  background-position: 15px 21px;
   opacity: 0.3;
   border: none;
 }
@@ -88,24 +138,58 @@
   background-image: url("../img/qty-plus-mobile.svg");
   background-repeat: no-repeat;
   background-size: 14px;
-  background-position: center;
+  background-position: 13px 15px;
   opacity: 0.3;
   border: none;
 }
 
-.step__children-label {
-  margin-bottom: 27px;
+.step__children-wrapper {
+  padding-top: 6px;
+}
 
-  font-weight: 500;
+.step__children-label {
+  position: relative;
+
+  margin-bottom: 27px;
+  padding-left: 40px;
+
+
+  font-weight: 400;
   font-size: 15px;
   line-height: 15px;
   font-family: @site-font-family;
   color: #444444;
 }
 
+.step__children-label::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 1px;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 26px;
+  height: 26px;
+  background-color: #ffffff;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+}
+
+.step__children-input {
+  position: absolute;
+  appearance: none;
+}
+
+.step__children-input:checked + label::before {
+  background-image: url("../img/tick.svg");
+  background-size: 9px 9px;
+  background-repeat: no-repeat;
+  background-position: 8px 7px;
+}
+
 .step__calendar {
-  margin-top: 27px;
-  margin-bottom: 23px;
+  margin-top: 24px;
+  margin-bottom: -2px;
 }
 
 .step__next {
@@ -128,10 +212,16 @@
 }
 
 .step__add-country {
-  width: 100%;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  margin-left: 1px;
   padding-top: 13px;
-  padding-bottom: 12px;
+  padding-bottom: 11px;
   padding-left: 12px;
+  padding-right: 14px;
 
   font-weight: 500;
   font-size: 14px;
@@ -147,9 +237,31 @@
   border-radius: 4px;
 }
 
+.step__add-country::after {
+  content: "";
+
+  position: absolute;
+  top: 17px;
+  right: 49px;
+  z-index: 1;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  border: 1px solid #cbced9;
+  background-color: transparent;
+}
+
+.step__add-country svg {
+  opacity: 0.3;
+  margin-top: 1px;
+}
+
 .step__prev {
   display: block;
-  margin-top: 19px;
+  margin-top: 13px;
 
   font-weight: 600;
   font-size: 17px;
@@ -185,6 +297,10 @@
   &--step3 {
     display: none;
   }
+}
+
+.step__btn-wrapper--last {
+  margin-top: -26px;
 }
 
 @media (min-width: @tablet-width) {

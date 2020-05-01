@@ -6,13 +6,44 @@
   position: relative;
 
   display: flex;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.country__select::before {
+  content: "";
+
+  position: absolute;
+  top: 17px;
+  right: 50px;
+  z-index: 1;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  border: 1px solid #cbced9;
+  background-color: #ffffff;
+}
+
+.country__select::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  right: 51px;
+  width: 5px;
+  height: 10px;
+  background-image: url("../img/small-arrow.svg");
 }
 
 .country__input {
+  position: relative;
   width: 100%;
   padding-top: 12px;
   padding-bottom: 10px;
-  padding-left: 12px;
+  padding-left: 10px;
+  padding-right: 30px;
 
   font-weight: 500;
   font-size: 14px;
@@ -31,20 +62,91 @@
   margin-left: -1px;
   padding-top: 8px;
   padding-bottom: 3px;
-  padding-left: 9px;
-  padding-right: 9px;
+  padding-left: 8px;
+  padding-right: 8px;
   border: 1px solid #cbced9;
   border-radius: 4px;
+  width: 67px;
 
   &--active {
     display: block;
+  }
+
+  &--active::before {
+    content: "";
+
+    position: absolute;
+    top: 3px;
+    right: 64px;
+
+    display: block;
+    width: 34px;
+    height: 36px;
+
+    background: linear-gradient(90deg, rgba(252, 253, 253, 0) 0%, rgba(252, 253, 253, 1) 40%, rgba(252, 253, 253, 1) 100%);
+  }
+
+  &--active:after {
+    content: "";
+
+    position: absolute;
+    top: 17px;
+    right: 50px;
+    z-index: 1;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50px;
+    background-color: #1d2e5b;
+  }
+
+  &--active + .country__dropdown-icon {
+    right: 67px;
+  }
+}
+
+.country__flag-img {
+  width: 35px;
+  height: 24px;
+  background-size: 35px 24px;
+
+  &--bosnia {
+    background-image: url("../img/bosnia-icon.png");
+  }
+
+  &--czech {
+    background-image: url("../img/czech-icon.png");
   }
 }
 
 .country__remove {
   position: absolute;
   top: -10px;
-  right: -47px;
+  right: -9px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+
+  border: none;
+  background-color: #edeff6;
+  border-radius: 50%;
+}
+
+.country__remove svg {
+  opacity: 0.3;
+}
+
+.country__dropdown-icon {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
