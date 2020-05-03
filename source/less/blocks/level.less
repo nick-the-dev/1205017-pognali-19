@@ -155,6 +155,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .level--form {
+    top: -2px;
+
+    margin-left: -312px;
+  }
+
   .level__visual {
     margin-top: -37px;
     margin-left: -6px;
@@ -173,6 +179,10 @@
       top: -5px;
       left: -13px;
     }
+
+    &--form {
+      top: -6px;
+    }
   }
 
   .level__label--catalog {
@@ -186,6 +196,10 @@
     top: 19px;
 
     background-color: rgba(68, 68, 68, 0.4);
+  }
+
+  .level__label--form::before {
+    background-color: #a5a7ac;
   }
 
   .level__progress--catalog {
@@ -206,6 +220,11 @@
     &-50 {
       stroke-dasharray: 132.56;
     }
+  }
+
+  .level__progress--form {
+    r: 47;
+    stroke-dasharray: 283.56;
   }
 }
 

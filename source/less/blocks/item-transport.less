@@ -1,3 +1,7 @@
+.item-transport svg {
+  fill: #d9d9d9;
+}
+
 .item-transport {
   display: flex;
   justify-content: center;
@@ -15,5 +19,40 @@
   &--legs svg {
     margin-left: -2px;
   }
+
+  &--active svg {
+    fill: #1d2e5b;
+  }
 }
 
+@media (min-width: @tablet-width) {
+  .item-transport {
+    width: 42px;
+    height: 43px;
+
+    &--plane svg {
+      width: 19px;
+      height: 21px;
+    }
+
+    &--bus svg {
+      width: 17px;
+      height: 21px;
+    }
+
+    &--bicycle svg {
+      width: 24px;
+      height: 21px;
+    }
+
+    &--legs svg {
+      width: 20px;
+      height: 21px;
+      margin-right: -3px;
+    }
+  }
+
+  .item-transport svg {
+    margin-top: -2px;
+  }
+}

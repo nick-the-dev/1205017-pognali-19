@@ -5,13 +5,13 @@
   background-color: #e2e5f2;
   border-radius: 0 0 20px 20px;
 
-  &--active-form {
+  &--form {
     position: absolute;
     top: 29px;
     z-index: 2;
 
     display: none;
-    width: 100%;
+    width: 220px;
     padding-bottom: 0;
 
     background-color: #ffffff;
@@ -54,6 +54,15 @@
   margin-left: -25px;
   margin-right: -22px;
   padding-bottom: 13px;
+
+  &--form {
+    margin: 0;
+    padding: 0;
+  }
+
+  &--form svg {
+    fill: #ffffff;
+  }
 }
 
 .countries-filter__icon {
@@ -61,6 +70,7 @@
 }
 
 .countries-filter__heading {
+  width: 220px;
   margin-top: 0;
   margin-bottom: 0;
   margin-right: 26px;
@@ -74,18 +84,21 @@
 
   &--form {
     margin: 0;
-    padding-left: 13px;
-    padding-top: 8px;
-    padding-bottom: 6px;
+    margin-left: -1px;
+    padding-left: 12px;
+    padding-top: 13px;
+    padding-bottom: 11px;
 
     font-weight: 500;
     font-size: 14px;
-    line-height: 28px;
+    line-height: 18px;
+    letter-spacing: 1.4px;
     font-family: @site-font-family;
     color: #ffffff;
     text-transform: uppercase;
 
     background-color: #1d2e5b;
+    border-radius: 4px 4px 0 0;
   }
 }
 
@@ -102,8 +115,9 @@
   margin-left: 1px;
 
   &--form {
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin-left: 19px;
+    margin-bottom: 0;
+    padding-top: 1px;
   }
 }
 
@@ -191,6 +205,32 @@
 
   background-color: #e2e5f2;
   border-radius: 0 0 20px 20px;
+
+  &--form {
+    display: block;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0;
+    padding-bottom: 14px;
+
+    background-color: #ffffff;
+    box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.countries-filter__close-btn {
+  position: absolute;
+  right: 0;
+
+  width: 40px;
+  height: 40px;
+  padding-top: 3px;
+  padding-right: 8px;
+
+
+  background-color: transparent;
+  border: none;
 }
 
 @media (min-width: @tablet-width) {
