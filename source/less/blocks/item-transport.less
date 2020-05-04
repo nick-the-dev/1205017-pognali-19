@@ -1,8 +1,11 @@
 .item-transport svg {
-  fill: #d9d9d9;
+  fill: #1d2e5b;
+  opacity: 0.15;
 }
 
 .item-transport {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,10 +22,21 @@
   &--legs svg {
     margin-left: -2px;
   }
+}
 
-  &--active svg {
-    fill: #1d2e5b;
-  }
+.item-transport__label {
+  position: absolute;
+
+  width: 33px;
+  height: 33px;
+
+  font-size: 0;
+
+  border-radius: 50%;
+}
+
+.item-transport:checked + svg {
+  opacity: 1;
 }
 
 @media (min-width: @tablet-width) {
@@ -54,6 +68,11 @@
 
   .item-transport svg {
     margin-top: -2px;
+  }
+
+  .item-transport__label {
+    width: 42px;
+    height: 43px;
   }
 }
 
