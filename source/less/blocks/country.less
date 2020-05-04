@@ -255,5 +255,26 @@
 @media (min-width: @desktop-width) {
   .country__input {
     width: 730px;
+    margin-right: 85px;
+  }
+
+  .country__flag--active::before {
+    display: none;
+  }
+
+  .country__flag--active + .country__dropdown-icon {
+    right: 288px;
+  }
+
+  .country__flag--active::after {
+    right: 209px;
+  }
+
+  .country__select::before {
+    right: 209px;
+  }
+
+  .country__dropdown-icon {
+    right: 288px;
   }
 }

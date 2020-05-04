@@ -240,7 +240,19 @@
     &--form {
       display: block;
       width: 369px;
+      padding-top: 28px;
+      padding-left: 25px;
+      padding-bottom: 24px;
+
+      font-size: 20px;
+      line-height: 18px;
+      letter-spacing: 2px;
     }
+  }
+
+  .countries-filter__close-btn {
+    width: 70px;
+    height: 70px;
   }
 
   .countries-filter__heading-wrapper {
@@ -251,6 +263,19 @@
     margin-top: 14px;
     padding-bottom: 1px;
     padding-right: 73px;
+
+    &--form {
+      width: 369px;
+      margin-left: -1px;
+      margin-top: 0;
+      padding-right: 0;
+    }
+
+    &--form svg {
+      width: 18px;
+      height: 18px;
+      margin-top: 4px;
+    }
   }
 
   .countries-filter--open .countries-filter__toggle-close {
@@ -370,8 +395,8 @@
     padding-right: 20px;
 
     &--form {
-      margin-top: 37px;
-      margin-left: 93px;
+      margin-top: 30px;
+      margin-left: 106px;
     }
   }
 
@@ -386,8 +411,28 @@
     padding-bottom: 5px;
 
     &--form {
+      position: relative;
+
       display: flex;
+      width: 574px;
+      margin-top: 0;
+      padding-bottom: 24px;
+
       box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+    }
+
+    &--form::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 206px;
+
+      display: block;
+      width: 1px;
+      height: 100%;
+
+      background-color: #eaecf2;
     }
   }
 
@@ -404,6 +449,12 @@
 
     &--open {
       margin-bottom: 40px;
+    }
+
+    &--form {
+      width: 369px;
+
+      border: 1px solid #ffffff;
     }
   }
 
@@ -445,9 +496,14 @@
     &--form {
       width: 730px;
       margin-top: 0;
+      padding-bottom: 4px;
 
       background-color: #ffffff;
     }
+  }
+
+  .countries-filter__wrapper--form::after {
+    right: 241px;
   }
 
   .countries-filter__container {
@@ -464,6 +520,12 @@
 
     font-size: 20px;
     line-height: 24px;
+
+    &--form {
+      padding-left: 25px;
+      padding-top: 25px;
+      padding-bottom: 21px;
+    }
   }
 
   .countries-filter__heading::after {
@@ -473,6 +535,11 @@
   .countries-filter__heading-wrapper {
     justify-content: flex-start;
     padding-left: 45px;
+
+    &--form {
+      width: 730px;
+      padding-left: 1px;
+    }
   }
 
   .countries-filter__icon {
@@ -489,6 +556,7 @@
 
     &--form {
       display: block;
+      margin-left: 112px;
     }
   }
 

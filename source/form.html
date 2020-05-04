@@ -97,6 +97,18 @@
       <div class="site-main__heading-wrapper site-main__heading-wrapper--form">
         <div class="site-main__heading-container">
           <h1 class="site-main__heading site-main__heading--form">Направления</h1>
+          <section class="site-main__tools tools tools--form">
+            <h2 class="tools__heading visually-hidden">Кнопки быстрого доступа</h2>
+            <ul class="tools__contacts tools-list">
+              <li class="tools-list__item"><a class="tools-list__phone btn btn--circle" href="tel:88005558628"></a></li>
+              <li class="tools-list__item"><a class="tools-list__email btn btn--circle" href="mailto:mail@htmlacademy.ru"></a></li>
+            </ul>
+            <ul class="tools__user tools-user">
+              <li class="tools-user__item">
+                <a class="tools-user__btn btn btn--rounded" href="auth.html">Авторизация</a>
+              </li>
+            </ul>
+          </section>
         </div>
       </div>
       <form class="site-main__form form" action="https://echo.htmlacademy.ru" method="post">
@@ -113,7 +125,7 @@
             </div>
             <img class="form__img" src="https://via.placeholder.com/270x270" width="100" height="100" alt="Фото: Петя Демин">
           </div>
-          <button class="form__change-img-btn btn" type="button">Сменить фото</button>
+          <button class="form__change-img-btn btn" type="button"> <span class="form__change-img-btn-expanded">Сменить </span> фото</button>
 
           <div class="form__transport-wrapper">
             <fieldset class="form__tags tags">
@@ -193,9 +205,9 @@
             <ul class="add-plan__steps plan-steps">
               <li class="plan-steps__item step" id="step-1">
                 <div class="step__wrapper step__wrapper--step1">
-                  <h3 class="step__heading">Шаг 1.<br>Даты пребывания</h3>
+                  <h3 class="step__heading">Шаг 1. <br>Даты пребывания</h3>
                   <p class="step__desc step__desc--step1">
-                    Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.
+                    Укажите предпочтительное количество попутчиков, которых <br>вы хотели бы позвать в поездку и ее предполагаемую длительность.
                   </p>
                   <div class="step__fields-wrapper">
                     <div class="step__inputs-wrapper">
@@ -275,7 +287,7 @@
                           <td class="calendar__day calendar__day--disabled">26</td>
                           <td class="calendar__day calendar__day--disabled">27</td>
                           <td class="calendar__day calendar__day--disabled">28</td>
-                          <td class="calendar__day calendar__day--disabled">1</td>
+                          <td class="calendar__day calendar__day--disabled">1<span class="calendar__day-month-name"> мар</span></td>
                         </tr>
                         <tr class="calendar__row">
                           <td class="calendar__day calendar__day--disabled">2</td>
@@ -316,7 +328,7 @@
                         <tr class="calendar__row">
                           <td class="calendar__day calendar__day--inactive">30</td>
                           <td class="calendar__day calendar__day--inactive">31</td>
-                          <td class="calendar__day calendar__day--inactive">1</td>
+                          <td class="calendar__day calendar__day--inactive">1<span class="calendar__day-month-name"> апр</span></td>
                           <td class="calendar__day calendar__day--inactive">2</td>
                           <td class="calendar__day calendar__day--inactive">3</td>
                           <td class="calendar__day calendar__day--inactive">4</td>
@@ -338,7 +350,7 @@
                   <li class="steps-marker__item"><span class="steps-marker__item-text">Развлечения</span></li>
                 </ul>
                 <div class="step__wrapper step__wrapper--step2">
-                  <h3 class="step__heading">Шаг 2.<br>Маршрут</h3>
+                  <h3 class="step__heading">Шаг 2. <br>Маршрут</h3>
                   <p class="step__desc step__desc--step2">
                     Укажите страны, которые вы хотели посетить. <br>Это может быть одна или сразу несколько.
                   </p>
@@ -469,9 +481,9 @@
                   <li class="steps-marker__item steps-marker__item--active"><span class="steps-marker__item-text steps-marker__item-text--current">Развлечения</span></li>
                 </ul>
                 <div class="step__wrapper step__wrapper--step3">
-                  <h3 class="step__heading">Шаг 3.<br>Развлечения</h3>
+                  <h3 class="step__heading">Шаг 3. <br>Развлечения</h3>
                   <p class="step__desc step__desc--step3">
-                    Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+                    Наконец, расскажите о своих планах времяпровождения. <br>Можно писать в свободной форме и ставить тэги.
                   </p>
                   <ul class="step__countries-to-do to-do">
                     <li class="to-do__item plan">

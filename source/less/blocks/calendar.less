@@ -102,6 +102,10 @@
   }
 }
 
+.calendar__day-month-name {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .calendar__day {
     padding-top: 26px;
@@ -169,9 +173,53 @@
 
 @media (min-width: @desktop-width) {
   .calendar__day {
-    padding-top: 15px;
-    padding-right: 108px;
-    padding-bottom: 43px;
+    position: relative;
+
+    padding-top: 7px;
+    padding-right: 104px;
+    padding-bottom: 33px;
     padding-left: 16px;
+
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1.8px;
+
+    &--header {
+      padding-top: 6px;
+      padding-left: 13px;
+      padding-bottom: 13px;
+    }
+  }
+
+  .calendar__month-nav-btn {
+    height: 34px;
+    width: 18px;
+  }
+
+  .calendar__month-nav--prev {
+    left: 0;
+    top: 27px;
+  }
+
+  .calendar__month-nav--next {
+    right: 1px;
+    top: 27px;
+  }
+
+  .calendar__day-month-name {
+    position: absolute;
+    top: 7px;
+    left: 32px;
+
+    display: block;
+  }
+
+  .calendar__day--current::before {
+    top: -3px;
+    left: -4px;
+    z-index: 1;
+
+    width: 148px;
+    height: 76px;
   }
 }

@@ -45,11 +45,19 @@
   font-family: @site-font-family;
   color: #444444;
 
+  &--step1 br {
+    display: none;
+  }
+
   &--step2 {
     margin-bottom: 21px;
   }
 
   &--step2 br {
+    display: none;
+  }
+
+  &--step3 br {
     display: none;
   }
 }
@@ -656,6 +664,8 @@
 
     margin-bottom: 44px;
     padding-bottom: 105px;
+
+    border-radius: 60px;
   }
 
   .step__add-country {
@@ -665,37 +675,85 @@
   .step__wrapper {
     padding-left: 160px;
     padding-right: 160px;
-    padding-top: 100px;
+    padding-top: 99px;
     padding-bottom: 100px;
+
+    &--step1 {
+      padding-bottom: 53px;
+    }
+
+    &--step2 {
+      padding-right: 169px;
+      padding-bottom: 51px;
+    }
+
+    &--step3 {
+      padding-top: 100px;
+      padding-bottom: 38px;
+    }
   }
 
   .step__desc {
-    width: 576px;
+    width: 583px;
+    max-width: none;
+
+    &--step1 br {
+      display: block;
+    }
+
+    &--step1::after {
+      bottom: -55px;
+
+      width: 1000px;
+    }
+
+    &--step2 {
+      margin-bottom: 117px;
+    }
+
+    &--step2::after {
+      bottom: -55px;
+
+      width: 997px;
+    }
+
+    &--step3 br {
+      display: block;
+    }
+
+    &--step3::after {
+      bottom: -55px;
+      left: 0;
+
+      width: 997px;
+    }
   }
 
   .step__fields-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 60px;
+    margin-top: 85px;
   }
 
   .step__companions-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 400px;
+    width: 402px;
+    margin-bottom: 0;
     padding-bottom: 14px;
   }
 
   .step__input-wrapper {
     margin-bottom: 0;
+    margin-top: 0;
   }
 
   .step__duration-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 400px;
+    width: 402px;
   }
 
   .step__next {
@@ -707,24 +765,98 @@
     right: 301px;
 
     &--step2 {
+      top: 115px;
+      right: 383px;
+
       display: flex;
     }
 
     &--step3 {
+      top: 116px;
+      right: 383px;
+
       display: flex;
     }
   }
 
   .step__countries-to-do {
-    margin-top: 82px;
+    margin-top: 127px;
+    margin-left: -2px;
   }
 
   .step__btn-wrapper {
     justify-content: space-between;
-    margin-right: 160px;
+    margin-right: 163px;
   }
 
   .step__submit-btn {
     margin-left: 160px;
+  }
+
+  .step__heading br {
+    display: none;
+  }
+
+  .step__companions-input,
+  .step__duration-input {
+    width: 181px;
+  }
+
+  .step__companions-heading,
+  .step__duration-heading {
+    margin-top: 2px;
+  }
+
+  .step__companions-dec,
+  .step__duration-dec {
+    background-position: 21px 34px;
+  }
+
+  .step__companions-inc,
+  .step__duration-inc {
+    background-position: 29px 25px;
+  }
+
+  .step__companions-heading::after {
+    right: -290px;
+    top: 0;
+
+    color: #1d2e5b;
+  }
+
+  .step__children-wrapper {
+    top: 21px;
+    left: 756px;
+  }
+
+  .step__children-wrapper::after {
+    display: none;
+  }
+
+  .step__duration-heading::after {
+    right: -308px;
+    top: 0;
+    color: #1d2e5b;
+  }
+
+  .step__calendar {
+    margin-top: 32px;
+  }
+
+  .step__countries::before {
+    left: 774px;
+    top: -62px;
+
+    height: 540px;
+  }
+
+  .step__add-country::after {
+    top: 26px;
+    right: -52px;
+  }
+
+  .step:last-child {
+    margin-bottom: 55px;
+    padding-bottom: 105px;
   }
 }
