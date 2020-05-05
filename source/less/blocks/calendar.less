@@ -9,6 +9,10 @@
   border-bottom: 1px solid #cbced9;
 }
 
+.calendar__selected-dates {
+  display: none;
+}
+
 .calendar__month {
   font-weight: 600;
   font-size: 20px;
@@ -172,23 +176,69 @@
 }
 
 @media (min-width: @desktop-width) {
+  .calendar__table {
+    width: auto;
+  }
+
   .calendar__day {
     position: relative;
 
-    padding-top: 7px;
-    padding-right: 104px;
-    padding-bottom: 33px;
-    padding-left: 16px;
+    width: 144px;
+    height: 71px;
+
+    //padding-top: 7px;
+    //padding-right: 104px;
+    //padding-bottom: 33px;
+    //padding-left: 16px;
+    padding: 0;
 
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 1.8px;
 
     &--header {
-      padding-top: 6px;
-      padding-left: 13px;
-      padding-bottom: 13px;
+      height: 49px;
+      //padding-top: 6px;
+      //padding-left: 13px;
+      //padding-bottom: 13px;
+      padding: 0;
     }
+  }
+
+  .calendar__day-value {
+    position: absolute;
+    top: 7px;
+    left: 15px;
+  }
+
+  .calendar__day--header .calendar__day-value {
+    top: 6px;
+    left: 16px;
+  }
+
+  .calendar__day-expanded {
+    position: absolute;
+    top: 6px;
+    left: 27px;
+
+    display: block;
+    margin: 0;
+  }
+
+  .calendar__day--active-first::after {
+    content: "Заезд";
+
+    position: absolute;
+    top: 33px;
+    left: 15px;
+  }
+
+  .calendar__day--active-last::after {
+    content: "Выезд";
+
+    position: absolute;
+    top: 33px;
+    left: 15px;
   }
 
   .calendar__month-nav-btn {
