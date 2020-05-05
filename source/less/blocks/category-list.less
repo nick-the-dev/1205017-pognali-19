@@ -1,7 +1,19 @@
 .category-list {
+  padding-left: 9px;
+
   &--transport {
     display: flex;
+    margin-bottom: -2px;
+    padding-left: 0;
   }
+}
+
+.category-list__item {
+  margin-bottom: 12px;
+}
+
+.category-list__item:last-child {
+  margin-bottom: 9px;
 }
 
 @media (min-width: @tablet-width) {
@@ -11,6 +23,8 @@
 
     &--transport {
       justify-content: flex-start;
+      margin-left: -5px;
+      margin-top: -10px;
     }
   }
 }
@@ -21,6 +35,16 @@
 
     &--transport {
       flex-direction: row;
+      margin-top: -9px;
+      margin-left: -3px;
+    }
+  }
+
+  .category-list__item {
+    margin-bottom: 20px;
+
+    &--transport {
+      margin-bottom: 13px;
     }
   }
 }

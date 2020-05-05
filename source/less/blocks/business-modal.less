@@ -1,6 +1,6 @@
 .business-modal {
   position: absolute;
-  top: 3690px;
+  top: 3696px;
   left: 50%;
   z-index: 10;
 
@@ -10,16 +10,21 @@
 
   background-color: #ffffff;
   border-radius: 20px;
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
 
   transform: translateX(-50%);
+
+  &--active {
+    display: block;
+  }
 }
 
 .business-modal__heading {
   .homepage-heading();
 
-  padding-left: 25px;
+  padding-left: 23px;
   padding-right: 25px;
-  margin-bottom: 29px;
+  margin-bottom: 28px;
 
   text-align: center;
 }
@@ -31,13 +36,18 @@
 
   margin-left: 25px;
   margin-right: 25px;
-  max-width: 161px;
+  margin-bottom: 11px;
+  padding-top: 4px;
+  max-width: 219px;
+
+  border-top: 1px solid #f2f2f2;
 }
 
 .business-modal__btn {
   width: 100%;
   padding-top: 19px;
   padding-bottom: 16px;
+  padding-left: 5px;
   margin-top: 19px;
 
   font-weight: 600;
@@ -54,10 +64,13 @@
 
 @media (min-width: @tablet-width) {
   .business-modal {
-    top: 3566px;
+    top: 4263px;
 
     width: 688px;
-    height: 562px;
+    height: 525px;
+    padding-top: 51px;
+
+    border-radius: 30px;
   }
 
   .business-modal__heading {
@@ -87,9 +100,25 @@
 
 @media (min-width: @desktop-width) {
   .business-modal {
-    top: 2915px;
+    top: 3109px;
 
     width: 750px;
-    height: 524px;
+    height: 526px;
+  }
+
+  .business-modal__prices {
+    max-width: 632px;
+  }
+
+  .business-modal__heading {
+    padding-left: 3px;
+    padding-right: 0;
+  }
+
+  .business-modal__btn {
+    padding-top: 41px;
+    padding-bottom: 43px;
+
+    border-radius: 0 0 30px 30px;
   }
 }

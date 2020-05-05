@@ -5,6 +5,8 @@
 }
 
 .companions-list__item {
+  position: relative;
+
   margin-bottom: 10px;
 }
 
@@ -12,5 +14,12 @@
   .companions-list {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .companions-list {
+    width: 630px;
+    margin-top: 4px;
   }
 }

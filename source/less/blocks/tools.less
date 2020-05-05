@@ -1,10 +1,40 @@
 .tools {
   display: flex;
   justify-content: center;
+
+  &--catalog {
+    display: none;
+  }
+
+  &--form {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .tools {
     display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tools {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+
+    display: flex;
+    margin-top: 0;
+
+    &--catalog {
+      top: -65px;
+      right: 59px;
+
+      display: flex;
+    }
+
+    &--form {
+      top: -64px;
+    }
   }
 }

@@ -1,17 +1,93 @@
 .item-category__label {
+  position: relative;
+
+  padding-left: 18px;
+
   font-weight: 400;
   font-size: 15px;
   line-height: 15px;
   font-family: @site-font-family;
   color: #444444;
+
+  &--transport {
+    position: absolute;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    font-size: 0;
+  }
 }
+
+.item-category__input {
+  position: absolute;
+  appearance: none;
+}
+
+.item-category--transport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32.4px;
+  height: 32px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.item-category--transport svg {
+  margin-left: -1px;
+  margin-top: -1px;
+
+  fill: #1d2e5b;
+  opacity: 0.15;
+}
+
 
 @media (min-width: @tablet-width) {
   .item-category {
-    width: 113px;
+    width: 140px;
 
     &--transport {
-      width: auto;
+      width: 43px;
+      height: 43px;
+    }
+
+    &--plane svg {
+      width: 19px;
+      height: 21px;
+      margin-left: -4px;
+    }
+
+    &--bus svg {
+      width: 17px;
+      height: 21px;
+    }
+
+    &--bicycle svg {
+      width: 24px;
+      height: 21px;
+    }
+
+    &--legs svg {
+      width: 20px;
+      height: 21px;
+    }
+  }
+
+  .item-category__label {
+    padding-left: 26px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &--transport {
+      width: 43px;
+      height: 43px;
+
+      font-size: 0;
     }
   }
 }

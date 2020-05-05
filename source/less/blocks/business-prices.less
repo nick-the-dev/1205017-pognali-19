@@ -1,14 +1,17 @@
 .business-prices__item {
   display: flex;
   flex-direction: column;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  margin-bottom: 3px;
+  padding-top: 7px;
+  padding-bottom: 9px;
 
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   font-family: @site-font-family;
   color: #444444;
+
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .business-prices__item-name,
@@ -16,10 +19,16 @@
   margin: 0;
 }
 
+.business-prices__item-name {
+  margin-bottom: -2px;
+}
+
 @media (min-width: @tablet-width) {
   .business-prices__item {
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 14px;
 
     font-size: 22px;
     line-height: 28px;

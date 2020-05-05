@@ -1,23 +1,65 @@
 .range__input-wrapper {
+  position: relative;
   display: flex;
 
   margin-bottom: 24px;
 }
 
+.range__input-wrapper::before {
+  content: "";
+
+  position: absolute;
+  top: 12px;
+  left: 50%;
+
+  width: 7px;
+  height: 11px;
+  margin-left: -1px;
+
+  background-color: #ffffff;
+}
+
+.range__input-wrapper::after {
+  content: "";
+
+  position: absolute;
+  top: 17px;
+  left: 50%;
+
+  width: 16px;
+  height: 1px;
+  margin-left: -8px;
+
+  background-color: #cbced9;
+}
+
+.range__label--from {
+  margin-right: -1px;
+}
+
 .range__input {
   width: 100%;
-  padding-top: 9px;
+  padding-top: 11px;
   padding-bottom: 6px;
 
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 1.5px;
+  font-family: @site-font-family;
+  color: #1d2e5b;
   text-align: center;
 
   border: 1px solid #cbced9;
 
   &--from {
+    padding-left: 17px;
     border-radius: 5px 0 0 5px;
   }
 
   &--to {
+    padding-left: 15px;
+
     border-radius: 0 5px 5px 0;
   }
 }
@@ -74,12 +116,61 @@
   .range__input-wrapper {
     order: 2;
 
-    width: 150px;
+    width: 148px;
+    margin-top: 2px;
     margin-bottom: 0;
+  }
+
+  .range__input-wrapper::before {
+    top: 15px;
+
+    width: 9px;
+    height: 15px;
+  }
+
+  .range__input-wrapper::after {
+    top: 22px;
+
+    width: 21px;
+    margin-left: -10px;
+  }
+
+  .range__input {
+    padding-top: 13px;
+    padding-bottom: 9px;
+
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
   }
 
   .range__scale-wrapper {
     width: 277px;
+  }
+
+  .range__scale {
+    height: 3px;
+  }
+
+  .range__pin {
+    width: 13px;
+    height: 13px;
+
+    &--max {
+      top: -5px;
+      right: -5px;
+    }
+
+    &--min {
+      top: -5px;
+      left: calc(100% - 75%);
+    }
+  }
+
+  .range__bar {
+    right: -81px;
+
+    height: 3px;
   }
 }
 
@@ -94,8 +185,26 @@
     width: 100%;
   }
 
+  .range__input--to {
+    padding-left: 13px;
+  }
+
   .range__scale-wrapper {
     width: 191px;
     margin-top: 36px;
+  }
+
+  .range__pin--max {
+    right: 0;
+  }
+
+  .range__pin--min {
+    left: calc(100% - 69%);
+  }
+
+  .range__bar {
+    right: -61px;
+
+    width: 66%;
   }
 }

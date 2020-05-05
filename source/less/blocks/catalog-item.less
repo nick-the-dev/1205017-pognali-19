@@ -23,6 +23,11 @@
 }
 
 .catalog-item__name {
+  position: relative;
+
+  max-width: 102px;
+  margin-top: 15px;
+
   font-weight: 600;
   font-size: 20px;
   line-height: 20px;
@@ -30,32 +35,77 @@
   color: #1d2e5b;
 }
 
+.catalog-item__name::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  right: -42px;
+
+  display: block;
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+}
+
+.catalog-item--offline .catalog-item__name::after {
+  background-color: #f97676;
+}
+
+.catalog-item--online .catalog-item__name::after {
+  background-color: #81e31e;
+}
+
 .catalog-item__likes-wrapper {
   position: relative;
 }
 
-.catalog-item__likes-heart {
+.catalog-item__likes {
   position: absolute;
-  left: -40px;
+  left: -37px;
   top: -7px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
   width: 31px;
   height: 31px;
 
-  background-color: #f9eaea;
-  background-image: url("../img/heart.svg");
-  background-repeat: no-repeat;
-  background-size: 13px 11px;
-  background-position: center;
+  background-color: #edeff6;
   border: none;
   border-radius: 50%;
 
   &--active {
-    background-image: url("../img/heart-active.svg");
+    background-color: #f9eaea;
+  }
+
+  &--active .catalog-item__heart {
+    display: none;
+  }
+
+  &--active .catalog-item__heart--active {
+    display: block;
+
+    opacity: 1;
+  }
+}
+
+.catalog-item__heart {
+  fill: #192144;
+  opacity: 0.3;
+
+  &--active {
+    display: none;
+
+    fill: #f02323;
   }
 }
 
 .catalog-item__likes-count {
+  margin-top: -11px;
+
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
@@ -65,16 +115,23 @@
 
 .catalog-item__tags {
   margin-left: 26px;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
+  margin-top: 3px;
 }
 
 .catalog-item__countries {
-  margin-left: 66px;
-  margin-top: 23px;
-  margin-bottom: 21px;
+  min-height: 63px;
+  margin-left: 25px;
+  margin-top: 17px;
+}
+
+.catalog-item:nth-child(3) .catalog-item__countries {
+  min-height: 87px;
 }
 
 .catalog-item__countries-heading {
+  position: relative;
+
   margin-left: 26px;
 
   font-weight: 400;
@@ -85,14 +142,73 @@
   text-transform: lowercase;
 }
 
+.catalog-item__countries-heading::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -26px;
+  width: 14px;
+  display: block;
+  height: 1px;
+  background-color: #edeff6;
+}
+
+.catalog-item__countries-heading::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 106px;
+  width: 138px;
+  display: block;
+  height: 1px;
+  background-color: #edeff6;
+}
+
 .catalog-item__skills {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  padding-left: 1px;
+  padding-right: 23px;
 }
 
 .catalog-item__transport {
+  position: relative;
+
   margin-left: 25px;
+}
+
+.catalog-item__transport::before {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  left: -26px;
+
+  width: 14px;
+  display: block;
+  height: 1px;
+
+  background-color: #edeff6;
+}
+
+.catalog-item__transport::after {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  left: 80px;
+
+  width: 90px;
+  display: block;
+  height: 1px;
+
+  background-color: #edeff6;
+}
+
+.catalog-item__transport-list {
+  margin-top: 14px;
+  margin-left: -1px;
 }
 
 .catalog-item__transport-heading {
@@ -102,6 +218,24 @@
   font-family: @site-font-family;
   color: #444444;
   text-transform: lowercase;
+}
+
+.catalog-item__level {
+  position: relative;
+}
+
+.catalog-item__level::after {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  right: -23px;
+
+  width: 11px;
+  display: block;
+  height: 1px;
+
+  background-color: #edeff6;
 }
 
 .catalog-item__level-heading {
@@ -139,6 +273,23 @@
     width: 688px;
   }
 
+  .catalog-item__name {
+    width: fit-content;
+    max-width: 218px;
+    margin-top: 33px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .catalog-item__name::after {
+    top: 11px;
+    right: -30px;
+
+    width: 7px;
+    height: 7px;
+  }
+
   .catalog-item__img {
     width: 190px;
     height: 190px;
@@ -150,23 +301,27 @@
     margin-left: 33px;
   }
 
+  .catalog-item__heading-wrapper {
+    margin-bottom: 10px;
+  }
+
   .catalog-item__likes-wrapper {
-    margin-top: 149px;
-    margin-left: 196px;
+    margin-top: 134px;
+    margin-left: 202px;
   }
 
   .catalog-item__tags {
     position: absolute;
-    top: 83px;
-    left: 259px;
+    top: 81px;
+    left: 262px;
 
     margin: 0;
   }
 
   .catalog-item__skills {
     position: absolute;
-    top: 37px;
-    right: 25px;
+    top: 32px;
+    right: 18px;
 
     flex-direction: column;
     margin: 0;
@@ -174,6 +329,11 @@
 
   .catalog-item__transport {
     margin: 0;
+  }
+
+  .catalog-item__transport-list {
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .catalog-item__transport-heading {
@@ -185,8 +345,15 @@
   }
 
   .catalog-item__countries {
-    margin-left: 36px;
-    margin-bottom: 26px;
+    min-height: 50px;
+
+    margin-top: 17px;
+    margin-bottom: 0;
+    margin-left: -11px;
+  }
+
+  .catalog-item:nth-child(3) .catalog-item__countries {
+    min-height: 50px;
   }
 
   .catalog-item__btn {
@@ -195,6 +362,31 @@
     left: 255px;
 
     width: 148px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    border-radius: 25px;
+  }
+
+  .catalog-item__heart {
+    width: 20px;
+    height: 17px;
+  }
+
+  .catalog-item__likes {
+    left: -57px;
+    top: -12px;
+
+    width: 50px;
+    height: 50px;
+  }
+
+  .catalog-item__likes-count {
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .catalog-item__img-wrapper {
@@ -204,6 +396,16 @@
 
   .catalog-item__countries-heading {
     margin-left: 83px;
+  }
+
+  .catalog-item__countries-heading::before {
+    left: -83px;
+
+    width: 71px;
+  }
+
+  .catalog-item__countries-heading::after {
+    width: 500px;
   }
 }
 
@@ -216,24 +418,47 @@
   .catalog-item__img {
     width: 285px;
     height: 285px;
+
+    border-radius: 20px 0 0 20px;
+  }
+
+  .catalog-item__name {
+    margin-top: 48px;
+  }
+
+  .catalog-item__name::after {
+    top: 10px;
+    right: auto;
+    left: -25px;
+  }
+
+  .catalog-item__name-wrapper {
+    margin-left: 59px;
   }
 
   .catalog-item__tags {
-    left: 314px;
+    left: 347px;
+    top: 96px;
   }
 
   .catalog-item__img-wrapper {
+    height: 285px;
     margin: 0;
   }
 
   .catalog-item__btn {
-    left: 310px;
+    left: 340px;
+    top: 188px;
+  }
+
+  .catalog-item__likes-wrapper {
+    margin-top: 133px;
   }
 
   .catalog-item__skills {
     top: auto;
-    right: 44px;
-    bottom: 61px;
+    right: 131px;
+    bottom: 56px;
 
     flex-direction: row;
   }
@@ -244,9 +469,27 @@
 
   .catalog-item__countries {
     position: absolute;
-    top: 54px;
-    left: 657px;
+    top: 49px;
+    left: 654px;
 
     margin: 0;
+  }
+
+  .catalog-item__level::after {
+    display: none;
+  }
+
+  .catalog-item__transport::after {
+    display: none;
+  }
+
+  .catalog-item__transport::before {
+    top: -147px;
+    left: -38px;
+
+    width: 1px;
+    height: 187px;
+
+    background: linear-gradient(0deg, rgba(237, 239, 246, 0) 0%, rgba(237, 239, 246, 1) 30%, rgba(237, 239, 246, 1) 70%, rgba(237, 239, 246, 0) 100%);
   }
 }

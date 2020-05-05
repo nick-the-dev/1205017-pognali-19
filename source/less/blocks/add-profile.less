@@ -9,7 +9,7 @@
   max-width: 320px;
   margin: 0 auto;
   padding-top: 67px;
-  padding-bottom: 38px;
+  padding-bottom: 37px;
   padding-right: 26px;
   padding-left: 50px;
 }
@@ -32,6 +32,24 @@
   .homepage-heading();
 
   width: 101px;
+  padding-top: 3px;
+}
+
+.add-profile__list {
+  position: relative;
+
+  margin-top: 44px;
+  margin-bottom: 18px;
+}
+
+.add-profile__list::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 1px;
+  background-color: #e1e3e9;
+  position: absolute;
+  top: -13px;
 }
 
 .add-profile__business-prices {
@@ -42,12 +60,21 @@
   color: #192144;
 }
 
+.add-profile__business-prices-img {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
+  .add-profile {
+    border-radius: 0 0 60px 60px;
+  }
 
   .add-profile__container {
     max-width: 768px;
-    padding-top: 167px;
-    padding-bottom: 138px;
+    padding-top: 101px;
+    padding-bottom: 65px;
+    padding-left: 39px;
+    padding-right: 42px;
   }
 
   .add-profile__heading-wrapper {
@@ -56,17 +83,68 @@
 
   .add-profile__heading {
     width: auto;
+    margin-left: 5px;
+
+    font-size: 45px;
+    line-height: 45px;
   }
 
   .add-profile__img {
     position: absolute;
-    bottom: 118px;
-    right: 81px;
+    bottom: 48px;
+    right: 85px;
   }
 
   .add-profile__list {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 73px;
+    margin-bottom: 33px;
+  }
+
+  .add-profile__list::before {
+    left: 93px;
+    top: 0;
+
+    width: 559px;
+  }
+
+  .add-profile__list::after {
+    content: "";
+
+    position: absolute;
+    top: -43px;
+    right: -2px;
+    z-index: -1;
+
+    display: block;
+    width: 198px;
+    height: 285px;
+
+    background-color: #e2e5f2;
+    border-radius: 20px;
+  }
+
+  .add-profile__business-prices {
+    display: flex;
+    align-items: center;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: #132576;
+  }
+
+  .add-profile__business-prices-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 67px;
+    height: 67px;
+    margin-right: 23px;
+    margin-top: -2px;
+
+    background-color: #e2e5f2;
+    border-radius: 50%;
+
+    fill: #132576;
   }
 }
 
@@ -74,10 +152,39 @@
   .add-profile__container {
     max-width: 1440px;
     padding-left: 131px;
-    padding-right: 131px;
+    padding-right: 373px;
+    padding-top: 134px;
+    padding-bottom: 165px;
   }
 
   .add-profile__img {
-    bottom: 250px;
+    bottom: 266px;
+    right: 134px;
+
+    height: 198px;
+    width: 198px;
+
+    background-size: unset;
+  }
+
+  .add-profile__list {
+    margin-top: 132px;
+    margin-bottom: 35px;
+  }
+
+  .add-profile__list::before {
+    width: 810px;
+  }
+
+  .add-profile__list::after {
+    top: -50px;
+    right: -127px;
+
+    width: 444px;
+    height: 300px;
+  }
+
+  .add-profile__heading {
+    margin-left: 244px;
   }
 }

@@ -6,6 +6,7 @@
 .tags__heading {
   padding-left: 16px;
   padding-right: 16px;
+  padding-top: 3px;
 
   font-weight: 600;
   font-size: 16px;
@@ -17,6 +18,10 @@
 }
 
 .tags__list {
+  padding-top: 6px;
+  padding-left: 12px;
+  padding-bottom: 6px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -28,3 +33,41 @@
   resize: none;
 }
 
+@media (min-width: @tablet-width) {
+  .tags {
+    position: relative;
+  }
+
+  .tags__heading {
+    position: absolute;
+    bottom: -12px;
+    left: 266px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+
+    background-color: #edeff6;
+  }
+
+  .tags__list {
+    width: 100%;
+    height: 71px;
+    padding-top: 28px;
+    padding-left: 26px;
+    padding-bottom: 0;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tags__heading {
+    left: 21px;
+  }
+}
