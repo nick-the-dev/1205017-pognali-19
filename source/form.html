@@ -23,7 +23,7 @@
       @media ( min-width: 1440px ) {
         HTML {
           /* Десктопный макет */
-          background-image: url( "img/temp/pognali-form-desktop-filter.png" );
+          background-image: url( "img/temp/pognali-form-desktop.png" );
         }
       }
     </style>
@@ -132,7 +132,7 @@
           <div class="form__transport-wrapper">
             <fieldset class="form__tags tags">
               <legend class="tags__heading">Тэги</legend>
-              <textarea class="tags__list" name="tags-list" rows="2" cols="30">#бургер #бар #футбол #концерт #крафт</textarea>
+              <textarea class="tags__list" name="tags-list" rows="2" cols="30" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
             </fieldset>
 
             <fieldset class="form__transport transport">
@@ -217,8 +217,14 @@
                         <label class="step__companions-heading" for="companions-number">Ищу попутчиков:</label>
                         <div class="step__input-wrapper">
                           <input class="step__companions-input" type="number" name="companions-number" id="companions-number" value="2">
-                          <button class="step__companions-dec" type="button"></button>
-                          <button class="step__companions-inc" type="button"></button>
+                          <button class="step__companions-dec" type="button">
+                            <svg class="step__minus-mobile" width="14" height="2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 14 2"><path d="M0 0h14v2H0z"/></svg>
+                            <svg class="step__minus-desktop" width="20" height="2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 2" xml:space="preserve"><path class="st0" d="M0 0h20v2H0z"/><path class="st0" d="M0 0h20v2H0z"/></svg>
+                          </button>
+                          <button class="step__companions-inc" type="button">
+                            <svg class="step__plus-mobile" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 14 14"><path d="M8 6V0H6v6H0v2h6v6h2V8h6V6z"/></svg>
+                            <svg class="step__plus-desktop" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"><path d="M20 9h-9V0H9v9H0v2h9v9h2v-9h9z"/></svg>
+                          </button>
                         </div>
                       </div>
 
@@ -226,8 +232,14 @@
                         <label class="step__duration-heading" for="trip-duration">Длительность:</label>
                         <div class="step__input-wrapper">
                           <input class="step__duration-input" type="number" name="trip-duration" id="trip-duration" value="2">
-                          <button class="step__duration-dec" type="button"></button>
-                          <button class="step__duration-inc" type="button"></button>
+                          <button class="step__duration-dec" type="button">
+                            <svg class="step__minus-mobile" width="14" height="2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 14 2"><path d="M0 0h14v2H0z"/></svg>
+                            <svg class="step__minus-desktop" width="20" height="2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 2" xml:space="preserve"><path class="st0" d="M0 0h20v2H0z"/><path class="st0" d="M0 0h20v2H0z"/></svg>
+                          </button>
+                          <button class="step__duration-inc" type="button">
+                            <svg class="step__plus-mobile" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 14 14"><path d="M8 6V0H6v6H0v2h6v6h2V8h6V6z"/></svg>
+                            <svg class="step__plus-desktop" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"><path d="M20 9h-9V0H9v9H0v2h9v9h2v-9h9z"/></svg>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -235,13 +247,16 @@
                     <div class="step__children-wrapper">
                       <input class="step__children-input check-input--active visually-hidden" type="checkbox" name="children-allowed" id="children-allowed" checked>
                       <label class="step__children-label" for="children-allowed">Можно с детьми</label>
+                      <svg class="step__checkbox-tick" width="9" height="9" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12"><path d="M12 0L3.8 8 0 4.3v4L3.8 12 12 4z" /></svg>
                     </div>
                   </div>
 
 
                   <div class="step__calendar calendar">
                     <div class="calendar__month-wrapper">
-                      <a class="calendar__month-nav calendar__month-nav--prev" href="#"><img class="calendar__month-nav-btn" src="../img/month-arrow-left.svg" width="9" height="17" alt="Месяц назад"></a>
+                      <a class="calendar__month-nav calendar__month-nav--prev" href="#">
+                        <img class="calendar__month-nav-btn" src="../img/month-arrow-left.svg" width="9" height="17" alt="Месяц назад">
+                      </a>
                       <a class="calendar__month-nav calendar__month-nav--next" href="#"><img class="calendar__month-nav-btn" src="../img/month-arrow-right.svg" width="9" height="17" alt="Месяц вперед"></a>
                       <div class="calendar__month">
                         <span class="calendar__month-name">Март</span>
@@ -442,7 +457,7 @@
                 </div>
                 <a class="step__next" href="#step-2">
                   Следующий шаг
-                  <svg class="directions__btn-arrow" width="10" height="14" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 14"><path d="M0 14V.1l10 7z"/></svg>
+                  <svg class="step__btn-arrow-right" width="10" height="14" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 14"><path d="M0 14V.1l10 7z"/></svg>
                 </a>
               </li>
               <li class="plan-steps__item step step--step2" id="step-2">
@@ -486,7 +501,7 @@
                       </div>
                     </li>
                     <li class="countries-list__item country">
-                      <div class="country__select country__select--dropdown">
+                      <div class="country__select">
                         <label class="country__label visually-hidden" for="country-3">Выберите страну</label>
                         <input class="country__input country__input--selected " type="text" id="country-3" value="Выберите страну">
                         <div class="country__flag">
@@ -588,13 +603,15 @@
                     Наконец, расскажите о своих планах времяпровождения. <br>Можно писать в свободной форме и ставить тэги.
                   </p>
                   <ul class="step__countries-to-do to-do">
-                    <li class="to-do__item plan">
+                    <li class="to-do__item plan plan--error">
                       <div class="plan__header">
                         <h4 class="plan__country-name">Босния и Герцеговина</h4>
                         <div class="plan__country-flag plan__country-flag--bosnia"></div>
                       </div>
                       <label class="plan__label visually-hidden">План действий</label>
-                      <textarea class="plan__text" placeholder="План действий"></textarea>
+                      <textarea class="plan__text" placeholder="План действий" required></textarea>
+                      <div class="plan__error-msg">
+                      </div>
                     </li>
                     <li class="to-do__item plan">
                       <div class="plan__header">
@@ -602,8 +619,10 @@
                         <div class="plan__country-flag plan__country-flag--czech"></div>
                       </div>
                       <label class="plan__label visually-hidden">План действий</label>
-                      <textarea class="plan__text" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                      <textarea class="plan__text" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
                       </textarea>
+                      <div class="plan__error-msg">
+                      </div>
                     </li>
                   </ul>
                 </div>

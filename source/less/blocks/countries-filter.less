@@ -59,10 +59,6 @@
     margin: 0;
     padding: 0;
   }
-
-  &--form svg {
-    fill: #ffffff;
-  }
 }
 
 .countries-filter__icon {
@@ -231,6 +227,19 @@
 
   background-color: transparent;
   border: none;
+
+  &:hover svg {
+    opacity: 1;
+  }
+
+  &:active svg {
+    opacity: 0.1;
+  }
+}
+
+.countries-filter__close-btn svg {
+  fill: #ffffff;
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {

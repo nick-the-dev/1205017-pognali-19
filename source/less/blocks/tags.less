@@ -1,6 +1,14 @@
 .tags {
   border: 1px solid #cbced9;
   border-radius: 10px;
+
+  &:hover {
+    border-color: #aeb4cb;
+  }
+
+  &:active {
+    border-color: #161c35;
+  }
 }
 
 .tags__heading {
@@ -31,6 +39,10 @@
   background-color: #edeff6;
   border: none;
   resize: none;
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.6);
+  }
 }
 
 @media (min-width: @tablet-width) {
