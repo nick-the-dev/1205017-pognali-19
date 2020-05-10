@@ -13,3 +13,74 @@
 .companion-transport__item--active svg {
   fill: #1d2e5b;
 }
+
+.companion-transport__item {
+  position: relative;
+
+  &--plane:hover::before {
+    left: 1px;
+  }
+
+  &--plane:hover::after {
+    content: "Авиаперелет";
+
+    left: -57px;
+  }
+
+  &--bus:hover::after {
+    content: "Автотранспорт";
+
+    left: -65px;
+  }
+
+  &--bicycle:hover::before {
+    left: 4px;
+  }
+
+  &--bicycle:hover::after {
+    content: "Велосипед";
+
+    left: -48px;
+  }
+
+  &--legs:hover::before {
+    left: 2px;
+  }
+
+  &--legs:hover::after {
+    content: "Пешком";
+
+    left: -40px;
+  }
+}
+
+.companion-transport__item:hover::before {
+  content: "";
+
+  position: absolute;
+  bottom: -10px;
+
+  width: 0;
+  height: 0;
+
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #101d41;
+}
+
+.companion-transport__item:hover::after {
+  position: absolute;
+  top: 36px;
+  z-index: 1;
+
+  height: 57px;
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: #ffffff;
+
+  background-color: #101d41;
+  border-radius: 4px;
+}

@@ -17,9 +17,39 @@
 
     background-color: #161c36;
   }
+
+  &--sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 20px;
+
+    background-color: #ffffff;
+  }
+
+  &--sticky + .site-main {
+    padding-top: 71px;
+
+    &--catalog,
+    &--form {
+      padding-top: 63px;
+    }
+  }
+
+  &--sticky .main-nav__toggle-burger {
+    fill: #cccccc;
+  }
 }
 
 .site-header__logo {
+  z-index: 10;
+}
+
+.site-header__logo-wrapper {
   z-index: 10;
 }
 
@@ -33,11 +63,25 @@
     padding-right: 48.3%;
     padding-left: 40px;
     padding-top: 42px;
+
+    &--sticky {
+      padding-bottom: 44px;
+      padding-top: 41px;
+    }
+
+    &--sticky + .site-main {
+      padding-top: 109px;
+    }
   }
 
   .site-header__logo {
     width: 166px;
     height: 42px;
+  }
+
+  .site-header__logo-wrapper {
+    margin-top: 3px;
+    margin-bottom: -3px;
   }
 }
 
@@ -46,10 +90,45 @@
     width: 200px;
     height: 52px;
   }
-}
 
-@media (min-width: @desktop-width) {
+  .site-header__logo-wrapper {
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: -5px;
+  }
+
   .site-header {
     padding-right: 16%;
+
+    &--catalog .site-header__logo-wrapper,
+    &--form .site-header__logo-wrapper {
+      margin-top: 6px;
+      margin-bottom: -6px;
+    }
+
+    &--sticky {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    &--sticky .site-header__logo {
+      margin-top: -5px;
+    }
+
+    &--sticky .site-list__link {
+      color: #192144;
+    }
+
+    &--sticky .main-nav__list {
+      top: 35px;
+    }
+
+    &--sticky .main-nav__list::before {
+      background-color: #192144;
+    }
+
+    &--sticky + .site-main {
+      padding-top: 119px;
+    }
   }
 }

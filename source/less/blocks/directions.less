@@ -99,7 +99,12 @@
 
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
-    background-position: 92% 2.5%;
+    background-position: 91.6% 2%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/flags-back@2x.png");
+      background-size: 289px auto;
+    }
   }
 
   .directions__container::before {

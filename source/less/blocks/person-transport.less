@@ -3,6 +3,9 @@
 }
 
 .person-transport__item {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +15,73 @@
 
   background-color: #edeff6;
   border-radius: 50%;
+
+  &--plane:hover::before {
+    left: 7px;
+  }
+
+  &--plane:hover::after {
+    content: "Авиаперелет";
+
+    left: -52px;
+  }
+
+  &--bus:hover::after {
+    content: "Автотранспорт";
+
+    left: -57px;
+  }
+
+  &--bicycle:hover::before {
+    left: 8px;
+  }
+
+  &--bicycle:hover::after {
+    content: "Велосипед";
+
+    left: -43px;
+  }
+
+  &--legs:hover::before {
+    left: 8px;
+  }
+
+  &--legs:hover::after {
+    content: "Пешком";
+
+    left: -34px;
+  }
+}
+
+.person-transport__item:hover::before {
+  content: "";
+
+  position: absolute;
+  bottom: -9px;
+
+  width: 0;
+  height: 0;
+
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #101d41;
+}
+
+.person-transport__item:hover::after {
+  position: absolute;
+  top: 40px;
+  z-index: 1;
+
+  height: 57px;
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: #ffffff;
+
+  background-color: #101d41;
+  border-radius: 4px;
 }
 
 .person-transport__item svg {
@@ -33,9 +103,7 @@
 
   .person-transport__item {
     background-color: transparent;
-  }
 
-  .person-transport__item {
     &--plane svg {
       width: 19px;
       height: 21px;
@@ -66,5 +134,26 @@
 @media (min-width: @desktop-width) {
   .person-transport {
     flex-direction: row;
+  }
+
+  .person-transport__item {
+    &--bicycle svg {
+      margin-right: -10px;
+      margin-top: -1px;
+    }
+
+    &--legs svg {
+      margin-right: -9px;
+      margin-top: -2px;
+    }
+
+    &--bus svg {
+      margin-right: -6px;
+      margin-top: -1px;
+    }
+
+    &--plane svg {
+      margin-top: -1px;
+    }
   }
 }

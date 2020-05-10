@@ -33,6 +33,22 @@
   position: relative;
 
   color: #ffd74b;
+
+  &:hover {
+    color: #ff8d30;
+  }
+
+  &:hover::after {
+    background-color: rgba(255, 141, 48, 0.4);
+  }
+
+  &:active {
+    color: rgba(255, 141, 48, 0.3);
+  }
+
+  &:active::after {
+    background-color: rgba(255, 141, 48, 0.2);
+  }
 }
 
 .registration__auth-link::after {
@@ -67,10 +83,34 @@
   font-size: 18px;
   line-height: 18px;
   font-family: @site-font-family;
-  color: rgba(68, 68, 68, 0.3);
+  color: #ffffff;
 
   border-radius: 10px;
   border: none;
+
+  &:hover::placeholder {
+    color: rgba(68, 68, 68, 0.5);
+  }
+
+  &:active {
+    padding-top: 18px;
+    padding-bottom: 16px;
+
+    border: 4px solid #ffffff;
+    background-color: #192144;
+  }
+
+  &:focus {
+    padding-top: 18px;
+    padding-bottom: 16px;
+
+    border: 4px solid #ffffff;
+    background-color: #192144;
+  }
+
+  &:invalid {
+    background-color: #ffefef;
+  }
 }
 
 .registration__email::placeholder {

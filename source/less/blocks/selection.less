@@ -30,6 +30,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .selection__category-heading-wrapper svg {
@@ -57,7 +65,7 @@
   padding-top: 12px;
   padding-bottom: 9px;
 
-  border-bottom: 1px solid #f3c72b;
+  border-bottom: 1px solid transparent;
 
   &--open .selection__category-heading-wrapper svg {
     transform: rotate(180deg);
@@ -96,6 +104,16 @@
 
   background-color: #ffffff;
   border-radius: 20px;
+
+  &:hover {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+
+    background-color: #f3c72b;
+  }
 }
 
 @media (min-width: @tablet-width) {

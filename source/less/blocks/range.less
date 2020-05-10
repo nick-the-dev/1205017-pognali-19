@@ -11,6 +11,7 @@
   position: absolute;
   top: 12px;
   left: 50%;
+  z-index: 2;
 
   width: 7px;
   height: 11px;
@@ -25,6 +26,7 @@
   position: absolute;
   top: 17px;
   left: 50%;
+  z-index: 3;
 
   width: 16px;
   height: 1px;
@@ -33,8 +35,24 @@
   background-color: #cbced9;
 }
 
-.range__label--from {
-  margin-right: -1px;
+.range__label {
+  position: relative;
+
+  &--from {
+    margin-right: -1px;
+  }
+
+  &:hover {
+    z-index: 1;
+  }
+
+  &:hover .range__input {
+    border-color: #959bb2;
+  }
+
+  &:active .range__input {
+    border-color: #161c35;
+  }
 }
 
 .range__input {
@@ -100,9 +118,28 @@
     left: calc(100% - 70%);
   }
 
+  &--min:hover {
+    margin-left: -2px;
+  }
+
   &--max {
     top: -4px;
     right: 0;
+  }
+
+  &--max:hover {
+    margin-right: -2px;
+  }
+
+  &:hover {
+    top: -8px;
+
+    width: 19px;
+    height: 19px;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px 0 rgba(29, 46, 91, 0.35);
   }
 }
 
