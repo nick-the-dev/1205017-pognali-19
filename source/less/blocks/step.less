@@ -249,13 +249,27 @@
   border-radius: 4px;
 }
 
+.step__children-input:checked + .step__children-label::after {
+  content: "";
+
+  position: absolute;
+  top: 1px;
+  left: 10px;
+  z-index: 1;
+
+  width: 9px;
+  height: 9px;
+
+  background-image: url("../img/tick.svg");
+}
+
+.step__children-input:checked:active + .step__children-label::after {
+  opacity: 0.3;
+}
+
 .step__children-input {
   position: absolute;
   appearance: none;
-}
-
-.step__children-input:checked ~ .step__checkbox-tick {
-  display: block;
 }
 
 .step__calendar {
@@ -439,15 +453,6 @@
   display: none;
 }
 
-.step__checkbox-tick {
-  display: none;
-
-  position: absolute;
-  left: 10px;
-  top: 9px;
-  z-index: 0;
-}
-
 @media (min-width: @tablet-width) {
   .step {
     margin-bottom: 40px;
@@ -621,6 +626,14 @@
     height: 36px;
   }
 
+  .step__children-input:checked + .step__children-label::after {
+    top: 3px;
+    left: 14px;
+
+    width: 12px;
+    height: 12px;
+  }
+
   .step__children-input:checked + label::before {
     background-size: 12px;
     background-position: 12px 11px;
@@ -787,14 +800,6 @@
   .step:last-child {
     margin-bottom: 46px;
     padding-bottom: 52px;
-  }
-
-  .step__checkbox-tick {
-    left: 14px;
-    top: 8px;
-
-    width: 12px;
-    height: 12px;
   }
 }
 

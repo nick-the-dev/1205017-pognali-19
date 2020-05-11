@@ -1,10 +1,13 @@
 .registration {
+  display: flex;
+
   background-color: #192144;
   border-radius: 0 0 30px 30px;
 }
 
 .registration__container {
   max-width: 320px;
+  width: 320px;
   margin: 0 auto;
   padding-top: 102px;
   padding-left: 25px;
@@ -72,11 +75,19 @@
   position: relative;
 }
 
+.registration__email::placeholder {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  font-family: @site-font-family;
+  color: rgba(68, 68, 68, 0.3);
+}
+
 .registration__email {
   width: 100%;
   padding-top: 22px;
   padding-bottom: 20px;
-  padding-left: 24px;
+  padding-left: 23px;
   margin-bottom: 13px;
 
   font-weight: 600;
@@ -92,33 +103,23 @@
     color: rgba(68, 68, 68, 0.5);
   }
 
-  &:active {
-    padding-top: 18px;
-    padding-bottom: 16px;
-
-    border: 4px solid #ffffff;
-    background-color: #192144;
-  }
-
+  &:active,
   &:focus {
     padding-top: 18px;
     padding-bottom: 16px;
+    padding-left: 19px;
 
     border: 4px solid #ffffff;
     background-color: #192144;
   }
 
-  &:invalid {
+  &--invalid {
     background-color: #ffefef;
   }
-}
 
-.registration__email::placeholder {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 18px;
-  font-family: @site-font-family;
-  color: rgba(68, 68, 68, 0.3);
+  &--invalid::placeholder {
+    color: #ff0000;
+  }
 }
 
 .registration__btn {
@@ -192,6 +193,7 @@
 
   .registration__container {
     max-width: 768px;
+    width: 768px;
     padding-top: 136px;
     padding-left: 75px;
     padding-right: 75px;
@@ -228,6 +230,13 @@
     line-height: 24px;
 
     border-radius: 20px;
+
+    &:active,
+    &:focus {
+      padding-left: 30px;
+      padding-top: 25px;
+      padding-bottom: 22px;
+    }
   }
 
   .registration__email::placeholder {
@@ -244,8 +253,8 @@
   }
 
   .registration__contacts-heading {
-    margin-top: 45px;
-    margin-bottom: 39px;
+    margin-top: 46px;
+    margin-bottom: 38px;
 
     font-size: 28px;
     line-height: 33px;
@@ -259,6 +268,7 @@
 @media (min-width: @desktop-width) {
   .registration__container {
     max-width: 1440px;
+    width: 1440px;
     padding-left: 132px;
     padding-right: 135px;
     padding-top: 167px;
