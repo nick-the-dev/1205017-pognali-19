@@ -43,6 +43,65 @@
   &--sticky .main-nav__toggle-burger {
     fill: #cccccc;
   }
+
+  &--no-js {
+    height: 100vh;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--no-js .site-header__logo-wrapper {
+    position: absolute;
+
+    margin-left: 25px;
+  }
+
+  &--no-js .user-list {
+    display: flex;
+  }
+
+  &--no-js .main-nav {
+    width: 100%;
+  }
+
+  &--no-js .main-nav__list {
+    margin-top: 90px;
+  }
+
+  &--no-js .main-nav__wrapper {
+    position: static;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--no-js .main-nav__toggle-close {
+    display: block;
+  }
+
+  &--no-js .main-nav__toggle-burger {
+    display: none;
+  }
+
+  &--no-js .main-nav__toggle {
+    display: none;
+  }
+
+  &--no-js.site-header--catalog,
+  &--no-js.site-header--form {
+    padding-top: 0;
+  }
+
+  &--no-js.site-header--catalog .site-header__logo-wrapper,
+  &--no-js.site-header--form .site-header__logo-wrapper {
+    padding-top: 26px;
+  }
+
+  &--no-js.site-header--catalog .main-nav__list,
+  &--no-js.site-header--form .main-nav__list {
+    margin-top: 117px;
+  }
 }
 
 .site-header__logo-blue {
@@ -75,6 +134,40 @@
 
     &--sticky + .site-main {
       padding-top: 109px;
+    }
+
+    &--no-js {
+      align-items: unset;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 42px;
+    }
+
+    &--no-js .site-header__logo-wrapper {
+      margin-left: 40px;
+    }
+
+    &--no-js .main-nav__list {
+      margin-top: 141px;
+    }
+
+    &--no-js .main-nav__socials {
+      margin-top: 741px;
+    }
+
+    &--no-js.site-header--catalog .site-header__logo-wrapper,
+    &--no-js.site-header--form .site-header__logo-wrapper {
+      padding-top: 42px;
+    }
+
+    &--no-js.site-header--catalog .main-nav__list,
+    &--no-js.site-header--form .main-nav__list {
+      margin-top: 183px;
+    }
+
+    &--no-js.site-header--catalog .main-nav__socials,
+    &--no-js.site-header--form .main-nav__socials {
+      margin-top: 783px;
     }
   }
 
@@ -133,6 +226,31 @@
 
     &--sticky + .site-main {
       padding-top: 119px;
+    }
+
+    &--no-js {
+      height: auto;
+      padding-bottom: 20px;
+    }
+
+    &--no-js .site-header__logo-wrapper {
+      position: static;
+
+      width: 254px;
+      margin-left: 60px;
+    }
+
+    &--no-js .user-list {
+      display: none;
+    }
+
+    &--no-js .main-nav__list {
+      margin-top: 0;
+    }
+
+    &--no-js.site-header--catalog .main-nav__list,
+    &--no-js.site-header--form .main-nav__list {
+      margin-top: 0;
     }
   }
 }
