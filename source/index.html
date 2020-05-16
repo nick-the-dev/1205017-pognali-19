@@ -10,13 +10,13 @@
         background-repeat: no-repeat;
         background-position:  50% 0;
         /* По умолчанию показывается мобильный макет */
-        background-image: url( "img/temp/pognali-index-mobile.png" );
+        background-image: url( "img/temp/pognali-index-mobile-menu.png" );
       }
       /* Планшет */
       @media ( min-width: 768px ) {
         HTML {
           /* Планшетный макет */
-          background-image: url( "img/temp/pognali-index-tablet.png" );
+          background-image: url( "img/temp/pognali-index-tablet-menu.png" );
         }
       }
       /* Десктоп */
@@ -107,24 +107,24 @@
           </li>
         </ul>
       </nav>
+      <section class="site-header__tools tools">
+        <h2 class="tools__heading visually-hidden">Кнопки быстрого доступа</h2>
+        <ul class="tools__contacts tools-list">
+          <li class="tools-list__item"><a class="tools-list__phone btn btn--circle" href="tel:88005558628"></a></li>
+          <li class="tools-list__item"><a class="tools-list__email btn btn--circle" href="mailto:mail@htmlacademy.ru"></a></li>
+        </ul>
+        <ul class="tools__user tools-user">
+          <li class="tools-user__item">
+            <a class="tools-user__btn btn btn--rounded" href="auth.html">Авторизация</a>
+          </li>
+        </ul>
+      </section>
     </header>
 
     <main class="site-main site-main--homepage">
       <div class="site-main__heading-wrapper site-main__heading-wrapper--homepage">
         <div class="site-main__heading-container site-main__heading-container--index">
           <h1 class="site-main__heading site-main__heading--homepage">В путешествие с крутыми попутчиками!</h1>
-          <section class="site-main__tools tools">
-            <h2 class="tools__heading visually-hidden">Кнопки быстрого доступа</h2>
-            <ul class="tools__contacts tools-list">
-              <li class="tools-list__item"><a class="tools-list__phone btn btn--circle" href="tel:88005558628"></a></li>
-              <li class="tools-list__item"><a class="tools-list__email btn btn--circle" href="mailto:mail@htmlacademy.ru"></a></li>
-            </ul>
-            <ul class="tools__user tools-user">
-              <li class="tools-user__item">
-                <a class="tools-user__btn btn btn--rounded" href="auth.html">Авторизация</a>
-              </li>
-            </ul>
-          </section>
         </div>
       </div>
 

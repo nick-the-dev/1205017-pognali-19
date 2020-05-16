@@ -95,6 +95,20 @@
   color: rgba(29, 46, 91, 0.3);
 }
 
+.step__companions-input:active + .step__companions-dec svg,
+.step__companions-input:active ~ .step__companions-inc svg,
+.step__companions-input:focus + .step__companions-dec svg,
+.step__companions-input:focus ~ .step__companions-inc svg {
+  opacity: 1;
+}
+
+.step__duration-input:active + .step__duration-dec svg,
+.step__duration-input:active ~ .step__duration-inc svg,
+.step__duration-input:focus + .step__duration-dec svg,
+.step__duration-input:focus ~ .step__duration-inc svg {
+  opacity: 1;
+}
+
 .step__input-wrapper {
   position: relative;
 
@@ -112,8 +126,7 @@
   &:hover .step__minus-mobile,
   &:hover .step__plus-desktop,
   &:hover .step__minus-desktop {
-    fill: #959bb2;
-    opacity: 1;
+    opacity: 0.4;
   }
 }
 
