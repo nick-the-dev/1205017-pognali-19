@@ -1,4 +1,5 @@
 .directions {
+  display: flex;
   padding-top: 102px;
   padding-bottom: 30px;
 
@@ -11,6 +12,7 @@
   position: relative;
 
   max-width: 320px;
+  width: 320px;
   margin: 0 auto;
 }
 
@@ -61,6 +63,20 @@
   background-color: #ffd74b;
   border-radius: 10px;
   border: none;
+
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    background-color: #ffbd30;
+  }
+
+  &:active .directions__btn-arrow {
+    opacity: 0.3;
+  }
 }
 
 .directions__btn-arrow {
@@ -80,12 +96,18 @@
 
   .directions__container {
     max-width: 768px;
+    width: 768px;
     padding-left: 75px;
     padding-right: 75px;
 
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
-    background-position: 92% 2.5%;
+    background-position: 91.6% 2%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/flags-back@2x.png");
+      background-size: 289px auto;
+    }
   }
 
   .directions__container::before {
@@ -172,6 +194,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 1440px;
+    width: 1440px;
     padding-left: 131px;
     padding-right: 234px;
     padding-top: 191px;

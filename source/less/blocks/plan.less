@@ -1,5 +1,15 @@
 .plan {
   position: relative;
+
+  min-height: 281px;
+
+  &--error .plan__error-msg {
+    display: block;
+  }
+
+  &--error .plan__text {
+    border-color: #f47e7e;
+  }
 }
 
 .plan::after {
@@ -101,6 +111,8 @@
 }
 
 .plan__text {
+  position: relative;
+
   width: 220px;
   height: 220px;
   margin-bottom: 19px;
@@ -117,13 +129,47 @@
   border-radius: 4px;
 
   resize: none;
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active {
+    border-color: #161c35;
+  }
 }
 
 .plan__text::placeholder {
   color: rgba(68, 68, 68, 0.3);
 }
 
+.plan__error-msg {
+  display: none;
+
+  position: absolute;
+  left: 2px;
+  bottom: 25px;
+
+  width: calc(100% - 4px);
+  height: 57px;
+  padding-left: 24px;
+  padding-top: 13px;
+
+  background-color: #ffefef;
+  border-radius: 0 0 3px 3px;
+
+  &::after {
+    content: "Это поле должно быть заполнено";
+
+    color: #ff0000;
+  }
+}
+
 @media (min-width: @tablet-width) {
+  .plan {
+    min-height: 261px;
+  }
+
   .plan::after {
     display: none;
   }
@@ -178,18 +224,27 @@
     width: 15px;
     height: 15px;
   }
+
+  .plan__error-msg {
+    left: 3px;
+    bottom: 45px;
+
+    width: 497px;
+    padding-top: 19px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .plan__text {
     width: 730px;
+    margin-bottom: 38px;
     padding: 24px 24px;
     padding-right: 20px;
   }
 
   .plan__country-flag {
     margin-right: 115px;
-    margin-top: 2px;
+    margin-top: 4px;
   }
 
   .plan__header {
@@ -202,5 +257,9 @@
 
   .plan::before {
     left: 775px;
+  }
+
+  .plan__error-msg {
+    width: 728px;
   }
 }

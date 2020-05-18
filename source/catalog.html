@@ -10,30 +10,46 @@
         background-repeat: no-repeat;
         background-position:  50% 0;
         /* По умолчанию показывается мобильный макет */
-        background-image: url( "img/temp/pognali-catalog-mobile.png" );
+        background-image: url( "img/temp/pognali-catalog-mobile-filter.png" );
       }
       /* Планшет */
       @media ( min-width: 768px ) {
         HTML {
           /* Планшетный макет */
-          background-image: url( "img/temp/pognali-catalog-tablet.png" );
+          background-image: url( "img/temp/pognali-catalog-tablet-filter.png" );
         }
       }
       /* Десктоп */
       @media ( min-width: 1440px ) {
         HTML {
           /* Десктопный макет */
-          background-image: url( "img/temp/pognali-catalog-desktop.png" );
+          background-image: url( "img/temp/pognali-catalog-desktop-filter.png" );
         }
       }
     </style>
     <link href="pixel-glass/styles.css" rel="stylesheet">
     <script src="pixel-glass/script.js"></script>
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="../js/picturefill.js" async></script>
   </head>
   <body>
 
     <header class="site-header site-header--catalog">
-      <img class="site-header__logo" src="../img/logo-mobile-white@1x.png" width="100" height="19" alt="Погнали?">
+      <a class="site-header__logo-wrapper" href="/">
+        <picture class="site-header__logo-white">
+          <source media="(min-width: 1440px)" srcset="../img/logo-desktop-white@1x.png 1x, ../img/logo-desktop-white@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="../img/logo-tablet-white@1x.png 1x, ../img/logo-tablet-white@2x.png 2x">
+          <img class="site-header__logo" src="../img/logo-mobile-white@1x.png" srcset="../img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Погнали?">
+        </picture>
+        <picture class="site-header__logo-blue">
+          <source media="(min-width: 1440px)" srcset="../img/logo-desktop-blue@1x.png 1x, ../img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="../img/logo-tablet-blue@1x.png 1x, ../img/logo-tablet-blue@2x.png 2x">
+          <img class="site-header__logo" src="../img/logo-mobile-blue@1x.png" srcset="../img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Погнали?">
+        </picture>
+      </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <svg class="main-nav__toggle-burger" width="25" height="11" viewbox="0 0 25 11"><path d="M1.5 3h22c.8 0 1.5-.7 1.5-1.5S24.3 0 23.5 0h-22C.7 0 0 .7 0 1.5S.7 3 1.5 3zM23.5 8h-22C.7 8 0 8.7 0 9.5S.7 11 1.5 11h22c.8 0 1.5-.7 1.5-1.5S24.3 8 23.5 8z"/></svg>
@@ -91,33 +107,34 @@
           </li>
         </ul>
       </nav>
+      <section class="site-header__tools tools tools--catalog">
+        <h2 class="tools__heading visually-hidden">Кнопки быстрого доступа</h2>
+        <ul class="tools__contacts tools-list">
+          <li class="tools-list__item"><a class="tools-list__phone btn btn--circle" href="tel:88005558628"></a></li>
+          <li class="tools-list__item"><a class="tools-list__email btn btn--circle" href="mailto:mail@htmlacademy.ru"></a></li>
+        </ul>
+        <ul class="tools__user tools-user">
+          <li class="tools-user__item">
+            <a class="tools-user__btn btn btn--rounded" href="auth.html">Авторизация</a>
+          </li>
+        </ul>
+      </section>
     </header>
 
     <main class="site-main site-main--catalog">
       <div class="site-main__heading-wrapper site-main__heading-wrapper--catalog">
         <div class="site-main__heading-container site-main__heading-container--catalog">
           <h1 class="site-main__heading site-main__heading--catalog">Попутчики</h1>
-          <section class="site-main__tools tools tools--catalog">
-            <h2 class="tools__heading visually-hidden">Кнопки быстрого доступа</h2>
-            <ul class="tools__contacts tools-list">
-              <li class="tools-list__item"><a class="tools-list__phone btn btn--circle" href="tel:88005558628"></a></li>
-              <li class="tools-list__item"><a class="tools-list__email btn btn--circle" href="mailto:mail@htmlacademy.ru"></a></li>
-            </ul>
-            <ul class="tools__user tools-user">
-              <li class="tools-user__item">
-                <a class="tools-user__btn btn btn--rounded" href="auth.html">Авторизация</a>
-              </li>
-            </ul>
-          </section>
           <div class="site-main__home-link-wrapper">
-            <span class="site-main__home-link">На главную</span>
+            <a class="site-main__home-link" href="/">На главную</a>
             <svg class="site-main__home-link-icon" width="32" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 16.1"><path d="M27.6 2.1H10V0L0 3l10 2.9V4.1h17.6c.4 0 2.4 0 2.4 2v6.1c0 .5-.1.9-.4 1.2-.6.6-1.6.7-2 .7H4v2H27.7c.4 0 2.1-.1 3.2-1.2.7-.7 1.1-1.6 1.1-2.7V6.1c0-2-2.6-4-4.4-4z"/></svg>
           </div>
         </div>
       </div>
 
-      <section class="site-main__countries-filter countries-filter">
+      <section class="site-main__countries-filter countries-filter countries-filter--open"> <!-- фильтрация по странам открывается если присвоить блоку countries-filter модификатор --open -->
         <div class="countries-filter__container">
+
           <div class="countries-filter__heading-wrapper">
             <div class="countries-filter__icon">
               <svg width="15" height="10" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 15 10"><path d="M4 0h2v2H4zM0 0h3v2H0zM7 0h8v2H7zM4 8h2v2H4zM0 8h3v2H0zM7 8h8v2H7zM9 4h2v2H9zM12 4h3v2h-3zM0 4h8v2H0z"/></svg>
@@ -131,339 +148,341 @@
             </button>
           </div>
           <div class="countries-filter__wrapper">
-            <div class="countries-filter__continents-wrapper">
-              <ul class="countries-filter__continents continents">
-                <li class="continents__item continents__item--active">Европа</li>
-                <li class="continents__item">Азия</li>
-                <li class="continents__item">Америка</li>
-                <li class="continents__item">Острова</li>
-              </ul>
+            <div class="countries-filter__inner">
+              <div class="countries-filter__continents-wrapper">
+                <ul class="countries-filter__continents continents">
+                  <li class="continents__item continents__item--active">Европа</li>
+                  <li class="continents__item">Азия</li>
+                  <li class="continents__item">Америка</li>
+                  <li class="continents__item">Острова</li>
+                </ul>
+              </div>
 
+              <div class="countries-filter__countries-wrapper">
+                <table class="countries-filter__letters letters">
+                  <tr class="letters__row">
+                    <td class="letters__cell letters__cell--active">
+                      а
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Австралия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Австрия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Азербайджан</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Албания</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Алжир</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Ангола</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Андорра</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Антигуа и Барбуда</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Аргентина</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Армения</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Афганистан</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      б
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Багамские Острова</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Бангладеш</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Барбадос</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Бахрейн</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Белоруссия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Белиз</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Бельгия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Бенин</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Болгария</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Боливия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Босния и Герцеговина</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Ботсвана</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Бразилия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Бруней</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Буркина-Фасо</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Бурунди</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Бутан</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      в
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Вануату</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Великобритания</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Венгрия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Венесуэла</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Восточный Тимор</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Вьетнам</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      г
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Габон</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Гаити</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Гайана</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Гамбия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Гана</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Гватемала</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Гвинея</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Гвинея-Бисау</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Германия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Гондурас</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Гренада</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Греция</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Грузия</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      д
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Дания</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Джибути</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Доминика</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Доминикана</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr class="letters__row">
+                    <td class="letters__cell">
+                      е
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Египет</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      з
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Замбия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Зимбабве</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      и
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Израиль</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Индия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Индонезия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Иордания</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Ирак</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Иран</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Ирландия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Исландия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Испания</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Италия</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      к
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Кабо-Верде</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Казахстан</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Камбоджа</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Камерун</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Канада</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Катар</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Кения</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Кипр</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Киргизия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Кирибати</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Китай</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Колумбия</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      л
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Лаос</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Латвия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Лесото</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Либерия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Ливан</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Ливия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Литва</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Лихтенштейн</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Люксембург</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr class="letters__row">
+                    <td class="letters__cell">
+                      м
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Маврикий</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Мавритания</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Мадагаскар</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Малави</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Малайзия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Мали</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Мальдивы</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Мальта</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Марокко</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Мексика</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      н
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Намибия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Науру</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Непал</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Нигер</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Нигерия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Нидерланды</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Никарагуа</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Новая Зеландия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Норвегия</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      о
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">ОАЭ</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Оман</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      п
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Пакистан</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Палау</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Панама</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Папуа — Новая Гвинея</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Парагвай</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Перу</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Польша</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Португалия</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      р
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Руанда</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Румыния</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Россия</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr class="letters__row">
+                    <td class="letters__cell">
+                      с
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Сальвадор</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Самоа</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Сан-Марино</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Саудовская Аравия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Сейшелы</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Сенегал</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Сербия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Сингапур</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Сирия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Словакия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Словения</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">США</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      т
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Таджикистан</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Таиланд</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Танзания</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Того</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Тонга</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Тринидад и Тобаго</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Тувалу</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Тунис</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Туркмения</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Турция</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      у
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Уганда</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Узбекистан</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Украина</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Уругвай</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      ф
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Фиджи</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Филиппины</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Финляндия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Франция</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      х
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Хорватия</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr class="letters__row">
+                    <td class="letters__cell">
+                      ч
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Чад</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Черногория</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Чехия</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Чили</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      ш
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Швейцария</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Швеция</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Шри-Ланка</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      э
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Эквадор</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Эритрея</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Эсватини</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Эстония</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Эфиопия</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      ю
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">ЮАР</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Южный Судан</a></li>
+                      </ul>
+                    </td>
+                    <td class="letters__cell">
+                      я
+                      <ul class="letters__cell-list">
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Ямайка</a></li>
+                        <li class="letters__cell-country"><a class="letters__cell-country-link" href="/europe/country-name">Япония</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+
+                <ul class="countries-filter__countries countries">
+                  <li class="countries__item"><a class="countries__item-link" href="/europe/australia">Австралия</a></li>
+                  <li class="countries__item"><a class="countries__item-link" href="/europe/austria">Австрия</a></li>
+                  <li class="countries__item"><a class="countries__item-link" href="/europe/azerbaijan">Азербайджан</a></li>
+                  <li class="countries__item"><a class="countries__item-link" href="/europe/albania">Албания</a></li>
+                  <li class="countries__item"><a class="countries__item-link" href="/europe/algeria">Алжир</a></li>
+                  <li class="countries__item"><a class="countries__item-link" href="/europe/angola">Ангола</a></li>
+                  <li class="countries__item"><a class="countries__item-link" href="/europe/andorra">Андорра</a></li>
+                  <li class="countries__item"><a class="countries__item-link" href="/europe/antigua-barbuda">Антигуа и Барбуда</a></li>
+                  <li class="countries__item"><a class="countries__item-link" href="/europe/argentina">Аргентина</a></li>
+                  <li class="countries__item"><a class="countries__item-link" href="/europe/armenia">Армения</a></li>
+                  <li class="countries__item"><a class="countries__item-link" href="/europe/afghanistan">Афганистан</a></li>
+                </ul>
+              </div>
+
+              <button class="countries-filter__btn" type="button">
+                <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12"><path d="M6.9 6l4.9-4.9c.2-.2.2-.6 0-.9s-.6-.2-.9 0L6 5.1 1.1.2C.9 0 .5 0 .2.2s-.2.6 0 .9L5.1 6 .2 10.9c-.2.2-.2.6 0 .9.2.2.6.2.9 0L6 6.9l4.9 4.9c.2.2.6.2.9 0 .2-.2.2-.6 0-.9L6.9 6z"/></svg>
+                Свернуть
+              </button>
             </div>
-
-            <div class="countries-filter__countries-wrapper">
-              <table class="countries-filter__letters letters">
-                <tr class="letters__row">
-                  <td class="letters__cell letters__cell--active">
-                    а
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Австралия</li>
-                      <li class="letters__cell-country">Австрия</li>
-                      <li class="letters__cell-country">Азербайджан</li>
-                      <li class="letters__cell-country">Албания</li>
-                      <li class="letters__cell-country">Алжир</li>
-                      <li class="letters__cell-country">Ангола</li>
-                      <li class="letters__cell-country">Андорра</li>
-                      <li class="letters__cell-country">Антигуа и Барбуда</li>
-                      <li class="letters__cell-country">Аргентина</li>
-                      <li class="letters__cell-country">Армения</li>
-                      <li class="letters__cell-country">Афганистан</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    б
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Багамские Острова</li>
-                      <li class="letters__cell-country">Бангладеш</li>
-                      <li class="letters__cell-country">Барбадос</li>
-                      <li class="letters__cell-country">Бахрейн</li>
-                      <li class="letters__cell-country">Белоруссия</li>
-                      <li class="letters__cell-country">Белиз</li>
-                      <li class="letters__cell-country">Бельгия</li>
-                      <li class="letters__cell-country">Бенин</li>
-                      <li class="letters__cell-country">Болгария</li>
-                      <li class="letters__cell-country">Боливия</li>
-                      <li class="letters__cell-country">Босния и Герцеговина</li>
-                      <li class="letters__cell-country">Ботсвана</li>
-                      <li class="letters__cell-country">Бразилия</li>
-                      <li class="letters__cell-country">Бруней</li>
-                      <li class="letters__cell-country">Буркина-Фасо</li>
-                      <li class="letters__cell-country">Бурунди</li>
-                      <li class="letters__cell-country">Бутан</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    в
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Вануату</li>
-                      <li class="letters__cell-country">Великобритания</li>
-                      <li class="letters__cell-country">Венгрия</li>
-                      <li class="letters__cell-country">Венесуэла</li>
-                      <li class="letters__cell-country">Восточный Тимор</li>
-                      <li class="letters__cell-country">Вьетнам</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    г
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Габон</li>
-                      <li class="letters__cell-country">Гаити</li>
-                      <li class="letters__cell-country">Гайана</li>
-                      <li class="letters__cell-country">Гамбия</li>
-                      <li class="letters__cell-country">Гана</li>
-                      <li class="letters__cell-country">Гватемала</li>
-                      <li class="letters__cell-country">Гвинея</li>
-                      <li class="letters__cell-country">Гвинея-Бисау</li>
-                      <li class="letters__cell-country">Германия</li>
-                      <li class="letters__cell-country">Гондурас</li>
-                      <li class="letters__cell-country">Гренада</li>
-                      <li class="letters__cell-country">Греция</li>
-                      <li class="letters__cell-country">Грузия</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    д
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Дания</li>
-                      <li class="letters__cell-country">Джибути</li>
-                      <li class="letters__cell-country">Доминика</li>
-                      <li class="letters__cell-country">Доминикана</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr class="letters__row">
-                  <td class="letters__cell">
-                    е
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Египет</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    з
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Замбия</li>
-                      <li class="letters__cell-country">Зимбабве</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    и
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Израиль</li>
-                      <li class="letters__cell-country">Индия</li>
-                      <li class="letters__cell-country">Индонезия</li>
-                      <li class="letters__cell-country">Иордания</li>
-                      <li class="letters__cell-country">Ирак</li>
-                      <li class="letters__cell-country">Иран</li>
-                      <li class="letters__cell-country">Ирландия</li>
-                      <li class="letters__cell-country">Исландия</li>
-                      <li class="letters__cell-country">Испания</li>
-                      <li class="letters__cell-country">Италия</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    к
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Кабо-Верде</li>
-                      <li class="letters__cell-country">Казахстан</li>
-                      <li class="letters__cell-country">Камбоджа</li>
-                      <li class="letters__cell-country">Камерун</li>
-                      <li class="letters__cell-country">Канада</li>
-                      <li class="letters__cell-country">Катар</li>
-                      <li class="letters__cell-country">Кения</li>
-                      <li class="letters__cell-country">Кипр</li>
-                      <li class="letters__cell-country">Киргизия</li>
-                      <li class="letters__cell-country">Кирибати</li>
-                      <li class="letters__cell-country">Китай</li>
-                      <li class="letters__cell-country">Колумбия</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    л
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Лаос</li>
-                      <li class="letters__cell-country">Латвия</li>
-                      <li class="letters__cell-country">Лесото</li>
-                      <li class="letters__cell-country">Либерия</li>
-                      <li class="letters__cell-country">Ливан</li>
-                      <li class="letters__cell-country">Ливия</li>
-                      <li class="letters__cell-country">Литва</li>
-                      <li class="letters__cell-country">Лихтенштейн</li>
-                      <li class="letters__cell-country">Люксембург</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr class="letters__row">
-                  <td class="letters__cell">
-                    м
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Маврикий</li>
-                      <li class="letters__cell-country">Мавритания</li>
-                      <li class="letters__cell-country">Мадагаскар</li>
-                      <li class="letters__cell-country">Малави</li>
-                      <li class="letters__cell-country">Малайзия</li>
-                      <li class="letters__cell-country">Мали</li>
-                      <li class="letters__cell-country">Мальдивы</li>
-                      <li class="letters__cell-country">Мальта</li>
-                      <li class="letters__cell-country">Марокко</li>
-                      <li class="letters__cell-country">Мексика</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    н
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Намибия</li>
-                      <li class="letters__cell-country">Науру</li>
-                      <li class="letters__cell-country">Непал</li>
-                      <li class="letters__cell-country">Нигер</li>
-                      <li class="letters__cell-country">Нигерия</li>
-                      <li class="letters__cell-country">Нидерланды</li>
-                      <li class="letters__cell-country">Никарагуа</li>
-                      <li class="letters__cell-country">Новая Зеландия</li>
-                      <li class="letters__cell-country">Норвегия</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    о
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">ОАЭ</li>
-                      <li class="letters__cell-country">Оман</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    п
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Пакистан</li>
-                      <li class="letters__cell-country">Палау</li>
-                      <li class="letters__cell-country">Панама</li>
-                      <li class="letters__cell-country">Папуа — Новая Гвинея</li>
-                      <li class="letters__cell-country">Парагвай</li>
-                      <li class="letters__cell-country">Перу</li>
-                      <li class="letters__cell-country">Польша</li>
-                      <li class="letters__cell-country">Португалия</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    р
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Руанда</li>
-                      <li class="letters__cell-country">Румыния</li>
-                      <li class="letters__cell-country">Россия</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr class="letters__row">
-                  <td class="letters__cell">
-                    с
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Сальвадор</li>
-                      <li class="letters__cell-country">Самоа</li>
-                      <li class="letters__cell-country">Сан-Марино</li>
-                      <li class="letters__cell-country">Саудовская Аравия</li>
-                      <li class="letters__cell-country">Сейшелы</li>
-                      <li class="letters__cell-country">Сенегал</li>
-                      <li class="letters__cell-country">Сербия</li>
-                      <li class="letters__cell-country">Сингапур</li>
-                      <li class="letters__cell-country">Сирия</li>
-                      <li class="letters__cell-country">Словакия</li>
-                      <li class="letters__cell-country">Словения</li>
-                      <li class="letters__cell-country">США</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    т
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Таджикистан</li>
-                      <li class="letters__cell-country">Таиланд</li>
-                      <li class="letters__cell-country">Танзания</li>
-                      <li class="letters__cell-country">Того</li>
-                      <li class="letters__cell-country">Тонга</li>
-                      <li class="letters__cell-country">Тринидад и Тобаго</li>
-                      <li class="letters__cell-country">Тувалу</li>
-                      <li class="letters__cell-country">Тунис</li>
-                      <li class="letters__cell-country">Туркмения</li>
-                      <li class="letters__cell-country">Турция</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    у
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Уганда</li>
-                      <li class="letters__cell-country">Узбекистан</li>
-                      <li class="letters__cell-country">Украина</li>
-                      <li class="letters__cell-country">Уругвай</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    ф
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Фиджи</li>
-                      <li class="letters__cell-country">Филиппины</li>
-                      <li class="letters__cell-country">Финляндия</li>
-                      <li class="letters__cell-country">Франция</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    х
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Хорватия</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr class="letters__row">
-                  <td class="letters__cell">
-                    ч
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Чад</li>
-                      <li class="letters__cell-country">Черногория</li>
-                      <li class="letters__cell-country">Чехия</li>
-                      <li class="letters__cell-country">Чили</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    ш
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Швейцария</li>
-                      <li class="letters__cell-country">Швеция</li>
-                      <li class="letters__cell-country">Шри-Ланка</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    э
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Эквадор</li>
-                      <li class="letters__cell-country">Эритрея</li>
-                      <li class="letters__cell-country">Эсватини</li>
-                      <li class="letters__cell-country">Эстония</li>
-                      <li class="letters__cell-country">Эфиопия</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    ю
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">ЮАР</li>
-                      <li class="letters__cell-country">Южный Судан</li>
-                    </ul>
-                  </td>
-                  <td class="letters__cell">
-                    я
-                    <ul class="letters__cell-list">
-                      <li class="letters__cell-country">Ямайка</li>
-                      <li class="letters__cell-country">Япония</li>
-                    </ul>
-                  </td>
-                </tr>
-              </table>
-
-              <ul class="countries-filter__countries countries">
-                <li class="countries__item"><a class="countries__item-link" href="/europe/australia">Австралия</a></li>
-                <li class="countries__item"><a class="countries__item-link" href="/europe/austria">Австрия</a></li>
-                <li class="countries__item"><a class="countries__item-link" href="/europe/azerbaijan">Азербайджан</a></li>
-                <li class="countries__item"><a class="countries__item-link" href="/europe/albania">Албания</a></li>
-                <li class="countries__item"><a class="countries__item-link" href="/europe/algeria">Алжир</a></li>
-                <li class="countries__item"><a class="countries__item-link" href="/europe/angola">Ангола</a></li>
-                <li class="countries__item"><a class="countries__item-link" href="/europe/andorra">Андорра</a></li>
-                <li class="countries__item"><a class="countries__item-link" href="/europe/antigua-barbuda">Антигуа и Барбуда</a></li>
-                <li class="countries__item"><a class="countries__item-link" href="/europe/argentina">Аргентина</a></li>
-                <li class="countries__item"><a class="countries__item-link" href="/europe/armenia">Армения</a></li>
-                <li class="countries__item"><a class="countries__item-link" href="/europe/afghanistan">Афганистан</a></li>
-              </ul>
-            </div>
-
-            <button class="countries-filter__btn" type="button">
-              <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12"><path d="M6.9 6l4.9-4.9c.2-.2.2-.6 0-.9s-.6-.2-.9 0L6 5.1 1.1.2C.9 0 .5 0 .2.2s-.2.6 0 .9L5.1 6 .2 10.9c-.2.2-.2.6 0 .9.2.2.6.2.9 0L6 6.9l4.9 4.9c.2.2.6.2.9 0 .2-.2.2-.6 0-.9L6.9 6z"/></svg>
-              Свернуть
-            </button>
           </div>
+
         </div>
 
       </section>
@@ -473,7 +492,7 @@
           <div class="selection__container">
             <h2 class="selection__heading">Подберите идеального попутчика</h2>
             <form class="selection__form" action="https://echo.htmlacademy.ru" method="get">
-              <div class="selection__category">
+              <div class="selection__category selection__category--open"> <!-- если убрать класс selection__category--open, то блок будет свернуть -->
                 <div class="selection__category-heading-wrapper">
                   <h3 class="selection__category-heading">Хобби</h3>
                   <svg width="8" height="4" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 5"><path d="M5 5L0 0h10z"/></svg>
@@ -496,7 +515,7 @@
                 </div>
               </div>
 
-              <div class="selection__category selection__category--open">
+              <div class="selection__category selection__category--open"> <!-- если убрать класс selection__category--open, то блок будет свернуть -->
                 <div class="selection__category-heading-wrapper">
                   <h3 class="selection__category-heading">Музыка</h3>
                   <svg width="8" height="4" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 5"><path d="M5 5L0 0h10z"/></svg>
@@ -519,7 +538,7 @@
                 </div>
               </div>
 
-              <div class="selection__category">
+              <div class="selection__category selection__category--open"> <!-- если убрать класс selection__category--open, то блок будет свернуть -->
                 <div class="selection__category-heading-wrapper">
                   <h3 class="selection__category-heading">Еда</h3>
                   <svg width="8" height="4" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 5"><path d="M5 5L0 0h10z"/></svg>
@@ -542,7 +561,7 @@
                 </div>
               </div>
 
-              <div class="selection__category selection__category--transport selection__category--open">
+              <div class="selection__category selection__category--transport selection__category--open"> <!-- если убрать класс selection__category--open, то блок будет свернуть -->
                 <div class="selection__category-heading-wrapper">
                   <h3 class="selection__category-heading">Транспорт</h3>
                   <svg width="8" height="4" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 10 5"><path d="M5 5L0 0h10z"/></svg>
@@ -607,290 +626,336 @@
         <section class="site-main__travelers catalog">
           <div class="catalog__container">
             <ul class="catalog__list catalog-list">
-              <li class="catalog-list__item catalog-item catalog-item--offline">
-                <div class="catalog-item__heading-wrapper">
-                  <div class="catalog-item__img-wrapper">
-                    <img class="catalog-item__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото: Таня Фирсова">
-                  </div>
-                  <div class="catalog-item__name-wrapper">
-                    <h2 class="catalog-item__name">Таня Фирсова</h2>
-                    <div class="catalog-item__likes-wrapper">
-                      <button class="catalog-item__likes catalog-item__likes--active" type="button">
-                        <svg class="catalog-item__heart" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 17"><path d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5C1.4 6.1 1.4 4 2.7 2.7c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z"/></svg>
-                        <svg class="catalog-item__heart catalog-item__heart--active" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 11"><path d="M12 1a3.32 3.32 0 00-4.7 0l-.8.7-.8-.7A3.32 3.32 0 001 1C-.3 2.3-.3 4.4 1 5.6l.8.8L6.5 11l4.7-4.6.8-.8c1.3-1.3 1.3-3.4 0-4.6z"/></svg>
-                      </button>
-                      <p class="catalog-item__likes-count">1,5 М</p>
+              <div class="catalog-list__container">
+                <li class="catalog-list__item catalog-item catalog-item--offline">
+                  <div class="catalog-item__heading-wrapper">
+                    <div class="catalog-item__img-wrapper">
+                      <a class="catalog-item__link" href="/user">
+                        <picture>
+                          <source media="(min-width: 1440px)" srcset="../img/firsova-desktop@1x.jpg 1x, ../img/firsova-desktop@2x.jpg 2x">
+                          <source media="(min-width: 768px)" srcset="../img/firsova-tablet@1x.jpg 1x, ../img/firsova-tablet@2x.jpg 2x">
+                          <img class="catalog-item__img" src="../img/firsova-mobile@1x.jpg" srcset="../img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Фото: Таня Фирсова">
+                        </picture>
+                      </a>
                     </div>
-                  </div>
-                  <div class="catalog-item__status"></div>
-                </div>
-                <ul class="catalog-item__tags companion-tags companion-tags--catalog">
-                  <li class="companion-tags__item companion-tags__item--catalog">ЗОЖ</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">ПП</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">Фитнес</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">пляж</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">авокадо</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">смузи</li>
-                </ul>
-                <span class="catalog-item__countries-heading">Хочет посетить:</span>
-                <ul class="catalog-item__countries person-countries">
-                  <li class="person-countries__item">
-                    <div class="person-countries__item-img person-countries__item-img--sri-lanka"></div>
-                    Шри-Ланка
-                  </li>
-                  <li class="person-countries__item">
-                    <div class="person-countries__item-img person-countries__item-img--thailand"></div>
-                    Таиланд
-                  </li>
-                  <li class="person-countries__item">
-                    <div class="person-countries__item-img person-countries__item-img--seychelles"></div>
-                    Сейшелы
-                  </li>
-                </ul>
-                <div class="catalog-item__skills">
-                  <div class="catalog-item__transport">
-                    <span class="catalog-item__transport-heading">Транспорт:</span>
-                    <ul class="catalog-item__transport-list person-transport">
-                      <li class="person-transport__item person-transport__item--plane person-transport__item--active">
-                        <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 19 21"><path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg>
-                      </li>
-                      <li class="person-transport__item person-transport__item--bus">
-                        <svg width="13" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg>
-                      </li>
-                      <li class="person-transport__item person-transport__item--bicycle">
-                        <svg width="19" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
-                      </li>
-                      <li class="person-transport__item person-transport__item--legs">
-                        <svg width="15" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 21"><ellipse cx="14.3" cy="2" rx="2.1" ry="2"/><path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/></svg>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="catalog-item__level">
-                    <span class="catalog-item__level-heading">Левел:</span>
-                    <div class="catalog-item__level-circle level">
-                      <div class="level__text level__text--catalog">
-                        <span class="level__value level__value--catalog">99</span>
-                        <div class="level__label level__label--catalog">level</div>
+                    <div class="catalog-item__name-wrapper">
+                      <a class="catalog-item__link" href="/user">
+                        <h2 class="catalog-item__name">Таня Фирсова</h2>
+                      </a>
+                      <div class="catalog-item__likes-wrapper">
+                        <button class="catalog-item__likes catalog-item__likes--active" type="button">
+                          <svg class="catalog-item__heart" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 17"><path d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5C1.4 6.1 1.4 4 2.7 2.7c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z"/></svg>
+                          <svg class="catalog-item__heart catalog-item__heart--active" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 11"><path d="M12 1a3.32 3.32 0 00-4.7 0l-.8.7-.8-.7A3.32 3.32 0 001 1C-.3 2.3-.3 4.4 1 5.6l.8.8L6.5 11l4.7-4.6.8-.8c1.3-1.3 1.3-3.4 0-4.6z"/></svg>
+                        </button>
+                        <p class="catalog-item__likes-count">1,5 М</p>
                       </div>
-                      <svg class="level__visual level__visual--catalog">
-                        <circle class="level__progress level__progress--catalog-99  level__progress--catalog" cx="57" cy="57" r="22"></circle>
-                      </svg>
                     </div>
+                    <div class="catalog-item__status"></div>
                   </div>
-                </div>
-                <a class="catalog-item__btn" href="#">Позвать!</a>
-              </li>
-              <li class="catalog-list__item catalog-item catalog-item--offline">
-                <div class="catalog-item__heading-wrapper">
-                  <div class="catalog-item__img-wrapper">
-                    <img class="catalog-item__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото: Петя Демин">
-                  </div>
-                  <div class="catalog-item__name-wrapper">
-                    <h2 class="catalog-item__name">Петя Демин</h2>
-                    <div class="catalog-item__likes-wrapper">
-                      <button class="catalog-item__likes" type="button">
-                        <svg class="catalog-item__heart" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 17"><path d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5C1.4 6.1 1.4 4 2.7 2.7c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z"/></svg>
-                        <svg class="catalog-item__heart catalog-item__heart--active" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 11"><path d="M12 1a3.32 3.32 0 00-4.7 0l-.8.7-.8-.7A3.32 3.32 0 001 1C-.3 2.3-.3 4.4 1 5.6l.8.8L6.5 11l4.7-4.6.8-.8c1.3-1.3 1.3-3.4 0-4.6z"/></svg>
-                      </button>
-                      <p class="catalog-item__likes-count">1500</p>
+                  <ul class="catalog-item__tags companion-tags companion-tags--catalog">
+                    <li class="companion-tags__item companion-tags__item--catalog">ЗОЖ</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">ПП</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">Фитнес</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">пляж</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">авокадо</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">смузи</li>
+                  </ul>
+                  <span class="catalog-item__countries-heading">Хочет посетить:</span>
+                  <ul class="catalog-item__countries person-countries">
+                    <li class="person-countries__item">
+                      <div class="person-countries__item-img person-countries__item-img--sri-lanka"></div>
+                      Шри-Ланка
+                    </li>
+                    <li class="person-countries__item">
+                      <div class="person-countries__item-img person-countries__item-img--thailand"></div>
+                      Таиланд
+                    </li>
+                    <li class="person-countries__item">
+                      <div class="person-countries__item-img person-countries__item-img--seychelles"></div>
+                      Сейшелы
+                    </li>
+                  </ul>
+                  <div class="catalog-item__skills">
+                    <div class="catalog-item__transport">
+                      <span class="catalog-item__transport-heading">Транспорт:</span>
+                      <ul class="catalog-item__transport-list person-transport">
+                        <li class="person-transport__item person-transport__item--plane person-transport__item--active">
+                          <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 19 21"><path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg>
+                        </li>
+                        <li class="person-transport__item person-transport__item--bus">
+                          <svg width="13" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg>
+                        </li>
+                        <li class="person-transport__item person-transport__item--bicycle">
+                          <svg width="19" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
+                        </li>
+                        <li class="person-transport__item person-transport__item--legs">
+                          <svg width="15" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 21"><ellipse cx="14.3" cy="2" rx="2.1" ry="2"/><path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/></svg>
+                        </li>
+                      </ul>
                     </div>
-                  </div>
-                  <div class="catalog-item__status"></div>
-                </div>
-                <ul class="catalog-item__tags companion-tags companion-tags--catalog">
-                  <li class="companion-tags__item companion-tags__item--catalog">бургер</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">бар</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">футбол</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">концерт</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">крафт</li>
-                </ul>
-                <span class="catalog-item__countries-heading">Хочет посетить:</span>
-                <ul class="catalog-item__countries person-countries">
-                  <li class="person-countries__item">
-                    <div class="person-countries__item-img person-countries__item-img--belgium"></div>
-                    Бельгия
-                  </li>
-                  <li class="person-countries__item">
-                    <div class="person-countries__item-img person-countries__item-img--czech"></div>
-                    Чехия
-                  </li>
-                </ul>
-                <div class="catalog-item__skills">
-                  <div class="catalog-item__transport">
-                    <span class="catalog-item__transport-heading">Транспорт:</span>
-                    <ul class="catalog-item__transport-list person-transport">
-                      <li class="person-transport__item person-transport__item--plane person-transport__item--active">
-                        <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 19 21"><path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg>
-                      </li>
-                      <li class="person-transport__item person-transport__item--bus person-transport__item--active">
-                        <svg width="13" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg>
-                      </li>
-                      <li class="person-transport__item person-transport__item--bicycle">
-                        <svg width="19" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
-                      </li>
-                      <li class="person-transport__item person-transport__item--legs person-transport__item--active">
-                        <svg width="15" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 21"><ellipse cx="14.3" cy="2" rx="2.1" ry="2"/><path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/></svg>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="catalog-item__level">
-                    <span class="catalog-item__level-heading">Левел:</span>
-                    <div class="catalog-item__level-circle level">
-                      <div class="level__text level__text--catalog">
-                        <span class="level__value level__value--catalog">80</span>
-                        <div class="level__label level__label--catalog">level</div>
+                    <div class="catalog-item__level">
+                      <span class="catalog-item__level-heading">Левел:</span>
+                      <div class="catalog-item__level-circle level">
+                        <div class="level__text level__text--catalog">
+                          <span class="level__value level__value--catalog">99</span>
+                          <div class="level__label level__label--catalog">level</div>
+                        </div>
+                        <svg class="level__visual level__visual--catalog level__visual--mobile">
+                          <circle class="level__progress level__progress--catalog-99  level__progress--catalog" cx="57" cy="57" r="22"></circle>
+                        </svg>
+                        <svg class="level__visual level__visual--catalog level__visual--tablet">
+                          <circle class="level__progress level__progress--catalog-99  level__progress--catalog" cx="57" cy="57" r="30"></circle>
+                        </svg>
                       </div>
-                      <svg class="level__visual level__visual--catalog">
-                        <circle class="level__progress level__progress--catalog-80 level__progress--catalog" cx="57" cy="57" r="22"></circle>
-                      </svg>
                     </div>
                   </div>
-                </div>
-                <a class="catalog-item__btn" href="#">Позвать!</a>
-              </li>
-              <li class="catalog-list__item catalog-item catalog-item--offline">
-                <div class="catalog-item__heading-wrapper">
-                  <div class="catalog-item__img-wrapper">
-                    <img class="catalog-item__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото: Марк Смолов">
-                  </div>
-                  <div class="catalog-item__name-wrapper">
-                    <h2 class="catalog-item__name">Марк Смолов</h2>
-                    <div class="catalog-item__likes-wrapper">
-                      <button class="catalog-item__likes" type="button">
-                        <svg class="catalog-item__heart" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 17"><path d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5C1.4 6.1 1.4 4 2.7 2.7c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z"/></svg>
-                        <svg class="catalog-item__heart catalog-item__heart--active" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 11"><path d="M12 1a3.32 3.32 0 00-4.7 0l-.8.7-.8-.7A3.32 3.32 0 001 1C-.3 2.3-.3 4.4 1 5.6l.8.8L6.5 11l4.7-4.6.8-.8c1.3-1.3 1.3-3.4 0-4.6z"/></svg>
-                      </button>
-                      <p class="catalog-item__likes-count">170</p>
+                  <a class="catalog-item__btn" href="/call-to-join">Позвать!</a>
+                </li>
+                <li class="catalog-list__item catalog-item catalog-item--offline">
+                  <div class="catalog-item__heading-wrapper">
+                    <div class="catalog-item__img-wrapper">
+                      <a class="catalog-item__link" href="/user">
+                        <picture>
+                          <source media="(min-width: 1440px)" srcset="../img/demin-desktop@1x.jpg 1x, ../img/demin-desktop@2x.jpg 2x">
+                          <source media="(min-width: 768px)" srcset="../img/demin-tablet@1x.jpg 1x, ../img/demin-tablet@2x.jpg 2x">
+                          <img class="catalog-item__img" src="../img/demin-mobile@1x.jpg" srcset="../img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Фото: Петя Демин">
+                        </picture>
+                      </a>
                     </div>
-                  </div>
-                  <div class="catalog-item__status"></div>
-                </div>
-                <ul class="catalog-item__tags companion-tags companion-tags--catalog">
-                  <li class="companion-tags__item companion-tags__item--catalog">рэп</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">тату</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">хайпбист</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">кроссовки</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">суприм</li>
-                </ul>
-                <span class="catalog-item__countries-heading">Хочет посетить:</span>
-                <ul class="catalog-item__countries person-countries">
-                  <li class="person-countries__item">
-                    <div class="person-countries__item-img person-countries__item-img--usa"></div>
-                    Сша
-                  </li>
-                  <li class="person-countries__item">
-                    <div class="person-countries__item-img person-countries__item-img--australia"></div>
-                    Австралия
-                  </li>
-                  <li class="person-countries__item">
-                    <div class="person-countries__item-img person-countries__item-img--dominica"></div>
-                    Доминика
-                  </li>
-                </ul>
-                <div class="catalog-item__skills">
-                  <div class="catalog-item__transport">
-                    <span class="catalog-item__transport-heading">Транспорт:</span>
-                    <ul class="catalog-item__transport-list person-transport">
-                      <li class="person-transport__item person-transport__item--plane person-transport__item--active">
-                        <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 19 21"><path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg>
-                      </li>
-                      <li class="person-transport__item person-transport__item--bus">
-                        <svg width="13" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg>
-                      </li>
-                      <li class="person-transport__item person-transport__item--bicycle person-transport__item--active">
-                        <svg width="19" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
-                      </li>
-                      <li class="person-transport__item person-transport__item--legs">
-                        <svg width="15" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 21"><ellipse cx="14.3" cy="2" rx="2.1" ry="2"/><path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/></svg>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="catalog-item__level">
-                    <span class="catalog-item__level-heading">Левел:</span>
-                    <div class="catalog-item__level-circle level">
-                      <div class="level__text level__text--catalog">
-                        <span class="level__value level__value--catalog">25</span>
-                        <div class="level__label level__label--catalog">level</div>
+                    <div class="catalog-item__name-wrapper">
+                      <a class="catalog-item__link" href="/user">
+                        <h2 class="catalog-item__name">Петя Демин</h2>
+                      </a>
+                      <div class="catalog-item__likes-wrapper">
+                        <button class="catalog-item__likes" type="button">
+                          <svg class="catalog-item__heart" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 17"><path d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5C1.4 6.1 1.4 4 2.7 2.7c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z"/></svg>
+                          <svg class="catalog-item__heart catalog-item__heart--active" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 11"><path d="M12 1a3.32 3.32 0 00-4.7 0l-.8.7-.8-.7A3.32 3.32 0 001 1C-.3 2.3-.3 4.4 1 5.6l.8.8L6.5 11l4.7-4.6.8-.8c1.3-1.3 1.3-3.4 0-4.6z"/></svg>
+                        </button>
+                        <p class="catalog-item__likes-count">1500</p>
                       </div>
-                      <svg class="level__visual level__visual--catalog">
-                        <circle class="level__progress level__progress--catalog-25 level__progress--catalog" cx="57" cy="57" r="22"></circle>
-                      </svg>
                     </div>
+                    <div class="catalog-item__status"></div>
                   </div>
-                </div>
-                <a class="catalog-item__btn" href="#">Позвать!</a>
-              </li>
-              <li class="catalog-list__item catalog-item catalog-item--online">
-                <div class="catalog-item__heading-wrapper">
-                  <div class="catalog-item__img-wrapper">
-                    <img class="catalog-item__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото: Лариса Роговая">
-                  </div>
-                  <div class="catalog-item__name-wrapper">
-                    <h2 class="catalog-item__name">Лариса Роговая</h2>
-                    <div class="catalog-item__likes-wrapper">
-                      <button class="catalog-item__likes" type="button">
-                        <svg class="catalog-item__heart" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 17"><path d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5C1.4 6.1 1.4 4 2.7 2.7c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z"/></svg>
-                        <svg class="catalog-item__heart catalog-item__heart--active" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 11"><path d="M12 1a3.32 3.32 0 00-4.7 0l-.8.7-.8-.7A3.32 3.32 0 001 1C-.3 2.3-.3 4.4 1 5.6l.8.8L6.5 11l4.7-4.6.8-.8c1.3-1.3 1.3-3.4 0-4.6z"/></svg>
-                      </button>
-                      <p class="catalog-item__likes-count">23</p>
+                  <ul class="catalog-item__tags companion-tags companion-tags--catalog">
+                    <li class="companion-tags__item companion-tags__item--catalog">бургер</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">бар</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">футбол</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">концерт</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">крафт</li>
+                  </ul>
+                  <span class="catalog-item__countries-heading">Хочет посетить:</span>
+                  <ul class="catalog-item__countries person-countries">
+                    <li class="person-countries__item">
+                      <div class="person-countries__item-img person-countries__item-img--belgium"></div>
+                      Бельгия
+                    </li>
+                    <li class="person-countries__item">
+                      <div class="person-countries__item-img person-countries__item-img--czech"></div>
+                      Чехия
+                    </li>
+                  </ul>
+                  <div class="catalog-item__skills">
+                    <div class="catalog-item__transport">
+                      <span class="catalog-item__transport-heading">Транспорт:</span>
+                      <ul class="catalog-item__transport-list person-transport">
+                        <li class="person-transport__item person-transport__item--plane person-transport__item--active">
+                          <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 19 21"><path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg>
+                        </li>
+                        <li class="person-transport__item person-transport__item--bus person-transport__item--active">
+                          <svg width="13" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg>
+                        </li>
+                        <li class="person-transport__item person-transport__item--bicycle">
+                          <svg width="19" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
+                        </li>
+                        <li class="person-transport__item person-transport__item--legs person-transport__item--active">
+                          <svg width="15" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 21"><ellipse cx="14.3" cy="2" rx="2.1" ry="2"/><path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/></svg>
+                        </li>
+                      </ul>
                     </div>
-                  </div>
-                  <div class="catalog-item__status catalog-item__status--active"></div>
-                </div>
-                <ul class="catalog-item__tags companion-tags companion-tags--catalog">
-                  <li class="companion-tags__item companion-tags__item--catalog">образование</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">карьера</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">учеба</li>
-                  <li class="companion-tags__item companion-tags__item--catalog">линкедин</li>
-                </ul>
-                <span class="catalog-item__countries-heading">Хочет посетить:</span>
-                <ul class="catalog-item__countries person-countries">
-                  <li class="person-countries__item">
-                    <div class="person-countries__item-img person-countries__item-img--uk"></div>
-                    Великобритания
-                  </li>
-                  <li class="person-countries__item">
-                    <div class="person-countries__item-img person-countries__item-img--germany"></div>
-                    Германия
-                  </li>
-                </ul>
-                <div class="catalog-item__skills">
-                  <div class="catalog-item__transport">
-                    <span class="catalog-item__transport-heading">Транспорт:</span>
-                    <ul class="catalog-item__transport-list person-transport">
-                      <li class="person-transport__item person-transport__item--plane person-transport__item--active">
-                        <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 19 21"><path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg>
-                      </li>
-                      <li class="person-transport__item person-transport__item--bus person-transport__item--active">
-                        <svg width="13" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg>
-                      </li>
-                      <li class="person-transport__item person-transport__item--bicycle">
-                        <svg width="19" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
-                      </li>
-                      <li class="person-transport__item person-transport__item--legs">
-                        <svg width="15" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 21"><ellipse cx="14.3" cy="2" rx="2.1" ry="2"/><path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/></svg>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="catalog-item__level">
-                    <span class="catalog-item__level-heading">Левел:</span>
-                    <div class="catalog-item__level-circle level">
-                      <div class="level__text level__text--catalog">
-                        <span class="level__value level__value--catalog">50</span>
-                        <div class="level__label level__label--catalog">level</div>
+                    <div class="catalog-item__level">
+                      <span class="catalog-item__level-heading">Левел:</span>
+                      <div class="catalog-item__level-circle level">
+                        <div class="level__text level__text--catalog">
+                          <span class="level__value level__value--catalog">80</span>
+                          <div class="level__label level__label--catalog">level</div>
+                        </div>
+                        <svg class="level__visual level__visual--catalog level__visual--mobile">
+                          <circle class="level__progress level__progress--catalog-80 level__progress--catalog" cx="57" cy="57" r="22"></circle>
+                        </svg>
+                        <svg class="level__visual level__visual--catalog level__visual--tablet">
+                          <circle class="level__progress level__progress--catalog-80  level__progress--catalog" cx="57" cy="57" r="30"></circle>
+                        </svg>
                       </div>
-                      <svg class="level__visual level__visual--catalog">
-                        <circle class="level__progress  level__progress--catalog level__progress--catalog-50" cx="57" cy="57" r="22"></circle>
-                      </svg>
                     </div>
                   </div>
-                </div>
-                <a class="catalog-item__btn" href="#">Позвать!</a>
-              </li>
+                  <a class="catalog-item__btn" href="/call-to-join">Позвать!</a>
+                </li>
+                <li class="catalog-list__item catalog-item catalog-item--offline">
+                  <div class="catalog-item__heading-wrapper">
+                    <div class="catalog-item__img-wrapper">
+                      <a class="catalog-item__link" href="/user">
+                        <picture>
+                          <source media="(min-width: 1440px)" srcset="../img/smolov-desktop@1x.jpg 1x, ../img/smolov-desktop@2x.jpg 2x">
+                          <source media="(min-width: 768px)" srcset="../img/smolov-tablet@1x.jpg 1x, ../img/smolov-tablet@2x.jpg 2x">
+                          <img class="catalog-item__img" src="../img/smolov-mobile@1x.jpg" srcset="../img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Фото: Марк Смолов">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="catalog-item__name-wrapper">
+                      <a class="catalog-item__link" href="/user">
+                        <h2 class="catalog-item__name">Марк Смолов</h2>
+                      </a>
+                      <div class="catalog-item__likes-wrapper">
+                        <button class="catalog-item__likes" type="button">
+                          <svg class="catalog-item__heart" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 17"><path d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5C1.4 6.1 1.4 4 2.7 2.7c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z"/></svg>
+                          <svg class="catalog-item__heart catalog-item__heart--active" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 11"><path d="M12 1a3.32 3.32 0 00-4.7 0l-.8.7-.8-.7A3.32 3.32 0 001 1C-.3 2.3-.3 4.4 1 5.6l.8.8L6.5 11l4.7-4.6.8-.8c1.3-1.3 1.3-3.4 0-4.6z"/></svg>
+                        </button>
+                        <p class="catalog-item__likes-count">170</p>
+                      </div>
+                    </div>
+                    <div class="catalog-item__status"></div>
+                  </div>
+                  <ul class="catalog-item__tags companion-tags companion-tags--catalog">
+                    <li class="companion-tags__item companion-tags__item--catalog">рэп</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">тату</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">хайпбист</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">кроссовки</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">суприм</li>
+                  </ul>
+                  <span class="catalog-item__countries-heading">Хочет посетить:</span>
+                  <ul class="catalog-item__countries person-countries">
+                    <li class="person-countries__item">
+                      <div class="person-countries__item-img person-countries__item-img--usa"></div>
+                      Сша
+                    </li>
+                    <li class="person-countries__item">
+                      <div class="person-countries__item-img person-countries__item-img--australia"></div>
+                      Австралия
+                    </li>
+                    <li class="person-countries__item">
+                      <div class="person-countries__item-img person-countries__item-img--dominica"></div>
+                      Доминика
+                    </li>
+                  </ul>
+                  <div class="catalog-item__skills">
+                    <div class="catalog-item__transport">
+                      <span class="catalog-item__transport-heading">Транспорт:</span>
+                      <ul class="catalog-item__transport-list person-transport">
+                        <li class="person-transport__item person-transport__item--plane person-transport__item--active">
+                          <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 19 21"><path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg>
+                        </li>
+                        <li class="person-transport__item person-transport__item--bus">
+                          <svg width="13" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg>
+                        </li>
+                        <li class="person-transport__item person-transport__item--bicycle person-transport__item--active">
+                          <svg width="19" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
+                        </li>
+                        <li class="person-transport__item person-transport__item--legs">
+                          <svg width="15" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 21"><ellipse cx="14.3" cy="2" rx="2.1" ry="2"/><path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/></svg>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="catalog-item__level">
+                      <span class="catalog-item__level-heading">Левел:</span>
+                      <div class="catalog-item__level-circle level">
+                        <div class="level__text level__text--catalog">
+                          <span class="level__value level__value--catalog">25</span>
+                          <div class="level__label level__label--catalog">level</div>
+                        </div>
+                        <svg class="level__visual level__visual--catalog level__visual--mobile">
+                          <circle class="level__progress level__progress--catalog-25 level__progress--catalog" cx="57" cy="57" r="22"></circle>
+                        </svg>
+                        <svg class="level__visual level__visual--catalog level__visual--tablet">
+                          <circle class="level__progress level__progress--catalog-25  level__progress--catalog" cx="57" cy="57" r="30"></circle>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="catalog-item__btn" href="/call-to-join">Позвать!</a>
+                </li>
+                <li class="catalog-list__item catalog-item catalog-item--online">
+                  <div class="catalog-item__heading-wrapper">
+                    <div class="catalog-item__img-wrapper">
+                      <a class="catalog-item__link" href="/user">
+                        <picture>
+                          <source media="(min-width: 1440px)" srcset="../img/rogovaya-desktop@1x.jpg 1x, ../img/rogovaya-desktop@2x.jpg 2x">
+                          <source media="(min-width: 768px)" srcset="../img/rogovaya-tablet@1x.jpg 1x, ../img/rogovaya-tablet@2x.jpg 2x">
+                          <img class="catalog-item__img" src="../img/rogovaya-mobile@1x.jpg" srcset="../img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Фото: Лариса Роговая">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="catalog-item__name-wrapper">
+                      <a class="catalog-item__link" href="/user">
+                        <h2 class="catalog-item__name">Лариса Роговая</h2>
+                      </a>
+                      <div class="catalog-item__likes-wrapper">
+                        <button class="catalog-item__likes" type="button">
+                          <svg class="catalog-item__heart" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 17"><path d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5C1.4 6.1 1.4 4 2.7 2.7c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z"/></svg>
+                          <svg class="catalog-item__heart catalog-item__heart--active" width="13" height="11" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 11"><path d="M12 1a3.32 3.32 0 00-4.7 0l-.8.7-.8-.7A3.32 3.32 0 001 1C-.3 2.3-.3 4.4 1 5.6l.8.8L6.5 11l4.7-4.6.8-.8c1.3-1.3 1.3-3.4 0-4.6z"/></svg>
+                        </button>
+                        <p class="catalog-item__likes-count">23</p>
+                      </div>
+                    </div>
+                    <div class="catalog-item__status catalog-item__status--active"></div>
+                  </div>
+                  <ul class="catalog-item__tags companion-tags companion-tags--catalog">
+                    <li class="companion-tags__item companion-tags__item--catalog">образование</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">карьера</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">учеба</li>
+                    <li class="companion-tags__item companion-tags__item--catalog">линкедин</li>
+                  </ul>
+                  <span class="catalog-item__countries-heading">Хочет посетить:</span>
+                  <ul class="catalog-item__countries person-countries">
+                    <li class="person-countries__item">
+                      <div class="person-countries__item-img person-countries__item-img--uk"></div>
+                      Великобритания
+                    </li>
+                    <li class="person-countries__item">
+                      <div class="person-countries__item-img person-countries__item-img--germany"></div>
+                      Германия
+                    </li>
+                  </ul>
+                  <div class="catalog-item__skills">
+                    <div class="catalog-item__transport">
+                      <span class="catalog-item__transport-heading">Транспорт:</span>
+                      <ul class="catalog-item__transport-list person-transport">
+                        <li class="person-transport__item person-transport__item--plane person-transport__item--active">
+                          <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 19 21"><path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/></svg>
+                        </li>
+                        <li class="person-transport__item person-transport__item--bus person-transport__item--active">
+                          <svg width="13" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 21"><path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/></svg>
+                        </li>
+                        <li class="person-transport__item person-transport__item--bicycle">
+                          <svg width="19" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 21"><path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
+                        </li>
+                        <li class="person-transport__item person-transport__item--legs">
+                          <svg width="15" height="17" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 21"><ellipse cx="14.3" cy="2" rx="2.1" ry="2"/><path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/></svg>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="catalog-item__level">
+                      <span class="catalog-item__level-heading">Левел:</span>
+                      <div class="catalog-item__level-circle level">
+                        <div class="level__text level__text--catalog">
+                          <span class="level__value level__value--catalog">50</span>
+                          <div class="level__label level__label--catalog">level</div>
+                        </div>
+                        <svg class="level__visual level__visual--catalog level__visual--mobile">
+                          <circle class="level__progress  level__progress--catalog level__progress--catalog-50" cx="57" cy="57" r="22"></circle>
+                        </svg>
+                        <svg class="level__visual level__visual--catalog level__visual--tablet">
+                          <circle class="level__progress level__progress--catalog-50  level__progress--catalog" cx="57" cy="57" r="30"></circle>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="catalog-item__btn" href="/call-to-join">Позвать!</a>
+                </li>
+              </div>
             </ul>
             <div class="catalog__show-more-wrapper">
               <svg class="catalog__show-more-icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 27 27"><path d="M25.5 12H15V1.5c0-.8-.7-1.5-1.5-1.5S12 .7 12 1.5V12H1.5c-.8 0-1.5.7-1.5 1.5S.7 15 1.5 15H12v10.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5V15h10.5c.8 0 1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5z"/></svg>
-              <a class="catalog__show-more" href="#">Показать еще</a>
+              <a class="catalog__show-more" href="/catalog-next-companions">Показать еще</a>
             </div>
             <div class="catalog__nav">
               <ul class="catalog__pagination">
@@ -908,12 +973,12 @@
                 </li>
               </ul>
               <div class="catalog__nav-buttons">
-                <a class="catalog__nav-btn catalog__nav-btn--prev" href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="20" viewBox="0 0 10 20">
+                <a class="catalog__nav-btn catalog__nav-btn--prev" href="/catalog-prev-page">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="20" viewbox="0 0 10 20">
                     <image id="triangle-arrow-left_200_" data-name="triangle-arrow-left 200%" width="10" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAUCAYAAAC07qxWAAAAbklEQVQokY3OqxGAMBBF0cvHIBBIJNSBpCcogaIojglDmCTsh2veiiO2GqeVHx31HwRsHrxROCz4IgtmSIMfJEERlVBFKTRRhC6SflRr+mE+gQ5YPBjWxRG6OIUmLqGKJShiDX6wBTPcWuppB7gAdbgUr4230lwAAAAASUVORK5CYII="/>
                   </svg>
                 </a>
-                <a class="catalog__nav-btn catalog__nav-btn--next" href="#">
+                <a class="catalog__nav-btn catalog__nav-btn--next" href="/catalog-next-page">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="20" viewbox="0 0 10 20">
                     <image id="triangle-arrow-right_200_" data-name="triangle-arrow-right 200%" width="10" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAUCAYAAAC07qxWAAAAeklEQVQokY3TsQ2AIBCF4V+0sbCwtNRZ3ElHgJl0OEMiRpC78zUXki/kEh7NNK8e2DHSDuNyAD1watTdcwP8H2hiV5xFXEIR12AVS/CDNZjhzoAJmzf+2jElxCe2YEg90OCDNJghCX5QDVZRCUX0hiqKiQ2P7da/AnABp7UTo+YZa3oAAAAASUVORK5CYII="/>
                   </svg>
@@ -927,7 +992,11 @@
 
     <footer class="site-footer">
       <div class="site-footer__container">
-        <img class="site-footer__logo" src="../img/logo-mobile-blue@1x.png" width="100" height="19" alt="Погнали?">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="../img/logo-desktop-blue@1x.png 1x, ../img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="../img/logo-tablet-blue@1x.png 1x, ../img/logo-tablet-blue@2x.png 2x">
+          <img class="site-footer__logo" src="../img/logo-mobile-blue@1x.png" srcset="../img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Погнали?">
+        </picture>
         <ul class="site-footer__socials socials">
           <li class="socials__item socials__item--circle">
             <a class="socials__link socials__link--footer socials__link--facebook" href="#">

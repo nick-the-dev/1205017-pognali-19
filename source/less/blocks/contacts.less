@@ -31,6 +31,25 @@
 .contacts__item {
   display: flex;
   align-items: center;
+
+  &:hover .contacts__phone,
+  &:hover .contacts__email {
+    color: #ffbd30;
+  }
+
+  &:hover svg {
+    fill: #ffbd30;
+  }
+
+  &:active .contacts__phone,
+  &:active .contacts__email {
+    color: rgba(255, 189, 48, 0.3);
+  }
+
+  &:active svg {
+    fill: #ffbd30;
+    opacity: 0.3;
+  }
 }
 
 .contacts__item-img {
@@ -137,5 +156,3 @@
     fill: #ffd74b;
   }
 }
-
-

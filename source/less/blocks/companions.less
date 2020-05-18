@@ -1,4 +1,5 @@
 .companions {
+  display: flex;
   padding-top: 102px;
   padding-bottom: 30px;
 
@@ -37,12 +38,18 @@
   margin-right: -135px;
 
   background-image: url("../img/smolov-back-desktop@1x.png");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/smolov-back-desktop@2x.png");
+    background-size: 143px auto;
+  }
 }
 
 .companions__container {
   position: relative;
 
   max-width: 320px;
+  width: 320px;
   margin: 0 auto;
 }
 
@@ -96,6 +103,11 @@
   margin-left: -170px;
 
   background-image: url("../img/rogovaya-back-mobile@1x.png");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/rogovaya-back-mobile@2x.png");
+    background-size: 71px auto;
+  }
 }
 
 .companions__btn {
@@ -117,6 +129,20 @@
 
   background-color: #ffd74b;
   border-radius: 10px;
+
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    background-color: #ffbd30;
+  }
+
+  &:active .companions__btn-arrow {
+    opacity: 0.3;
+  }
 }
 
 .companions__btn-arrow {
@@ -136,7 +162,7 @@
   }
 
   .companions::before {
-    top: 111px;
+    top: 140px;
 
     width: 213px;
     height: 213px;
@@ -145,6 +171,7 @@
 
   .companions__container {
     max-width: 768px;
+    width: 768px;
     padding-left: 75px;
     padding-right: 75px;
   }
@@ -213,11 +240,17 @@
     margin-left: 24px;
 
     background-image: url("../img/rogovaya-back-desktop@1x.png");
+    background-size: 285px auto;
     border-radius: 20px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/rogovaya-back-desktop@2x.png");
+      background-size: 285px auto;
+    }
   }
 
   .companions::after {
-    top: 456px;
+    top: 486px;
 
     margin-right: 200px;
   }
@@ -243,6 +276,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 1440px;
+    width: 1440px;
     padding-top: 189px;
     padding-bottom: 124px;
     padding-left: 131px;

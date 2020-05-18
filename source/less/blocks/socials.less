@@ -4,8 +4,6 @@
 
   &--main-nav {
     justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -18,6 +16,22 @@
 
     background-color: #ffd74b;
     border-radius: 50%;
+
+    &:hover {
+      background-color: #ffbd30;
+    }
+
+    &:active svg {
+      opacity: 0.3;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

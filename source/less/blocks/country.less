@@ -55,6 +55,18 @@
 
   border: 1px solid #cbced9;
   border-radius: 4px;
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:hover ~ .country__dropdown-icon {
+    opacity: 0.5;
+  }
+
+  &--selected {
+    width: 168px;
+  }
 }
 
 .country__flag {
@@ -135,6 +147,14 @@
   border: none;
   background-color: #edeff6;
   border-radius: 50%;
+
+  &:hover svg {
+    opacity: 0.3;
+  }
+
+  &:active svg {
+    opacity: 0.05;
+  }
 }
 
 .country__remove svg {

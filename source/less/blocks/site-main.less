@@ -10,24 +10,33 @@
 }
 
 .site-main__heading-wrapper {
+  display: flex;
+  flex-direction: column;
+
   background-color: #161c36;
 
   &--homepage {
     height: 569px;
-    margin-top: -66px;
+    margin-top: -71px;
 
     background-image: url("../img/traveller-illustration-mobile@1x.png"),
       url("../img/globe-back-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: 62% 71%, center;
     background-size: 192px 255px, cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/traveller-illustration-mobile@2x.png"),
+        url("../img/globe-back-mobile@2x.jpg");
+      background-size: 192px 255px, cover;
+    }
   }
 
   &--catalog {
     position: relative;
     z-index: 1;
 
-    padding-top: 36px;
+    padding-top: 31px;
 
     border-radius: 0 0 20px 20px;
   }
@@ -43,6 +52,12 @@
 .site-main__heading-container {
   max-width: 320px;
   margin: 0 auto;
+
+  &--catalog,
+  &--form {
+    max-width: unset;
+    width: 320px;
+  }
 }
 
 .site-main__heading {
@@ -76,6 +91,7 @@
 
     width: 214px;
     margin-left: 25px;
+    margin-top: -5px;
     padding-top: 36px;
     padding-bottom: 9px;
 
@@ -179,17 +195,24 @@
 @media (min-width: @tablet-width) {
   .site-main__heading-wrapper--homepage {
     height: 994px;
-    margin-top: -105px;
+    margin-top: -110px;
 
     background-color: #182044;
-    background-image: url("../img/traveller-illustration-mobile@1x.png"),
+    background-image: url("../img/traveller-illustration-tablet@1x.png"),
       url("../img/globe-back-tablet@1x.jpg");
-    background-position: 72% 81%, 50% 100%;
-    background-size: 372px 495px, 192%;
+    background-position: 71.8% 74.4%, 50% 100%;
+    background-size: 372px auto, 192%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/traveller-illustration-tablet@2x.png"),
+        url("../img/globe-back-tablet@2x.jpg");
+      background-position: 71.8% 74.4%, 50.4% 100%;
+      background-size: 372px auto, 193.5%;
+    }
   }
 
   .site-main__heading-wrapper--catalog {
-    padding-top: 114px;
+    padding-top: 109px;
     padding-bottom: 54px;
     padding-left: 35px;
     padding-right: 75px;
@@ -213,6 +236,16 @@
     display: flex;
     align-items: center;
     max-width: 768px;
+
+    &--catalog {
+      max-width: unset;
+      width: 658px;
+    }
+
+    &--form {
+      max-width: unset;
+      width: 768px;
+    }
   }
 
   .site-main__heading {
@@ -228,6 +261,7 @@
     &--catalog {
       width: 289px;
       margin-left: 39px;
+      margin-right: 153px;
     }
 
     &--form {
@@ -255,6 +289,22 @@
     display: flex;
     justify-content: space-between;
     width: 177px;
+
+    &:hover .site-main__home-link {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:hover .site-main__home-link-icon {
+      opacity: 0.6;
+    }
+
+    &:active .site-main__home-link {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:active .site-main__home-link-icon {
+      opacity: 0.3;
+    }
   }
 
   .site-main__home-link {
@@ -300,21 +350,32 @@
     z-index: 1;
 
     height: 750px;
-    margin-top: -115px;
+    margin-top: -120px;
 
-    background-image: url("../img/traveller-illustration-desktop@1x.png"), url("../img/globe-back-desktop@1x.jpg");
+    background-image: url("../img/traveller-illustration-desktop@1x.png"),
+      url("../img/globe-back-desktop@1x.jpg");
     background-position: 60% 101.1%, 50% 0%;
     background-size: 431px 640px, 1800px 750px;
     background-color: #161c34;
     border-radius: 0 0 60px 60px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/traveller-illustration-desktop@2x.png"),
+        url("../img/globe-back-desktop@2x.jpg");
+      background-size: 431px 640px, 1800px 750px;
+    }
   }
 
   .site-main__heading-wrapper--catalog {
-    padding-top: 104px;
+    padding-top: 99px;
   }
 
   .site-main__heading-container {
-    max-width: 1440px;
+    width: 1330px;
+
+    &--form {
+      width: 1440px;
+    }
   }
 
   .site-main__heading {
@@ -323,7 +384,7 @@
     text-align: left;
 
     &--homepage {
-      margin-left: 127px;
+      margin-left: -209px;
       padding-top: 210px;
     }
 
@@ -337,6 +398,7 @@
     &--catalog {
       width: 287px;
       margin-left: 91px;
+      margin-right: 727px;
     }
   }
 

@@ -1,4 +1,5 @@
 .item-plans {
+  height: 154px;
   margin-bottom: 10px;
   padding: 25px;
   padding-top: 8px;
@@ -53,10 +54,19 @@
   font-family: @site-font-family;
   color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .item-plans {
+    height: auto;
     padding-left: 36px;
     padding-right: 28px;
     padding-bottom: 16px;

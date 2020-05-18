@@ -1,12 +1,16 @@
 .level {
   position: absolute;
+  z-index: 1;
+
   width: 60px;
   height: 60px;
   margin: 30px auto;
 
+  cursor: pointer;
+
   &--form {
     left: 50%;
-    top: 169px;
+    top: 3px;
     z-index: 1;
 
     margin-left: -113px;
@@ -22,6 +26,10 @@
   &--catalog {
     margin-top: -57px;
     margin-left: -37px;
+  }
+
+  &--tablet {
+    display: none;
   }
 }
 
@@ -168,6 +176,14 @@
     &--catalog {
       margin-top: -49px;
       margin-left: -39px;
+    }
+
+    &--tablet {
+      display: block;
+    }
+
+    &--mobile {
+      display: none;
     }
   }
 

@@ -1,10 +1,13 @@
 .about-service {
+  display: flex;
+
   background-color: #192144;
   border-radius: 0 0 30px 30px;
 }
 
 .about-service__container {
   max-width: 320px;
+  width: 320px;
   margin: 0 auto;
   padding-top: 33px;
   padding-left: 49px;
@@ -14,6 +17,11 @@
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 65% -5%;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+    background-size: 292px auto;
+  }
 }
 
 .about-service__container::before {
@@ -74,6 +82,20 @@
 
   background-color: #ffd74b;
   border-radius: 20px;
+
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    background-color: #ffbd30;
+  }
+
+  &:active .about-service__btn-arrow {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -85,11 +107,19 @@
 
   .about-service__container {
     max-width: 768px;
+    width: 768px;
     padding-left: 75px;
     padding-top: 43px;
 
     background-image: url("../img/about-tablet@1x.png");
     background-position: 98% 43%;
+    background-size: 376px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+      background-size: 374px auto;
+      background-position: 98% 41.3%;
+    }
   }
 
   .about-service__container::before {
@@ -144,6 +174,7 @@
 @media (min-width: @desktop-width) {
   .about-service__container {
     max-width: 1440px;
+    width: 1440px;
     padding-bottom: 163px;
     padding-left: 130px;
     padding-top: 70px;
@@ -152,6 +183,11 @@
     background-image: url("../img/about-desktop@1x.png");
     background-size: 630px 665px;
     background-position: 92.6% 100%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/about-desktop@2x.png");
+      background-size: 630px auto;
+    }
   }
 
   .about-service__container::before {

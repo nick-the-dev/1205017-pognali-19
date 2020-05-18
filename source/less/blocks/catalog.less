@@ -8,8 +8,16 @@
 .catalog__show-more-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 19px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog__show-more {
@@ -59,6 +67,14 @@
 
   &--next {
     border-radius: 0 20px 20px 0;
+  }
+
+  &:hover svg {
+    opacity: 0.6;
+  }
+
+  &:active svg {
+    opacity: 0.3;
   }
 }
 
@@ -118,9 +134,19 @@
     width: 50px;
     height: 50px;
 
+    border-radius: 50%;
+
     &--active {
       background-color: #ffd74b;
-      border-radius: 50%;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 1;
+      background-color: #ffd74b;
     }
   }
 
@@ -136,7 +162,7 @@
 
   .catalog__show-more-wrapper {
     margin-bottom: 47px;
-    margin-top: 46px;
+    margin-top: 6px;
   }
 
   .catalog__show-more {
@@ -173,7 +199,7 @@
   }
 
   .catalog__show-more-wrapper {
-    margin-top: 66px;
+    margin-top: 36px;
     margin-bottom: 66px;
   }
 

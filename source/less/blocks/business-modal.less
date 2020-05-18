@@ -15,8 +15,14 @@
   transform: translateX(-50%);
 
   &--active {
-    display: block;
+    display: flex;
   }
+}
+
+.business-modal__container {
+  max-width: 320px;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .business-modal__heading {
@@ -60,17 +66,32 @@
   background-color: #f3f4f8;
   border: 0;
   border-radius: 0 0 20px 20px;
+
+  &:hover {
+    background-color: #edeff6;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .business-modal {
     top: 4263px;
+    left: 50%;
 
     width: 688px;
     height: 525px;
+    margin-left: -2px;
     padding-top: 51px;
 
     border-radius: 30px;
+  }
+
+  .business-modal__container {
+    max-width: 768px;
+    width: 768px;
   }
 
   .business-modal__heading {
@@ -94,6 +115,8 @@
 
     font-size: 24px;
     text-transform: none;
+
+    border-radius: 0 0 30px 30px;
   }
 }
 
@@ -104,6 +127,12 @@
 
     width: 750px;
     height: 526px;
+    margin-left: 0;
+  }
+
+  .business-modal__container {
+    max-width: 1440px;
+    width: 1440px;
   }
 
   .business-modal__prices {
@@ -118,7 +147,5 @@
   .business-modal__btn {
     padding-top: 41px;
     padding-bottom: 43px;
-
-    border-radius: 0 0 30px 30px;
   }
 }

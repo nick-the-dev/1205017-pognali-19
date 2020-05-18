@@ -1,9 +1,13 @@
 .steps {
+  display: flex;
+  flex-direction: column;
+
   background-color: #192144;
 }
 
 .steps__container {
   max-width: 320px;
+  width: 320px;
   margin: 0 auto;
   padding-left: 25px;
   padding-right: 25px;
@@ -93,6 +97,7 @@
 @media (min-width: @tablet-width) {
   .steps__container {
     max-width: 768px;
+    width: 768px;
   }
 
   .steps__item {
@@ -162,6 +167,7 @@
 @media (min-width: @desktop-width) {
   .steps__container {
     max-width: 1440px;
+    width: 1440px;
   }
 
   .steps__list {
