@@ -10,13 +10,13 @@
         background-repeat: no-repeat;
         background-position:  50% 0;
         /* По умолчанию показывается мобильный макет */
-        background-image: url( "img/temp/pognali-index-mobile-menu.png" );
+        background-image: url( "img/temp/pognali-index-mobile.png" );
       }
       /* Планшет */
       @media ( min-width: 768px ) {
         HTML {
           /* Планшетный макет */
-          background-image: url( "img/temp/pognali-index-tablet-menu.png" );
+          background-image: url( "img/temp/pognali-index-tablet.png" );
         }
       }
       /* Десктоп */
@@ -254,7 +254,9 @@
                   <circle class="level__progress level__progress--99" cx="57" cy="57" r="30"></circle>
                 </svg>
               </div>
-              <img class="companion__img" src="../img/firsova-desktop@1x.jpg" srcset="../img/firsova-desktop@2x.jpg 2x" width="270" height="270" alt="Фото: Таня Фирсова">
+              <div class="companion__img-wrapper">
+                <img class="companion__img" src="../img/firsova-desktop@1x.jpg" srcset="../img/firsova-desktop@2x.jpg 2x" width="270" height="270" alt="Фото: Таня Фирсова">
+              </div>
               <div class="companion__info companion-info">
                 <ul class="companion-info__countries companion-countries">
                   <li class="companion-countries__item companion-countries__item--sri-lanka"></li>
@@ -297,7 +299,9 @@
                   <circle class="level__progress level__progress--80" cx="57" cy="57" r="30"></circle>
                 </svg>
               </div>
-              <img class="companion__img" src="../img/demin-desktop@1x.jpg" srcset="../img/demin-desktop@2x.jpg 2x" width="270" height="270" alt="Фото: Петя Демин">
+              <div class="companion__img-wrapper">
+                <img class="companion__img" src="../img/demin-desktop@1x.jpg" srcset="../img/demin-desktop@2x.jpg 2x" width="270" height="270" alt="Фото: Петя Демин">
+              </div>
               <div class="companion__info companion-info">
                 <ul class="companion-info__countries companion-countries">
                   <li class="companion-countries__item companion-countries__item--belgium"></li>
@@ -466,7 +470,7 @@
       </div>
     </footer>
 
-    <section class="modal business-modal">
+    <section class="modal business-modal"> <!-- Модалка открывается когда блоку business-modal присваивается модификатор --active -->
       <div class="business-modal__container">
         <h2 class="business-modal__heading">Бизнес-тарифы</h2>
         <ul class="business-modal__prices business-prices">
