@@ -8,6 +8,7 @@
   &--form {
     position: absolute;
     top: 29px;
+    left: 1px;
     z-index: 2;
 
     display: none;
@@ -241,6 +242,7 @@
 .countries-filter__close-btn {
   position: absolute;
   right: 0;
+  top: 0;
 
   width: 40px;
   height: 40px;
@@ -397,7 +399,7 @@
   .countries-filter__container {
     position: static;
 
-    max-width: unset;
+    max-width: 768px;
     padding-left: 0;
     padding-right: 0;
     padding-top: 95px;
@@ -460,6 +462,8 @@
     padding-right: 0;
     padding-bottom: 5px;
 
+    border-radius: 0 0 60px 60px;
+
     &--form {
       position: relative;
 
@@ -467,6 +471,8 @@
       width: 574px;
       margin-top: 0;
       padding-bottom: 24px;
+
+      border-radius: 0 0 10px 10px;
 
       box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
     }
@@ -643,7 +649,7 @@
   }
 
   .countries-filter__inner {
-    width: unset;
+    width: auto;
     padding: 0;
   }
 }

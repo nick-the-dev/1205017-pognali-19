@@ -1,6 +1,7 @@
 .step {
   display: flex;
   flex-direction: column;
+  width: 270px;
   margin-bottom: 10px;
   padding-bottom: 22px;
 
@@ -394,6 +395,7 @@
 .step__add-country svg {
   opacity: 0.2;
   margin-top: 1px;
+  margin-left: 44px;
 }
 
 .step__prev {
@@ -474,8 +476,13 @@
   display: none;
 }
 
+.step__fields-wrapper {
+  height: 200px;
+}
+
 @media (min-width: @tablet-width) {
   .step {
+    width: 618px;
     margin-bottom: 40px;
     padding-bottom: 55px;
 
@@ -623,6 +630,8 @@
 
   .step__fields-wrapper {
     position: relative;
+
+    height: 357px;
   }
 
   .step__children-label {
@@ -713,7 +722,7 @@
 
     font-size: 24px;
     line-height: 24px;
-    text-transform: unset;
+    text-transform: none;
     color: #1d2e5b;
   }
 
@@ -725,7 +734,7 @@
 
     font-size: 24px;
     line-height: 24px;
-    text-transform: unset;
+    text-transform: none;
   }
 
   .step__add-country {
@@ -756,6 +765,7 @@
     width: 20px;
     height: 20px;
     margin-top: -3px;
+    margin-left: 105px;
   }
 
   .step__btn-wrapper {
@@ -776,7 +786,7 @@
 
     font-size: 24px;
     line-height: 24px;
-    text-transform: unset;
+    text-transform: none;
     color: #1d2e5b;
   }
 
@@ -830,6 +840,7 @@
   .step {
     position: relative;
 
+    width: 1320px;
     margin-bottom: 44px;
     padding-bottom: 105px;
 
@@ -900,6 +911,7 @@
   .step__fields-wrapper {
     display: flex;
     justify-content: space-between;
+    height: 154px;
     margin-top: 21px;
   }
 
@@ -1021,6 +1033,10 @@
   .step__add-country::after {
     top: 26px;
     right: -52px;
+  }
+
+  .step__add-country svg {
+    margin-left: 466px;
   }
 
   .step:last-child {
