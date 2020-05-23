@@ -37,7 +37,7 @@
   </head>
   <body>
 
-    <header class="site-header site-header--form site-header--no-js">
+    <header class="site-header site-header--form site-header--no-js"> <!-- мобильное менб открывается если убрать модификатор --no-js и добавить --mobile-menu. Cкролл-меню появляется если убрать --no-js и добавить --sticky -->
       <a class="site-header__logo-wrapper" href="/">
         <picture class="site-header__logo-white">
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
@@ -227,9 +227,9 @@
             <ul class="add-plan__steps plan-steps">
               <li class="plan-steps__item step" id="step-1">
                 <div class="step__wrapper step__wrapper--step1">
-                  <h3 class="step__heading">Шаг 1. <br>Даты пребывания</h3>
+                  <h3 class="step__heading">Шаг 1.&nbsp;<br>Даты пребывания</h3>
                   <p class="step__desc step__desc--step1">
-                    Укажите предпочтительное количество попутчиков, которых <br>вы хотели бы позвать в поездку и ее предполагаемую длительность.
+                    Укажите предпочтительное количество попутчиков, которых&nbsp;<br>вы хотели бы позвать в поездку и ее предполагаемую длительность.
                   </p>
                   <div class="step__fields-wrapper">
                     <div class="step__inputs-wrapper">
@@ -486,9 +486,9 @@
                   <li class="steps-marker__item"><span class="steps-marker__item-text">Развлечения</span></li>
                 </ul>
                 <div class="step__wrapper step__wrapper--step2">
-                  <h3 class="step__heading">Шаг 2. <br>Маршрут</h3>
+                  <h3 class="step__heading">Шаг 2.&nbsp;<br>Маршрут</h3>
                   <p class="step__desc step__desc--step2">
-                    Укажите страны, которые вы хотели посетить. <br>Это может быть одна или сразу несколько.
+                    Укажите страны, которые вы хотели посетить.&nbsp;<br>Это может быть одна или сразу несколько.
                   </p>
                   <ul class="step__countries countries-list">
                     <li class="countries-list__item country">
@@ -520,7 +520,7 @@
                       </div>
                     </li>
                     <li class="countries-list__item country">
-                      <div class="country__select country__select--dropdown">
+                      <div class="country__select"> <!-- выпадающее меню появляется если блоку country__select присвоить модификатор --dropdown -->
                         <label class="country__label visually-hidden" for="country-3">Выберите страну</label>
                         <input class="country__input" type="text" id="country-3" value="Выберите страну">
                         <div class="country__flag">
@@ -617,12 +617,12 @@
                   <li class="steps-marker__item steps-marker__item--active"><span class="steps-marker__item-text steps-marker__item-text--current">Развлечения</span></li>
                 </ul>
                 <div class="step__wrapper step__wrapper--step3">
-                  <h3 class="step__heading">Шаг 3. <br>Развлечения</h3>
+                  <h3 class="step__heading">Шаг 3.&nbsp;<br>Развлечения</h3>
                   <p class="step__desc step__desc--step3">
-                    Наконец, расскажите о своих планах времяпровождения. <br>Можно писать в свободной форме и ставить тэги.
+                    Наконец, расскажите о своих планах времяпровождения. &nbsp;<br>Можно писать в свободной форме и ставить тэги.
                   </p>
                   <ul class="step__countries-to-do to-do">
-                    <li class="to-do__item plan"> <!-- стиля для поля с ошибкой включаютс еслм блоку plan присвоить модификатор --error -->
+                    <li class="to-do__item plan"> <!-- стили для поля с ошибкой включаются если блоку plan присвоить модификатор --error -->
                       <div class="plan__header">
                         <h4 class="plan__country-name">Босния и Герцеговина</h4>
                         <div class="plan__country-flag plan__country-flag--bosnia"></div>
