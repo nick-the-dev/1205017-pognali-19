@@ -1,0 +1,101 @@
+.companion-countries {
+  display: flex;
+  justify-content: center;
+}
+
+.companion-countries__item {
+  position: relative;
+
+  width: 35px;
+  height: 24px;
+  margin-right: 19px;
+
+  &--sri-lanka {
+    background-image: url("../img/sri-lanka-icon.png");
+  }
+
+  &--thailand {
+    background-image: url("../img/thailand-icon.png");
+  }
+
+  &--seychelles {
+    background-image: url("../img/seychelles-icon.png");
+  }
+
+  &--belgium {
+    background-image: url("../img/belgium-icon.png");
+  }
+
+  &--czech {
+    background-image: url("../img/czech-icon.png");
+  }
+
+  &:hover::before {
+    content: "";
+
+    position: absolute;
+    bottom: -10px;
+    left: 9px;
+
+    width: 0;
+    height: 0;
+
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #101d41;
+  }
+
+  &:hover::after {
+    position: absolute;
+    top: 34px;
+    z-index: 1;
+
+    height: 57px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    color: #ffffff;
+
+    background-color: #101d41;
+    border-radius: 4px;
+  }
+
+
+  &--sri-lanka:hover::after {
+    content: "Шри-ланка";
+
+    left: -44px;
+
+    width: 120px;
+  }
+
+  &--thailand:hover::after {
+    content: "Таиланд";
+
+    left: -32px;
+  }
+
+  &--seychelles:hover::after {
+    content: "Сейшелы";
+
+    left: -37px;
+  }
+
+  &--belgium:hover::after {
+    content: "Бельгия";
+
+    left: -33px;
+  }
+
+  &--czech:hover::after {
+    content: "Бельгия";
+
+    left: -33px;
+  }
+}
+
+.companion-countries__item:last-child {
+  margin-right: 0;
+}

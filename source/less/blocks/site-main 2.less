@@ -1,0 +1,437 @@
+.site-main {
+  &--catalog {
+    background-color: #edeff6;
+    padding-bottom: 43px;
+  }
+
+  &--form {
+    background-color: #edeff6;
+  }
+}
+
+.site-main__heading-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #161c36;
+
+  &--homepage {
+    height: 569px;
+    margin-top: -71px;
+
+    background-image: url("../img/traveller-illustration-mobile@1x.png"),
+      url("../img/globe-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 62% 71%, center;
+    background-size: 192px 255px, cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/traveller-illustration-mobile@2x.png"),
+        url("../img/globe-back-mobile@2x.jpg");
+      background-size: 192px 255px, cover;
+    }
+  }
+
+  &--catalog {
+    position: relative;
+    z-index: 1;
+
+    padding-top: 31px;
+
+    border-radius: 0 0 20px 20px;
+  }
+
+  &--form {
+    position: relative;
+    z-index: 1;
+
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+.site-main__heading-container {
+  max-width: 320px;
+  margin: 0 auto;
+
+  &--catalog,
+  &--form {
+    max-width: unset;
+    width: 320px;
+  }
+}
+
+.site-main__heading {
+  .remove-indentation();
+  width: 237px;
+  margin: 0 auto;
+
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 40px;
+  font-family: @site-font-family;
+  color: #ffffff;
+  text-align: center;
+
+  &--homepage {
+    padding-top: 94px;
+  }
+
+  &--catalog {
+    position: relative;
+
+    width: 173px;
+    margin-left: 25px;
+    padding-bottom: 9px;
+
+    text-align: left;
+  }
+
+  &--form {
+    position: relative;
+
+    width: 214px;
+    margin-left: 25px;
+    margin-top: -5px;
+    padding-top: 36px;
+    padding-bottom: 9px;
+
+    text-align: left;
+  }
+}
+
+.site-main__home-link-icon {
+  display: none;
+}
+
+.site-main__heading--catalog::after {
+  content: "";
+
+  position: absolute;
+  bottom: -2px;
+
+  display: block;
+  width: 100%;
+  height: 5px;
+
+  border-radius: 2.4px;
+  background-color: #ff8d30;
+}
+
+.site-main__heading--form::after {
+  content: "";
+
+  position: absolute;
+  bottom: -2px;
+
+  display: block;
+  width: 100%;
+  height: 5px;
+
+  border-radius: 2.4px;
+  background-color: #ff8d30;
+}
+
+.site-main__steps {
+  margin-bottom: -41px;
+}
+
+.site-main__tools {
+  margin-top: 244px;
+}
+
+.site-main__about {
+  position: relative;
+  z-index: 5;
+}
+
+.site-main__directions {
+  position: relative;
+  z-index: 4;
+
+  margin-top: -30px;
+}
+
+.site-main__companions {
+  position: relative;
+  z-index: 3;
+
+  margin-top: -30px;
+}
+
+.site-main__add-profile {
+  position: relative;
+  z-index: 2;
+
+  margin-top: -30px;
+}
+
+.site-main__registration {
+  position: relative;
+  z-index: 1;
+
+  margin-top: -30px;
+}
+
+.site-main__address {
+  margin-top: -30px;
+}
+
+.site-main__selection {
+  margin-top: 24px;
+  margin-bottom: 28px;
+}
+
+.site-main__home-link {
+  display: none;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: @site-font-family;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .site-main__heading-wrapper--homepage {
+    height: 994px;
+    margin-top: -110px;
+
+    background-color: #182044;
+    background-image: url("../img/traveller-illustration-tablet@1x.png"),
+      url("../img/globe-back-tablet@1x.jpg");
+    background-position: 71.8% 74.4%, 50% 100%;
+    background-size: 372px auto, 192%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/traveller-illustration-tablet@2x.png"),
+        url("../img/globe-back-tablet@2x.jpg");
+      background-position: 71.8% 74.4%, 50.4% 100%;
+      background-size: 372px auto, 193.5%;
+    }
+  }
+
+  .site-main__heading-wrapper--catalog {
+    padding-top: 109px;
+    padding-bottom: 54px;
+    padding-left: 35px;
+    padding-right: 75px;
+
+    border-radius: 0 0 60px 60px;
+  }
+
+  .site-main__heading-wrapper--form {
+    border-radius: 0 0 60px 60px;
+  }
+
+  .site-main__heading--catalog::after {
+    bottom: -58px;
+
+    height: 8px;
+
+    border-radius: 4px;
+  }
+
+  .site-main__heading-container {
+    display: flex;
+    align-items: center;
+    max-width: 768px;
+
+    &--catalog {
+      max-width: unset;
+      width: 658px;
+    }
+
+    &--form {
+      max-width: unset;
+      width: 768px;
+    }
+  }
+
+  .site-main__heading {
+    width: 395px;
+
+    font-size: 60px;
+    line-height: 70px;
+
+    &--homepage {
+      padding-top: 163px;
+    }
+
+    &--catalog {
+      width: 289px;
+      margin-left: 39px;
+      margin-right: 153px;
+    }
+
+    &--form {
+      width: 354px;
+      margin-left: 74px;
+      padding-top: 115px;
+      padding-bottom: 63px;
+    }
+
+    &--form::after {
+      left: 3px;
+
+      bottom: -4px;
+      height: 8px;
+
+      border-radius: 4px;
+    }
+  }
+
+  .site-main--form {
+    margin-top: -1px;
+  }
+
+  .site-main__home-link-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 177px;
+
+    &:hover .site-main__home-link {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:hover .site-main__home-link-icon {
+      opacity: 0.6;
+    }
+
+    &:active .site-main__home-link {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:active .site-main__home-link-icon {
+      opacity: 0.3;
+    }
+  }
+
+  .site-main__home-link {
+    display: flex;
+
+    margin-top: -3px;
+  }
+
+  .site-main__home-link-icon {
+    display: block;
+    margin-top: -2px;
+
+    fill: #ffffff;
+  }
+
+  .site-main__reviews {
+    position: absolute;
+    left: 50%;
+  }
+
+  .site-main__steps {
+    position: relative;
+
+    margin-bottom: -44px;
+  }
+
+  .site-main__registration {
+    margin-top: -60px;
+  }
+
+  .site-main__address {
+    margin-top: -60px;
+  }
+
+  .site-main__selection {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-main__heading-wrapper--homepage {
+    position: relative;
+    z-index: 1;
+
+    height: 750px;
+    margin-top: -120px;
+
+    background-image: url("../img/traveller-illustration-desktop@1x.png"),
+      url("../img/globe-back-desktop@1x.jpg");
+    background-position: 60% 101.1%, 50% 0%;
+    background-size: 431px 640px, 1800px 750px;
+    background-color: #161c34;
+    border-radius: 0 0 60px 60px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/traveller-illustration-desktop@2x.png"),
+        url("../img/globe-back-desktop@2x.jpg");
+      background-size: 431px 640px, 1800px 750px;
+    }
+  }
+
+  .site-main__heading-wrapper--catalog {
+    padding-top: 99px;
+  }
+
+  .site-main__heading-container {
+    width: 1330px;
+
+    &--form {
+      width: 1440px;
+    }
+  }
+
+  .site-main__heading {
+    margin-left: 129px;
+
+    text-align: left;
+
+    &--homepage {
+      margin-left: -209px;
+      padding-top: 210px;
+    }
+
+    &--form {
+      width: 357px;
+      margin-left: 126px;
+      padding-top: 105px;
+      padding-bottom: 63px;
+    }
+
+    &--catalog {
+      width: 287px;
+      margin-left: 91px;
+      margin-right: 727px;
+    }
+  }
+
+  .site-main__heading--form::after {
+    left: 0;
+  }
+
+  .site-main__home-link-wrapper {
+    width: 225px;
+    padding-right: 48px;
+  }
+
+  .site-main__travelers-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  .site-main__selection {
+    order: 2;
+  }
+
+  .site-main__travelers {
+    margin-top: 24px;
+  }
+
+  .site-main__reviews {
+    left: auto;
+  }
+
+  .site-main__steps {
+    margin-top: -60px;
+    padding-top: 60px;
+  }
+}

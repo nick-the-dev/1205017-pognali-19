@@ -1,0 +1,42 @@
+.continents {
+  display: flex;
+  flex-direction: column;
+}
+
+.continents__item {
+  z-index: 2;
+
+  margin-bottom: 5px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: @site-font-family;
+  color: rgba(25, 33, 68, 0.3);
+  text-transform: uppercase;
+
+  &--active {
+    color: #192144;
+  }
+
+  &:hover {
+    color: rgba(25, 33, 68, 0.6);
+  }
+
+  &:active {
+    color: #192144;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .continents {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 366px;
+  }
+
+  .continents__item {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
