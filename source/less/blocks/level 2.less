@@ -1,0 +1,294 @@
+.level {
+  position: absolute;
+  z-index: 1;
+
+  width: 60px;
+  height: 60px;
+  margin: 30px auto;
+
+  cursor: pointer;
+
+  &--form {
+    left: 50%;
+    top: 3px;
+    z-index: 1;
+
+    margin-left: -113px;
+  }
+}
+
+.level__visual {
+  width: 114px;
+  height: 114px;
+  margin-top: -41px;
+  margin-left: -10px;
+
+  &--catalog {
+    margin-top: -57px;
+    margin-left: -37px;
+  }
+
+  &--tablet {
+    display: none;
+  }
+}
+
+.level__progress {
+  fill: rgba(0, 0, 0, 0.6);
+  stroke-width: 3px;
+  stroke: #ff8d30;
+  stroke-linecap: square;
+  stroke-dashoffset: 40;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+
+  &--99 {
+    stroke-dasharray: 220.56;
+  }
+
+  &--80 {
+    stroke-dasharray: 193.56;
+  }
+
+  &--form {
+    stroke-dasharray: 300.56;
+
+    fill: transparent;
+  }
+}
+
+.level__progress--catalog {
+  fill: transparent;
+
+  &-99 {
+    stroke-dasharray: 173.56;
+  }
+
+  &-80 {
+    stroke-dasharray: 158.56;
+  }
+
+  &-25 {
+    stroke-dasharray: 144.56;
+    stroke-dashoffset: 114;
+  }
+
+  &-50 {
+    stroke-dasharray: 107.56;
+  }
+}
+
+.level__text {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 16px;
+  text-align: center;
+
+  &--catalog {
+    top: -7px;
+    left: -10px;
+  }
+
+  &--form {
+    top: -10px;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.level__value {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: @site-font-family;
+
+  &--homepage {
+    line-height: 24px;
+    color: #ffffff;
+  }
+
+  &--catalog {
+    line-height: 18px;
+    color: #1d2e5b;
+  }
+
+  &--form {
+    line-height: 38px;
+    font-size: 38px;
+  }
+}
+
+.level__label {
+  margin-top: 1px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: @site-font-family;
+  color: #ffffff;
+
+  &--catalog {
+    display: none;
+  }
+
+  &--form {
+    font-size: 18px;
+    line-height: 22px;
+    color: #444444;
+  }
+}
+
+.level__label::before {
+  content: "";
+
+  position: absolute;
+  top: 22px;
+  left: 15px;
+
+  display: block;
+  width: 31px;
+  height: 1px;
+
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.level__label--form::before {
+  top: 35px;
+  left: 6px;
+
+  width: 49px;
+  height: 2px;
+  background-color: #cbced9;
+}
+
+@media (min-width: @tablet-width) {
+  .level--form {
+    top: -2px;
+
+    margin-left: -312px;
+  }
+
+  .level__visual {
+    margin-top: -37px;
+    margin-left: -6px;
+
+    &--catalog {
+      margin-top: -49px;
+      margin-left: -39px;
+    }
+
+    &--tablet {
+      display: block;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  .level__text {
+    top: 3px;
+    left: 20px;
+
+    &--catalog {
+      top: -5px;
+      left: -13px;
+    }
+
+    &--form {
+      top: -6px;
+    }
+  }
+
+  .level__label--catalog {
+    display: block;
+    margin-top: 2px;
+
+    color: rgba(68, 68, 68, 0.4);
+  }
+
+  .level__label--catalog::before {
+    top: 19px;
+
+    background-color: rgba(68, 68, 68, 0.4);
+  }
+
+  .level__label--form::before {
+    background-color: #a5a7ac;
+  }
+
+  .level__progress--catalog {
+    r: 30;
+
+    &-99 {
+      stroke-dasharray: 223.56;
+    }
+
+    &-80 {
+      stroke-dasharray: 194.56;
+    }
+
+    &-25 {
+      stroke-dasharray: 157.56;
+    }
+
+    &-50 {
+      stroke-dasharray: 132.56;
+    }
+  }
+
+  .level__progress--form {
+    r: 47;
+    stroke-dasharray: 283.56;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .level__visual {
+    margin-top: -34px;
+    margin-left: -4px;
+
+    &--catalog {
+      margin-top: -71px;
+      margin-left: 23px;
+    }
+  }
+
+  .level__text {
+    top: 7px;
+    left: 22px;
+
+    &--catalog {
+      top: -27px;
+      left: 49px;
+    }
+
+    &--form {
+      top: -3px;
+    }
+  }
+
+  .level {
+    &--form {
+      top: 37px;
+      margin-left: -170px;
+    }
+  }
+
+  .level__value {
+    &--form {
+      color: #ffffff;
+    }
+  }
+
+  .level__label {
+    &--form {
+      color: #ffffff;
+    }
+
+    &--form::before {
+      background-color: #5c6172;
+    }
+  }
+}

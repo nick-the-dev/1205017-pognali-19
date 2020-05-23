@@ -1,0 +1,24 @@
+.catalog-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-list__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-list__item {
+    margin-bottom: 40px;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-list__item {
+    margin-bottom: 30px;
+  }
+}

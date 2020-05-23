@@ -1,0 +1,59 @@
+.steps-marker {
+  position: absolute;
+  z-index: 10;
+
+  display: flex;
+}
+
+.steps-marker__item {
+  width: 5px;
+  height: 5px;
+  margin-left: 16px;
+
+  background-color: #808285;
+  border-radius: 50%;
+  opacity: 0.3;
+
+  &--active {
+    background-color: #1d2e5b;
+    opacity: 1;
+  }
+}
+
+.steps-marker__item-text {
+  display: none;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 13.8px;
+  letter-spacing: 2px;
+  font-family: @site-font-family;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+
+  &--current {
+    color: #000000;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .steps-marker__item {
+    margin-left: 29px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .steps-marker {
+    flex-direction: column;
+  }
+
+  .steps-marker__item {
+    margin-bottom: 39px;
+  }
+
+  .steps-marker__item-text {
+    display: block;
+    margin-top: -3px;
+    padding-left: 42px;
+  }
+}
