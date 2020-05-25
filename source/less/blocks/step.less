@@ -37,6 +37,14 @@
   line-height: 20px;
   font-family: @site-font-family;
   color: #1d2e5b;
+
+  &--step2 {
+    padding-right: 85px;
+  }
+
+  &--step3 {
+    padding-right: 50px;
+  }
 }
 
 .step__desc {
@@ -50,20 +58,8 @@
   font-family: @site-font-family;
   color: #444444;
 
-  &--step1 br {
-    display: none;
-  }
-
   &--step2 {
     margin-bottom: 21px;
-  }
-
-  &--step2 br {
-    display: none;
-  }
-
-  &--step3 br {
-    display: none;
   }
 }
 
@@ -108,6 +104,14 @@
 .step__duration-input:focus + .step__duration-dec svg,
 .step__duration-input:focus ~ .step__duration-inc svg {
   opacity: 1;
+}
+
+.step__companions-input::-webkit-inner-spin-button,
+.step__companions-input::-webkit-outer-spin-button,
+.step__duration-input::-webkit-inner-spin-button,
+.step__duration-input::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .step__input-wrapper {
@@ -353,7 +357,7 @@
   text-transform: uppercase;
   text-align: left;
 
-  background-color: transparent;
+  background-color: #edeff6;
   border: none;
   border-radius: 4px;
 
@@ -499,6 +503,18 @@
 
     font-size: 36px;
     line-height: 36px;
+
+    &--step1 {
+      padding-right: 160px;
+    }
+
+    &--step2 {
+      padding-right: 290px;
+    }
+
+    &--step3 {
+      padding-right: 220px;
+    }
   }
 
   .step__desc {
@@ -511,12 +527,9 @@
     font-size: 20px;
     line-height: 24px;
 
-    &--step2 br {
-      display: block;
-    }
-
     &--step2 {
       margin-bottom: 75px;
+      padding-right: 95px;
     }
 
     &--step2::after {
@@ -849,6 +862,8 @@
 
   .step__add-country {
     width: 730px;
+
+    background-color: transparent;
   }
 
   .step__wrapper {
@@ -876,10 +891,6 @@
     width: 583px;
     max-width: none;
 
-    &--step1 br {
-      display: block;
-    }
-
     &--step1::after {
       bottom: -55px;
 
@@ -888,6 +899,7 @@
 
     &--step2 {
       margin-bottom: 117px;
+      padding-right: 185px;
     }
 
     &--step2::after {
@@ -896,8 +908,8 @@
       width: 997px;
     }
 
-    &--step3 br {
-      display: block;
+    &--step3 {
+      padding-right: 95px;
     }
 
     &--step3::after {
@@ -981,10 +993,6 @@
 
   .step__submit-btn {
     margin-left: 160px;
-  }
-
-  .step__heading br {
-    display: none;
   }
 
   .step__companions-input,
